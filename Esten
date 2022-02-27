@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+        Name: 'Esten' theme for tumblr
+        Realese date: 30.06.2014;
+        Version: 1.2i;
+        Last update date: 09.02.2021;
+        Author: WGThemes - Grzegorz Wisniewski;
+        http://esten-theme.tumblr.com
+        -->
+        <meta charset="utf-8">
+        <title>{Title}{block:PermalinkPage}{block:PostSummary} - {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+        {block:Description}
+        <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        
+        {block:Hidden}
+        
+        <meta name="image:Header image 2" content=""/>
+        <meta name="image:Header image 3" content=""/>
+        <meta name="image:Header image 4" content=""/>
+        <meta name="image:Header image 5" content=""/>
+        <meta name="image:About blog image" content=""/>
+
+        <meta name="color:Accent color" content="#a77dc2"/>
+        <meta name="color:Header text color" content="#fff"/>
+        <meta name="color:Header mask color" content="#000"/>
+        <meta name="color:Header menu background color" content="#111"/>
+        <meta name="color:Header menu text color" content="#f7f7f7"/>
+        <meta name="color:Header menu border color" content="#626262"/>
+        <meta name="color:Top message background color" content="#fff"/>
+        <meta name="color:Top message text color" content="#434343"/>
+        <meta name="color:First post background color" content="#272727"/>
+        <meta name="color:First post text color" content="#f7f7f7"/>
+        <meta name="color:Post background color" content="#fff"/>
+        <meta name="color:Post text color" content="#434343"/>
+        <meta name="color:Post title color" content="#434343"/>
+        <meta name="color:Post tags background color" content="#f2f2f2"/>
+        <meta name="color:Post tags text color" content="#848484"/>
+        <meta name="color:Footer background color" content="#272727"/>
+        <meta name="color:Footer text color" content="#eee"/>
+        <meta name="color:Footer link color" content="#a77dc2"/>
+        <meta name="color:Footer separators color" content="#676767"/>
+        <meta name="color:Footer buttons background color" content="#a77dc2"/>
+        <meta name="color:Footer buttons text color" content="#eee"/>
+        <meta name="color:Footer tweets links color" content="#a77dc2"/>
+        <meta name="color:Copyright background color" content="#111111"/>
+        <meta name="color:Copyright text color" content="#f7f7f7"/>
+
+        <meta name="font:Main text font" content="Avalon"/>
+        <meta name="font:Header caption 1 font" content="Gibson"/>
+        <meta name="font:Header caption 2 font" content="Avalon"/>
+        <meta name="font:Navigation font" content="Avalon"/>
+        <meta name="font:Post header font" content="Avalon"/>
+        <meta name="font:Post title font" content="Gibson"/>
+        <meta name="font:Footer label font" content="Gibson"/>
+
+        <meta name="select:Header caption 1 style" content="normal-text" title="Normal"/>
+        <meta name="select:Header caption 1 style" content="border-text-2" title="Border medium"/>
+        <meta name="select:Header caption 1 style" content="bold-text" title="Bold"/>
+        <meta name="select:Header caption 1 style" content="italic-text" title="Italic"/>
+        <meta name="select:Header caption 1 style" content="bold-italic-text" title="Bold Italic"/>
+        <meta name="select:Header caption 1 style" content="border-text-1" title="Border thin"/>
+        <meta name="select:Header caption 1 style" content="border-text-3" title="Border thick"/>
+        <meta name="select:Header caption 2 style" content="normal-text" title="Normal"/>
+        <meta name="select:Header caption 2 style" content="bold-text" title="Bold"/>
+        <meta name="select:Header caption 2 style" content="italic-text" title="Italic"/>
+        <meta name="select:Header caption 2 style" content="bold-italic-text" title="Bold Italic"/>
+        <meta name="select:Header caption 2 style" content="border-text-1" title="Border thin"/>
+        <meta name="select:Header caption 2 style" content="border-text-2" title="Border medium"/>
+        <meta name="select:Header caption 2 style" content="border-text-3" title="Border thick"/>
+
+        <meta name="select:Header caption 1 align" content="center" title="Center"/>
+        <meta name="select:Header caption 1 align" content="left" title="Left"/>
+        <meta name="select:Header caption 1 align" content="right" title="Right"/>
+        <meta name="select:Header caption 2 align" content="center" title="Center"/>
+        <meta name="select:Header caption 2 align" content="left" title="Left"/>
+        <meta name="select:Header caption 2 align" content="right" title="Right"/>
+
+        <meta name="select:Background pattern" content="pattern-1" title="Light pattern 1"/>
+        <meta name="select:Background pattern" content="pattern-2" title="Light pattern 2"/>
+        <meta name="select:Background pattern" content="pattern-3" title="Light pattern 3"/>
+        <meta name="select:Background pattern" content="pattern-4" title="Dark pattern 1"/>
+        <meta name="select:Background pattern" content="pattern-5" title="Dark pattern 2"/>
+        <meta name="select:Background pattern" content="" title="No pattern - solid color"/>
+
+        <meta name="text:Header image rotation delay" content="6000"/>
+        <meta name="text:Header mask opacity" content="0.2"/>
+        
+        <meta name="text:Header caption 1 text" content=""/>
+        <meta name="text:Header caption 1 font size" content="45px"/>
+        <meta name="text:Header caption 1 top margin" content="120px"/>
+        <meta name="text:Header caption 2 text" content=""/>
+        <meta name="text:Header caption 2 font size" content="18px"/>
+        <meta name="text:Header caption 2 top margin" content="15px"/>
+
+        <meta name="text:Top message" content=""/>
+        <meta name="text:Top message font size" content="14px"/>
+        
+        <meta name="text:Instagram feed label" content="Instagram pictures"/>
+        <meta name="text:Instagram access token" content="">
+        <meta name="text:Instagram image limit" content="8"/>
+
+        <meta name="text:Flickr feed label" content="Flickr photos"/>
+        <meta name="text:Flickr username" content=""/>
+        <meta name="text:Flickr image limit" content="8"/>
+
+        <meta name="text:Twitter feed label" content="Recent tweets"/>
+        <meta name="text:Twitter feed limit" content="2"/>
+
+        <meta name="if:Show share options" content="1"/>     
+        <meta name="if:Show facebook button" content="1"/>     
+        <meta name="if:Show twitter button" content="1"/>     
+        <meta name="if:Show google plus button" content="1"/>
+        
+
+        <meta name="if:Menu home link" content="1"/>
+        <meta name="if:Menu show pages in dropdown" content="1"/>  
+        <meta name="if:Menu categories list" content="1"/>     
+        <meta name="if:Menu ask link" content="1"/>     
+        <meta name="if:Menu submit link" content="0"/>     
+        <meta name="if:Menu rss link" content="0"/>     
+        <meta name="if:Menu random link" content="0"/>     
+        <meta name="if:Menu archive link" content="1"/> 
+        
+        <meta name="if:Naviagtion links text to uppercase" content="0"/>
+
+        <meta name="if:Open posts in new tab" content="1"/> 
+        <meta name="if:Open social links in new tab" content="1"/> 
+
+        <meta name="if:Show about me post" content="1"/>     
+        <meta name="if:Show about me social links" content="1"/>     
+        <meta name="if:Show post notes count" content="1"/>     
+        <meta name="if:Show post comments count" content="0"/>
+        <meta name="if:Show tags on index page" content="1"/>
+        <meta name="if:Show footer twitter widget" content="0"/>
+        <meta name="if:Show footer text widget 1" content="0"/>
+        <meta name="if:Show footer text widget 2" content="0"/>
+        <meta name="if:Show footer tags widget" content="0"/>
+        <meta name="if:Show footer following widget" content="0"/>
+        <meta name="if:Show footer social links widget" content="0"/>
+        <meta name="if:Show footer search widget" content="0"/>
+        
+        <meta name="select:Header style and height" content="full-width header-l" title="Full width - 380px"/> 
+        <meta name="select:Header style and height" content="full-width header-m" title="Full width - 300px"/>
+        <meta name="select:Header style and height" content="full-width header-s" title="Full width - 220px"/>
+        <meta name="select:Header style and height" content="full-width header-xl" title="Full width - 520px"/> 
+        <meta name="select:Header style and height" content="header-s" title="Boxed - 220px"/>
+        <meta name="select:Header style and height" content="header-m" title="Boxed - 300px"/>
+        <meta name="select:Header style and height" content="header-l" title="Boxed - 380px"/> 
+        <meta name="select:Header style and height" content="header-xl" title="Boxed - 520px"/> 
+
+        <meta name="select:Single post width" content="sc-800" title="800px">
+        <meta name="select:Single post width" content="sc-700" title="700px">
+        <meta name="select:Single post width" content="sc-600" title="600px">
+
+        <meta name="select:Post shadows" content="hard-shadows" title="Hard shadows">
+        <meta name="select:Post shadows" content="soft-shadows" title="Soft shadows">
+        <meta name="select:Post shadows" content="no-shadows" title="No shadows">
+
+        <meta name="select:Post header style" content="post-header-s1" title="Circled icon"/>
+        <meta name="select:Post header style" content="post-header-s2" title="Icon"/>
+        <meta name="select:Post header style" content="post-header-s3" title="Hidden"/>  
+        <meta name="select:Post header style" content="post-header-s4" title="Icon 2"/>  
+        <meta name="select:Post header style" content="post-header-s5" title="No icon"/>  
+
+        <meta name="select:Post date format" content="post-date-1" title="Normal"/>  
+        <meta name="select:Post date format" content="post-date-2" title="X time ago"/>  
+
+        <meta name="select:Post tags style" content="tags-s2" title="No borders"/>
+        <meta name="select:Post tags style" content="tags-s1" title="Rounded borders"/>
+        <meta name="select:Post tags style" content="tags-s3" title="Small"/>  
+        
+        <meta name="text:Footer text widget 1 label" content="Text widget 1"/>
+        <meta name="text:Footer text widget 1 content" content="Add your own text at the 'Edit theme' window. You can use HTML too."/>
+
+        <meta name="text:Footer text widget 2 label" content="Text widget 2"/>
+        <meta name="text:Footer text widget 2 content" content="..."/>
+        
+        <meta name="text:Social links label" content="Folow me"/>
+        <meta name="text:Facebook URL" content=""/>
+        <meta name="text:Twitter URL" content=""/>
+        <meta name="text:Google Plus URL" content=""/>
+        <meta name="text:Dribbble URL" content=""/>
+        <meta name="text:Instagram URL" content=""/>
+        <meta name="text:Flickr URL" content=""/>
+        <meta name="text:Youtube URL" content=""/>
+        <meta name="text:Vimeo URL" content=""/>
+        <meta name="text:DeviantArt URL" content=""/>
+        <meta name="text:Pinterest URL" content=""/>
+        <meta name="text:LinkedIn URL" content=""/>
+        <meta name="text:Behance URL" content=""/>
+        <meta name="text:GitHub URL" content=""/>
+        <meta name="text:Spotify URL" content=""/>
+        <meta name="text:SoundCloud URL" content=""/>
+
+        <meta name="text:Google analytics ID" content=""/>
+        <meta name='text:Disqus Shortname' content=""/>
+
+        <meta name='text:Categories label in menu' content="Categories"/>
+        <meta name='text:Categories label in footer' content="Featured tags"/>
+
+        <meta name='text:Category 1 tag' content="reblog"/>
+        <meta name='text:Category 2 tag' content=""/>
+        <meta name='text:Category 3 tag' content=""/>
+        <meta name='text:Category 4 tag' content=""/>
+        <meta name='text:Category 5 tag' content=""/>
+        <meta name='text:Category 6 tag' content=""/>
+        <meta name='text:Category 7 tag' content=""/>
+        <meta name='text:Category 8 tag' content=""/>
+        <meta name='text:Category 9 tag' content=""/>
+        <meta name='text:Category 10 tag' content=""/>
+        <meta name='text:Category 11 tag' content=""/>
+        <meta name='text:Category 12 tag' content=""/>
+        <meta name='text:Category 13 tag' content=""/>
+        <meta name='text:Category 14 tag' content=""/>
+        <meta name='text:Category 15 tag' content=""/>
+        
+        <meta name="text:Custom Google Fonts NAME for main text" content=""/>
+        <meta name="text:Custom Google Fonts NAME for header caption 1" content=""/>
+        <meta name="text:Custom Google Fonts NAME for header caption 2" content=""/>
+        <meta name="text:Custom Google Fonts NAME for navigation" content=""/>
+        <meta name="text:Custom Google Fonts NAME for post header" content=""/>
+        <meta name="text:Custom Google Fonts NAME for post title" content=""/>
+        <meta name="text:Custom Google Fonts NAME for footer label" content=""/>
+
+        <meta name="text:Custom background pattern URL" content=""/>
+
+        <meta name="text:Like label" content="Like"/>
+        <meta name="text:Unlike label" content="Unlike"/>
+        <meta name="text:Reblog label" content="Reblog"/>
+        <meta name="text:View label" content="View"/>
+        <meta name="text:Share label" content="Share"/>
+        
+        <meta name="text:Following widget label" content="Following"/>
+
+        <meta name="text:Search label" content="Search"/>
+        <meta name="text:Search box text" content="Search keywords..."/>
+
+        {/block:Hidden}        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        <meta http-equiv="X-UA-Compatible" content="IE=9"/>        
+
+        <link href='https://static.tumblr.com/8wlin78/pdFoacp7p/estentheme.min.css' rel='stylesheet' type='text/css'>
+        <link href="https://static.tumblr.com/8wlin78/KZHnt0nmr/nivo-lightbox.min.css" rel="stylesheet" type="text/css">
+
+        {block:IfCustomGoogleFontsNAMEForMainText}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for main text}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForMainText}
+        {block:IfCustomGoogleFontsNAMEForHeaderCaption1}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for header caption 1}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForHeaderCaption1}
+        {block:IfCustomGoogleFontsNAMEForHeaderCaption2}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for header caption 2}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForHeaderCaption2}
+        {block:IfCustomGoogleFontsNAMEForNavigation}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for navigation}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForNavigation}
+        {block:IfCustomGoogleFontsNAMEForPostHeader}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for post header}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForPostHeader}
+        {block:IfCustomGoogleFontsNAMEForPostTitle}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for post title}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForPostTitle}
+        {block:IfCustomGoogleFontsNAMEForFooterLabel}
+        <link href='https://fonts.googleapis.com/css?family={text:Custom Google Fonts NAME for footer label}:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        {/block:IfCustomGoogleFontsNAMEForFooterLabel}
+
+        <!--[if lt IE 9]>
+            <script src="https://static.tumblr.com/hriofhd/Qj0m8pn7q/html5shiv.js"></script>
+        <![endif]-->
+        
+        <style>            
+            
+            body {
+                font-family: {font:Main text font};
+                {block:IfCustomGoogleFontsNAMEForMainText}
+                font-family: {text:Custom Google Fonts NAME for main text};
+                {/block:IfCustomGoogleFontsNAMEForMainText}
+                background-color: {BackgroundColor};
+                {block:IfCustomBackgroundPatternURL}
+                background-image: url({text:Custom background pattern URL}) !important;
+                {/block:IfCustomBackgroundPatternURL}
+           }            
+            .caption-1 {
+                font-family: {font:Header caption 1 font};
+                {block:IfCustomGoogleFontsNAMEForHeaderCaption1}
+                font-family: {text:Custom Google Fonts NAME for header caption 1};
+                {/block:IfCustomGoogleFontsNAMEForHeaderCaption1}
+                font-size: {text:Header caption 1 font size};
+                margin-top: {text:Header caption 1 top margin};
+                text-align: {select:Header caption 1 align};
+                color: {color:Header text color};
+            }
+            .caption-2 {
+                font-family: {font:Header caption 2 font};
+                {block:IfCustomGoogleFontsNAMEForHeaderCaption2}
+                font-family: {text:Custom Google Fonts NAME for header caption 2};
+                {/block:IfCustomGoogleFontsNAMEForHeaderCaption2}
+                font-size: {text:Header caption 2 font size};
+                margin-top: {text:Header caption 2 top margin};
+                text-align: {select:Header caption 2 align};
+                color: {color:Header text color};
+            }
+            .top-navigation,
+             .navigation {
+                font-family: {font:Navigation font};
+                {block:IfCustomGoogleFontsNAMEForNavigation}
+                font-family: {text:Custom Google Fonts NAME for navigation};
+                {/block:IfCustomGoogleFontsNAMEForNavigation}
+            }
+            .post-header {
+                font-family: {font:Post header font};
+                {block:IfCustomGoogleFontsNAMEForPostHeader}
+                font-family: {text:Custom Google Fonts NAME for post header};
+                {/block:IfCustomGoogleFontsNAMEForPostHeader}
+            }
+            .post-title,
+             .typography h1, 
+              .typography h2, 
+               .typography h3, 
+                .typography h4, 
+                 .typography h5, 
+                  .typography h6,
+                   .link-title {
+                font-family: {font:Post title font};
+                {block:IfCustomGoogleFontsNAMEForPostTitle}
+                font-family: {text:Custom Google Fonts NAME for post title};
+                {/block:IfCustomGoogleFontsNAMEForPostTitle}
+            }
+            .ft-label {
+                font-family: {font:Footer label font};
+                {block:IfCustomGoogleFontsNAMEForFooterLabel}
+                font-family: {text:Custom Google Fonts NAME for footer label};
+                {/block:IfCustomGoogleFontsNAMEForFooterLabel}
+            }
+            
+            .blog-name {
+                font-family: {TitleFont};
+                font-weight: {TitleFontWeight};
+                color: {TitleColor};
+            }
+
+            .top-message > div {
+                font-size: {text:Top message font size};
+                padding: {text:Top message font size} 30px;
+            }
+            @media all and (max-width: 648px) {
+                .top-message > div {
+                    font-size: 15px;
+                    padding: 15px 30px;
+                }
+            }
+
+            /* ACCENT COLOR*/
+            a, .typography a,
+             .button:hover,
+              .more_notes_link:hover,
+               .blog-name > a:hover,
+                .post-header-s1 > .post-icon > span,
+                 .menu > a:hover,
+                  .menu-btn:hover,
+                   .navigation > li > a:hover,
+                    .read_more,
+                     .page-info > span > span,
+                      .page-info > div > span,
+                       .link-target,
+                        .tags-s2 > a:hover,
+                         .post-options > div:hover,
+                          .tweets > .content > a,
+                           .top-navigation > li > a:hover,
+                            .top-navigation > li > span:hover,
+                             .top-navigation-sl > li > a:hover {
+                color: {color:Accent color};
+            }
+            .button, .more_notes_link,
+             .post-header,
+              .navigation > li > a:before,
+               .chat-content > .odd:after,
+                .slider-nav.circle > li.active:after,
+                 .slider-nav.circle > li:hover:after {
+                background-color: {color:Accent color};
+            }
+            .button, .more_notes_link,
+             .post-header-s1 > .post-icon,
+              .post-header-s2 > .post-icon,
+               .navigation,
+                .categories > a {
+                border-color: {color:Accent color};
+            }
+            
+            /*TOP MENU BACK AND TEXT COLOR*/
+            .top-menu,
+             .top-navigation,
+              .top-navigation-sl,
+               .top-navigation-sl > li:last-child:after {
+                background-color: {color:Header menu background color};
+            }
+            .full-width .top-menu {
+                background: none;
+            }
+            .full-width .top-menu.show-background,
+             .full-width .top-menu:hover,
+              .full-width .top-menu.showed {
+                background-color: rgba({RGBcolor:Header menu background color},0.9);
+            }
+            .full-width .top-navigation {
+                background-color: rgba({RGBcolor:Header menu background color},0.9);   
+            }
+            .full-width .top-navigation-sl,
+             .full-width .top-navigation-sl > li:last-child:after {
+                background: none;
+            }
+            .blog-name > a,
+             .menu-btn,
+              .top-navigation > li > a,
+               .top-navigation > li > span,
+                .top-navigation-sl > li > a{
+                color: {color:Header menu text color};
+            }
+            .top-menu,
+             .top-navigation,
+              .top-navigation-sl,
+               .top-navigation > li,
+                .top-navigation-sl > li,
+                 .top-navigation-sl > li:after,
+                  .menu-btn {
+                border-color: {color:Header menu border color};
+            }
+            .full-width .menu-btn:after {
+                border-bottom-color: {color:Header menu border color};
+            }
+            .top-navigation-sl > li:before {
+                background-color: {color:Header menu border color};
+             }
+            
+            /*TOP MESSAGE BACK AND TEXT COLOR*/
+            .page-info > div {
+                background-color: {color:Top message background color};
+                color: {color:Top message text color};
+            }
+
+            /*FIRST POST BACK AND TEXT COLOR*/
+            .first-post {
+                background-color: {color:First post background color};
+                color: {color:First post text color};
+            }
+            .menu > a,
+             .navigation > li > a {
+                color: {color:First post text color};
+             }
+             
+            /*POST BACK AND TEXT COLOR*/
+            .post,
+             .disqus,
+              .post-wrapper > .replies > span {
+                background-color: {color:Post background color};
+            }
+            .post-header-s4 > .post-icon {
+                color: {color:Post background color};
+            }
+            .post,
+             .disqus,
+              .tags-s2 > a,
+               .tags-s3 > a {
+                 color: {color:Post text color};
+            }
+            .post-header-s4 > .post-icon > span {
+                 background-color: {color:Post text color};
+            }
+            .post-title,
+             .post-title > a {
+                  color: {color:Post title color};
+            }
+             
+            /*POST TAGS COLORS*/
+            .tags-s1 > a,
+             .tags-s2 > a,
+              .tags-s3 > a {
+                color: {color:Post tags text color};
+            }
+            .tags-s1 > a {
+                background-color: {color:Post tags background color};
+                border-color: {color:Post tags background color};
+            }
+            .tags-s1 > a:hover {
+                background-color: {color:Post tags text color};
+                border-color: {color:Post tags text color};
+                color: {color:Post tags background color};
+            }
+
+            /*FOOTER BACK AND TEXT COLOR*/
+            footer {
+                background-color: {color:Footer background color};
+                color: {color:Footer text color};
+            }
+            .categories > a {
+                color: {color:Footer text color};
+            }
+            .ft-label,
+             .tweet-text {
+                border-color: {color:Footer separators color};
+            }
+            /*FOOTER LINK COLOR*/
+            footer .typography a {
+                color: {color:Footer link color};
+            }
+            /*FOOTER BUTTONS BACKGROUND COLOR*/
+            .categories > a,
+             .social-links > a,
+              .br-next,
+               .br-previous {
+                background-color: {color:Footer buttons background color};
+            }
+            /*FOOTER BUTTONS TEXT COLOR*/
+            .categories > a,
+             .social-links > a,
+              .br-next,
+               .br-previous {
+                color: {color:Footer buttons text color};
+            }
+            /*FOOTER TWEETS LINKS COLOR*/
+            .tweet-text a {
+                color: {color:Footer tweets links color};
+            }
+            /*COPYRIGHT BACK AND TEXT COLOR*/
+            .copyright {
+                background-color: {color:Copyright background color};
+            }
+            .copyright,
+             .copyright a {
+                color: {color:Copyright text color};
+            }
+            .slider-overlay {
+                background-color: {color:Header mask color};
+                opacity: {text:Header mask opacity};
+            }
+            .border-text-1 > span,
+             .border-text-2 > span {
+                border-color: {color:Header text color};     
+            }
+            
+            @media all and (max-width: 648px) {
+                .caption-1 {
+                    font-size: 28px;
+                }
+                .caption-2 {
+                    font-size: 18px;
+                }
+            }
+
+            /*FIX1*/
+            .large.permalink-post {
+                width: 100% !important;
+            }
+            /*FIX2*/
+            .top-menu-wrap {
+                z-index: 32;
+            }
+            
+            
+            {CustomCSS}
+            
+        </style>
+        
+        {block:IfGoogleAnalyticsID}
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+          ga('create', '{text:Google analytics ID}', 'auto');
+          ga('send', 'pageview');
+        </script>
+        {/block:IfGoogleAnalyticsID}
+        
+    </head>
+    <body class="{select:Background pattern}">
+        <header id="top" {block:ShowHeaderImage}class="{select:Header style and height}"{/block:ShowHeaderImage}>
+            <div class="top-menu-wrap">
+                <div class="top-menu">
+                    <div class="full-row">
+                        <div class="top-bar">
+                            {block:ShowTitle}
+                            <h1 class="blog-name"><a href="{BlogURL}">{Title}</a></h1>
+                            {/block:ShowTitle}
+                        </div>
+                        <span class="menu-btn icon-menu menu-toggle"></span>
+                        <ul class="top-navigation hidden scrollable parent {block:IfNaviagtionLinksTextToUppercase} uppercase{/block:IfNaviagtionLinksTextToUppercase}">
+                            {block:IfMenuHomeLink}
+                            <li><a href="/">{lang:Home}</a></li>
+                            {/block:IfMenuHomeLink}
+                            {block:IfMenuShowPagesInDropdown}{block:HasPages}
+                            <li>
+                                <span class="menu-toggle">
+                                    {lang:Pages}
+                                    <span class="icon-arrow-right"></span>
+                                </span>
+                                <ul class="top-navigation-sl hidden nodelay">
+                                    {block:Pages}
+                                    <li><a href="{URL}">{Label}</a></li>
+                                    {/block:Pages}
+                                </ul>
+                            </li>
+                            {/block:HasPages}{/block:IfMenuShowPagesInDropdown}
+                            {block:IfNotMenuShowPagesInDropdown}{block:HasPages}
+                            {block:Pages}
+                            <li><a href="{URL}">{Label}</a></li>
+                            {/block:Pages}
+                            {/block:HasPages}{/block:IfNotMenuShowPagesInDropdown}
+                            {block:IfMenuCategoriesList}
+                            <li>
+                                <span class="menu-toggle">
+                                    {text:Categories label in menu}
+                                    <span class="icon-arrow-right"></span>
+                                </span>
+                                <ul class="top-navigation-sl top-menu-categories hidden nodelay">
+                                    {block:IfCategory1tag}<li><a href="/tagged/{text:Category 1 tag}">{text:Category 1 tag}</a></li>{block:IfCategory1tag}
+                                    {block:IfCategory2tag}<li><a href="/tagged/{text:Category 2 tag}">{text:Category 2 tag}</a></li>{block:IfCategory2tag}
+                                    {block:IfCategory3tag}<li><a href="/tagged/{text:Category 3 tag}">{text:Category 3 tag}</a></li>{block:IfCategory3tag}
+                                    {block:IfCategory4tag}<li><a href="/tagged/{text:Category 4 tag}">{text:Category 4 tag}</a></li>{block:IfCategory4tag}
+                                    {block:IfCategory5tag}<li><a href="/tagged/{text:Category 5 tag}">{text:Category 5 tag}</a></li>{block:IfCategory5tag}
+                                    {block:IfCategory6tag}<li><a href="/tagged/{text:Category 6 tag}">{text:Category 6 tag}</a></li>{block:IfCategory6tag}
+                                    {block:IfCategory7tag}<li><a href="/tagged/{text:Category 7 tag}">{text:Category 7 tag}</a></li>{block:IfCategory7tag}
+                                    {block:IfCategory8tag}<li><a href="/tagged/{text:Category 8 tag}">{text:Category 8 tag}</a></li>{block:IfCategory8tag}
+                                    {block:IfCategory9tag}<li><a href="/tagged/{text:Category 9 tag}">{text:Category 9 tag}</a></li>{block:IfCategory9tag}
+                                    {block:IfCategory10tag}<li><a href="/tagged/{text:Category 10 tag}">{text:Category 10 tag}</a></li>{block:IfCategory10tag}
+                                    {block:IfCategory11tag}<li><a href="/tagged/{text:Category 11 tag}">{text:Category 11 tag}</a></li>{block:IfCategory11tag}
+                                    {block:IfCategory12tag}<li><a href="/tagged/{text:Category 12 tag}">{text:Category 12 tag}</a></li>{block:IfCategory12tag}
+                                    {block:IfCategory13tag}<li><a href="/tagged/{text:Category 13 tag}">{text:Category 13 tag}</a></li>{block:IfCategory13tag}
+                                    {block:IfCategory14tag}<li><a href="/tagged/{text:Category 14 tag}">{text:Category 14 tag}</a></li>{block:IfCategory14tag}
+                                    {block:IfCategory15tag}<li><a href="/tagged/{text:Category 15 tag}">{text:Category 15 tag}</a></li>{block:IfCategory15tag}
+                                </ul>
+                            </li>
+                            {/block:IfMenuCategoriesList}
+                            {block:IfMenuAskLink}
+                            <li><a href="/ask">{AskLabel}</a></li>
+                            {/block:IfMenuAskLink}
+                            {block:IfMenuSubmitLink}
+                            <li><a href="/submit">{SubmitLabel}</a></li>
+                            {/block:IfMenuSubmitLink}
+                            {block:IfMenuRssLink}
+                            <li><a href="{RSS}">{lang:RSS}</a></li>
+                            {/block:IfMenuRssLink}
+                            {block:IfMenuRandomLink}
+                            <li><a href="/random">{lang:Random}</a></li>
+                            {/block:IfMenuRandomLink}
+                            {block:IfMenuArchiveLink}
+                            <li><a href="/archive">{lang:Archive}</a></li>
+                            {/block:IfMenuArchiveLink}
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+            {block:ShowHeaderImage}
+            <div class="header-wrap full-row">
+                <div class="header-image">
+                    <div class="elise-slider">
+                        <div class="slide active" style="background-image: url({HeaderImage})"></div>
+                        <div class="slide" style="background-image: url({image:Header image 2})"></div>
+                        <div class="slide" style="background-image: url({image:Header image 3})"></div>
+                        <div class="slide" style="background-image: url({image:Header image 4})"></div>
+                        <div class="slide" style="background-image: url({image:Header image 5})"></div>
+                        <div class="slider-overlay"></div>
+                        <div class="captions-wrap full-row">
+                            {block:IfHeaderCaption1Text}<div class="caption-1 {select:Header caption 1 style}"><span>{text:Header caption 1 text}</span></div>{/block:IfHeaderCaption1Text}
+                            {block:IfHeaderCaption2Text}<div class="caption-2 {select:Header caption 2 style}"><span>{text:Header caption 2 text}</span></div>{/block:IfHeaderCaption2Text}
+                            {block:IfHeaderCaption3Text}<div class="caption-3 {select:Header caption 3 style}"><span>{text:Header caption 3 text}</span></div>{/block:IfHeaderCaption3Text}
+                        </div>
+                    </div>    
+                </div>
+            </div>
+            {/block:ShowHeaderImage}
+        </header>
+        <section class="blog-content">
+            <section id="posts" class="posts {block:IndexPage}masonry{/block:IndexPage} {block:PermalinkPage}permalink-page {select:Single post width}{/block:PermalinkPage}">
+                {block:IfTopMessage}
+                <div class="top-message element page-info typography {block:PermalinkPage}disabled{/block:PermalinkPage}{block:TagPage}disabled{/block:TagPage}{block:SearchPage}disabled{/block:SearchPage}">
+                    <div class="{select:Post shadows}">{text:Top message}</div>
+                </div>
+                {/block:IfTopMessage}
+                {block:TagPage}
+                <div class="element page-info">
+                    <div class="{select:Post shadows}">{lang:Posts tagged Tag 2}</div>
+                </div>    
+                {/block:TagPage}
+                {block:SearchPage}
+                    <div class="element page-info">
+                        <div class="{select:Post shadows}">{lang:Search results for SearchQuery 2}</div>
+                        {block:NoSearchResults}
+                        <div class="no-results {select:Post shadows}"></div>
+                        {/block:NoSearchResults}
+                    </div>    
+                {/block:SearchPage}
+                {block:IndexPage}{block:IfShowAboutMePost}
+                <article class="first-post element {select:Post shadows} {block:TagPage}disabled{/block:TagPage}{block:SearchPage}disabled{/block:SearchPage}">
+                    <div class="post-wrapper">
+                        <div class="first-post-section">
+                            <a class="nivo-lb about-me-picture" href="{image:About blog image}"><img src="{image:About blog image}" alt="About blog image"></a>
+                        </div>
+                        <div class="first-post-section post-text typography">
+                            {Description}
+                        </div>
+                        {block:IfShowAboutMeSocialLinks}
+                        <div class="first-post-section about-social-links links-container">
+                            {block:IfFacebookURL}<a href="{text:Facebook URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-facebook"></i></a>{/block:IfFacebookURL}
+                            {block:IfTwitterURL}<a href="{text:Twitter URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-twitter"></i></a>{/block:IfTwitterURL}
+                            {block:IfGooglePlusURL}<a href="{text:Google Plus URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-google-plus"></i></a>{/block:IfGooglePlusURL}
+                            {block:IfDribbbleURL}<a href="{text:Dribbble URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-dribbble"></i></a>{/block:IfDribbbleURL}
+                            {block:IfInstagramURL}<a href="{text:Instagram URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-instagram"></i></a>{/block:IfInstagramURL}
+                            {block:IfFlickrURL}<a href="{text:Flickr URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-flickr"></i></a>{/block:IfFlickrURL}
+                            {block:IfYoutubeURL}<a href="{text:Youtube URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-youtube"></i></a>{/block:IfYoutubeURL}
+                            {block:IfVimeoURL}<a href="{text:Vimeo URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-vimeo"></i></a>{/block:IfVimeoURL}
+                            {block:IfDeviantArtURL}<a href="{text:DeviantArt URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-deviantart"></i></a>{/block:IfDeviantArtURL}
+                            {block:IfPinterestURL}<a href="{text:Pinterest URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-pinterest"></i></a>{/block:IfPinterestURL}
+                            {block:IfLinkedInURL}<a href="{text:LinkedIn URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-linkedin"></i></a>{/block:IfLinkedInURL}
+                            {block:IfBehanceURL}<a href="{text:Behance URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-behance"></i></a>{/block:IfBehanceURL}
+                            {block:IfGitHubURL}<a href="{text:GitHub URL} {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}"><i class="icon-github"></i></a>{/block:IfGitHubURL}
+                            {block:IfSpotifyURL}<a href="{text:Spotify URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-spotify"></i></a>{/block:IfSpotifyURL}
+                            {block:IfSoundCloudURL}<a href="{text:SoundCloud URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-soundcloud"></i></a>{/block:IfSoundCloudURL}
+                        </div>
+                        {/block:IfShowAboutMeSocialLinks}
+                        <ul class="navigation {block:IfNaviagtionLinksTextToUppercase} uppercase{/block:IfNaviagtionLinksTextToUppercase}">
+                            {block:IfMenuHomeLink}
+                            <li><a href="/">{lang:Home}</a></li>
+                            {/block:IfMenuHomeLink}
+                            {block:HasPages}
+                                {block:Pages}
+                                <li><a href="{URL}">{Label}</a></li>
+                                {/block:Pages}
+                            {/block:HasPages}
+                            {block:AskEnabled}
+                            <li><a href="/ask">{AskLabel}</a></li>
+                            {/block:AskEnabled}
+                            {block:SubmissionsEnabled}
+                            <li><a href="/submit">{SubmitLabel}</a></li>
+                            {/block:SubmissionsEnabled}
+                            {block:IfMenuRssLink}
+                            <li><a href="{RSS}">{lang:RSS}</a></li>
+                            {/block:IfMenuRssLink}
+                            {block:IfMenuRandomLink}
+                            <li><a href="/random">{lang:Random}</a></li>
+                            {/block:IfMenuRandomLink}
+                            {block:IfMenuArchiveLink}
+                            <li><a href="/archive">{lang:Archive}</a></li>
+                            {/block:IfMenuArchiveLink}
+                        </ul>
+                    </div>
+                </article>
+                {/block:IfShowAboutMePost}{/block:IndexPage}
+                {block:Posts inlineMediaWidth="800"}        
+                <article class="post element {select:Post shadows} {TagsAsClasses} {block:PermalinkPage}permalink-post{/block:PermalinkPage}
+                    {block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}
+                    {block:Panorama}panorama{/block:Panorama}{block:Photoset}photoset{/block:Photoset}
+                    {block:Quote}quote{/block:Quote}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}
+                    {block:Audio}audio{/block:Audio}{block:Video}video{/block:Video}{block:Answer}question{/block:Answer}">
+                    <div class="post-header {select:Post header style} {select:Post date format}">
+                        <div class="post-icon">
+                            <span class="icon-{block:Text}text{/block:Text}{block:Photo}picture{/block:Photo}{block:Panorama}picture{/block:Panorama}{block:Photoset}picture{/block:Photoset}{block:Quote}quotes{/block:Quote}{block:Link}permalink{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}music{/block:Audio}{block:Video}movie{/block:Video}{block:Answer}question{/block:Answer}"></span>
+                        </div>
+                        {block:Date}
+                        <span class="date-format date-format-1">{DayOfMonth} {Month}, {Year}</span>
+                        <span class="date-format date-format-2">{TimeAgo}</span>
+                        {/block:Date}
+                        <div class="post-counts">
+                            {block:IfShowPostNotesCount}
+                            <span class="notes-number">{NoteCount}</span>
+                            <span class="icon-heart icon"></span>
+                            {/block:IfShowPostNotesCount}
+                            {block:IfDisqusShortname}{block:IfShowPostCommentsCount}
+                            <span class="dsq-comment-count"><a href="{Permalink}#disqus_thread">0</a></span>
+                            <span class="icon-comment icon"></span>
+                            {/block:IfShowPostCommentsCount}{/block:IfDisqusShortname}
+                        </div>
+                    </div>
+
+                    <div class="post-wrapper">    
+                        {block:Text}
+                            {block:Title}
+                                <h3 class="post-title">
+                                    {block:IndexPage}
+                                    <a href="{Permalink}" {block:IfOpenPostsInNewTab}target="_blank"{/block:IfOpenPostsInNewTab}>
+                                    {/block:IndexPage}
+                                        {Title}
+                                    {block:IndexPage}
+                                    </a>
+                                    {/block:IndexPage}
+                                </h3>
+                            {/block:Title}
+                            <div class="post-text typography">{Body}</div>
+                        {/block:Text}
+                        
+                        {block:Photo}
+                            <a href="{PhotoURL-HighRes}" class="nivo-lb"><img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}"></a>
+                        {/block:Photo}
+                        
+                        {block:Panorama}
+                            <div class="panorama-image">
+                                {LinkOpenTag}<img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}">{LinkCloseTag}
+                            </div>
+                        {/block:Panorama}
+
+                        {block:Photoset}
+                            <div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">
+                            {block:Photos}
+                                 <img src="{PhotoURL-500}"
+                                    {block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}
+                                    width="{PhotoWidth-500}" height="{PhotoHeight-500}"
+                                    {block:Caption}alt="{Caption}"{/block:caption} />
+                            {/block:Photos}
+                            </div>
+                        {/block:Photoset}
+                        
+                        {block:Quote}
+                            <div class="quote-content {Length}">
+                                <blockquote>
+                                    {Quote}
+                                </blockquote>
+                            </div>
+                            {block:Source}
+                            <div class="source post-text typography">- {Source}</div>
+                            {/block:Source}
+                        {/block:Quote}
+                        
+                        {block:Link}
+                            <div class="link-content">
+                                <h3 class="link-title">{Name}</h3>
+                                <div class="link-host">{block:Host}{Host}{/block:Host}</div>
+                                <a class="link-target" href="{URL}">Visit this link >></a>
+                            </div>
+                            {block:Description} 
+                            <div class="post-text typography">
+                                {Description}
+                            </div>
+                            {/block:Description}
+                        {/block:Link}
+                        
+                        {block:Chat}
+                            {block:Title}
+                            <h3 class="post-title">{Title}</h3>
+                            {/block:Title}
+                            <ul class="chat-content">
+                                {block:Lines}
+                                    <li class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}{Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                        {/block:Chat}
+                        
+                        {block:Audio}
+                            {block:AudioEmbed}
+                                {block:IndexPage}<div class="audio-wrapper">{AudioEmbed-400}</div>{/block:IndexPage}
+                                {block:PermalinkPage}<div class="audio-wrapper">{AudioEmbed-640}</div>{/block:PermalinkPage}
+                            {/block:AudioEmbed}
+                        {/block:Audio}
+                        
+                        {block:Video}                        
+                            <div class="video-wrapper">
+                            {block:IndexPage}{Video-400}{/block:IndexPage}
+                            {block:PermalinkPage}{VideoEmbed-700}{/block:PermalinkPage}  
+                            </div>
+                        {/block:Video}
+                        
+                        {block:Answer}
+                            <div class="question-content">
+                                {Question}
+                                <div class="asked-by">
+                                    {lang:Asked by Asker 2}
+                                    <img src="{AskerPortraitURL-30}">
+                                </div>
+                            </div>
+                            {block:Answerer}
+                            <div class="first-answer typography">
+                                {Answerer}:
+                                <blockquote class="answerer-answer">
+                                    {Answer}
+                                </blockquote>
+                            </div>
+                            {/block:Answerer}
+                            <div class="replies typography">
+                                <span>{lang:Answer}</span>
+                                {Replies}
+                            </div>
+                        {/block:Answer}                        
+                        
+                        {block:Caption}
+                        <div class="post-caption post-text typography">{Caption}</div>
+                        {/block:Caption}    
+                        {block:HasTags}
+                        <div class="post-tags {select:Post tags style} {block:IndexPage}{block:IfNotShowTagsOnIndexPage}disabled{/block:IfNotShowTagsOnIndexPage}{/block:IndexPage}">
+                            {block:Tags}<a href="{TagURL}"><span class="icon-tag"></span><span>{Tag}</span></a>{/block:Tags}
+                        </div>
+                        {/block:HasTags}
+                        <div class="post-options">
+                            {block:IndexPage}
+                            <div><a href={Permalink} {block:IfOpenPostsInNewTab}target="_blank"{/block:IfOpenPostsInNewTab}>{text:View label}</a></div>
+                            {/block:IndexPage}
+                            <div class="like-button">
+                                {LikeButton}
+                                <div class="like-btn">{text:Like label}</div>
+                                <div class="unlike-btn">{text:Unlike label}</div>
+                            </div>
+                            <div><a href="{ReblogURL}">{text:Reblog label}</a></div>
+                            {block:IfShowShareOptions}
+                            <div class="share-button">{text:Share label}</div>
+                            {/block:IfShowShareOptions}
+                            {block:IfShowFacebookButton}
+                            <div class="share-option hidden" onClick="window.open('http://www.facebook.com/sharer/sharer.php?u={ShortURL}&t={URLEncodedTitle}', 'facebook_share', 'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');">
+                                Facebook
+                            </div>
+                            {/block:IfShowFacebookButton}
+                            {block:IfShowTwitterButton}
+                            <div class="share-option hidden" onClick="window.open('http://twitter.com/share?text={URLEncodedTitle}&url={ShortURL}', 'twitter_share', 'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');">
+                                Twitter
+                            </div>
+                            {/block:IfShowTwitterButton}
+                            {block:IfShowGooglePlusButton}
+                            <div class="share-option hidden" onClick="window.open('https://plus.google.com/share?url={ShortURL}', 'google_plus_share', 'height=320, width=500, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');">
+                                Google +
+                            </div>
+                            {/block:IfShowGooglePlusButton}
+                        </div>
+                    </div>
+                </article>
+                
+                {/block:Posts}
+                
+                {block:PermalinkPagination} 
+                <div class="permalink-navigation element">
+                    {block:NextPost}
+                        <a href="{NextPost}" class="next button">{lang:Previous post}</a>
+                    {/block:NextPost}
+                        <a href="/" class="button">{lang:Home}</a>
+                    {block:PreviousPost}
+                        <a href="{PreviousPost}" class="previous button">{lang:Next post}</a>
+                    {/block:PreviousPost}
+                </div>    
+                {/block:PermalinkPagination}
+
+            </section>
+            {block:PermalinkPage}
+            <div class="post-bottom-info full-row {select:Single post width}">
+                {block:IfDisqusShortname}
+                <div id="disqus_thread" class="disqus {select:Post shadows}"></div>
+                <script type="text/javascript">
+                    var disqus_shortname = '{text:Disqus Shortname}';
+                    (function() {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">{lang:Blog comments powered by Disqus}</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                {/block:IfDisqusShortname}
+                {block:PostNotes} 
+                    <div class="post-notes {select:Post shadows}">{PostNotes-16}</div>
+                {/block:PostNotes}
+            </div>    
+            {/block:PermalinkPage}
+            {block:IndexPage}
+            <div id="more-posts" class="more-posts button">{lang:Load more posts}</div>
+            {/block:IndexPage}
+            <a href="#top" class="top-button" id="top-button"><span class="icon-arrow-up"></span></a>
+        </section>
+        <footer>
+            <div id="ft-con" class="ft-con 
+                {block:IfShowFooterTwitterWidget} widget{/block:IfShowFooterTwitterWidget}
+                {block:IfShowFooterTextWidget1} widget{/block:IfShowFooterTextWidget1}
+                {block:IfShowFooterTextWidget2} widget{/block:IfShowFooterTextWidget2}
+                {block:IfShowFooterFollowingWidget} widget{/block:IfShowFooterFollowingWidget}
+                {block:IfFlickrUsername} widget{/block:IfFlickrUsername}
+                {block:IfInstagramUsername} widget{/block:IfInstagramUsername}
+                {block:IfDribbbleUsername} widget{/block:IfDribbbleUsername}
+                {block:IfShowFooterSocialLinksWidget} widget{/block:IfShowFooterSocialLinksWidget}
+                {block:IfShowFooterTagsWidget} widget{/block:IfShowFooterTagsWidget}
+                {block:IfShowFooterSearchWidget} widget{/block:IfShowFooterSearchWidget}">
+                
+                {block:IfShowFooterTextWidget1}
+                <div class="ft-section text-widget">
+                    <div class="ft-label">
+                        <span>{text:Footer text widget 1 label}</span>
+                    </div>
+                    <div class="text-widget post-text typography">
+                        {text:Footer text widget 1 content}
+                    </div>    
+                </div>
+                {/block:IfShowFooterTextWidget1}
+                
+                {block:IfShowFooterTwitterWidget}{block:Twitter}
+                <div class="ft-section twitter-feed" id="twitter-feed">
+                    <div class="ft-label">
+                        <span>{text:Twitter feed label}</span>
+                    </div>
+                    <div id="tweets" class="tweets"></div>
+                </div>    
+                <script type="text/javascript">
+                    function recent_tweets(data) {
+                        String.prototype.parseURL = function() {
+                            return this.replace(/[A-Za-z]+:\/\/[A-Za-z0-9-_]+\.[A-Za-z0-9-_:%&\?\/.=]+/g, function(url) {
+                                return url.link(url);
+                            });
+                        };
+                        String.prototype.parseUsername = function() {
+                            return this.replace(/[@]+[A-Za-z0-9-_]+/g, function(u) {
+                            var username = u.replace("@","")
+                                return u.link("http://twitter.com/" + username);
+                            });
+                        };
+                        String.prototype.parseHashtag = function() {
+                            return this.replace(/[#]+[A-Za-z0-9-_]+/g, function(t) {
+                            var tag = t.replace("#","%23")
+                                return t.link("https://twitter.com/hashtag/" + tag + "?src=hash");
+                            });
+                        }; 
+                        for (i=0; i<{text:Twitter feed limit}; i++) {
+                            document.getElementById("tweets").innerHTML =
+                                document.getElementById("tweets").innerHTML +
+                                '<div class="tweet"><i class="icon-twitter"></i><div class="tweet-date" data-livestamp="' + data[i].created_at + '"></div><div class="tweet-text">' + data[i].text.parseURL().parseUsername().parseHashtag() + '</div></div>';
+                        }
+                    }
+                </script>
+                {/block:Twitter}{block:IfShowFooterTwitterWidget}
+                {block:IfShowFooterTextWidget2}
+                <div class="ft-section text-widget">
+                    <div class="ft-label">
+                        <span>{text:Footer text widget 2 label}</span>
+                    </div>
+                    <div class="text-widget post-text typography">
+                        {text:Footer text widget 2 content}
+                    </div>
+                </div>
+                {/block:IfShowFooterTextWidget2}
+                {block:IfShowFooterFollowingWidget}
+                <div class="ft-section blogroll">
+                    <div class="ft-label">
+                        <span>{text:Following widget label}</span>
+                    </div>
+                    {block:Following}
+                    <div id="blogroll" class="blogroll-wrap">
+                        <ul class=blogroll-list>
+                            {block:Followed}
+                            <li class="blogroll-item">
+                                <a href="{FollowedURL}"><img src="{FollowedPortraitURL-96}"/>
+                                    <div class="blogroll-item-info">
+                                        <div class="br-name">{FollowedName}</div>
+                                        <div class="br-title">{FollowedTitle}</div>
+                                    </div>
+                                </a>
+                            </li>
+                            {/block:Followed}
+                        </ul>
+                        <div class="blogroll-nav">
+                            <div class="br-previous"> << </div>
+                            <div class="br-next"> >> </div>
+                        </div>
+                    </div>
+                    {/block:Following}
+                </div>
+                {/block:IfShowFooterFollowingWidget}
+                {block:IfFlickrUsername}
+                <div id="flickr-feed" class="ft-section social-feed flickr-feed">
+                    <div class="ft-label">
+                        <span>{text:Flickr feed label}</span>
+                    </div>
+                </div>
+                {/block:IfFlickrUsername}
+                {block:IfInstagramAccessToken}
+                <div id="dribbble-feed" class="ft-section social-feed instagram-feed">
+                    <div class="ft-label">
+                        <span>{text:Instagram feed label}</span>
+                    </div>
+                </div>
+                {/block:IfInstagramAccessToken}
+                {block:IfShowFooterSocialLinksWidget}
+                <div class="ft-section social-links links-container">
+                    <div class="ft-label">
+                        <span>{text:Social links label}</span>
+                    </div>
+                    {block:IfFacebookURL}<a href="{text:Facebook URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-facebook"></i><span>Facebook</span></a>{/block:IfFacebookURL}
+                    {block:IfTwitterURL}<a href="{text:Twitter URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-twitter"></i><span>Twitter</span></a>{/block:IfTwitterURL}
+                    {block:IfGooglePlusURL}<a href="{text:Google Plus URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-google-plus"></i><span>Google+</span></a>{/block:IfGooglePlusURL}
+                    {block:IfDribbbleURL}<a href="{text:Dribbble URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-dribbble"></i><span>Dribbble</span></a>{/block:IfDribbbleURL}
+                    {block:IfInstagramURL}<a href="{text:Instagram URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-instagram"></i><span>Instagram</span></a>{/block:IfInstagramURL}
+                    {block:IfFlickrURL}<a href="{text:Flickr URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-flickr"></i><span>Flickr</span></a>{/block:IfFlickrURL}
+                    {block:IfYoutubeURL}<a href="{text:Youtube URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-youtube"></i><span>YouTube</span></a>{/block:IfYoutubeURL}
+                    {block:IfVimeoURL}<a href="{text:Vimeo URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-vimeo"></i><span>Vimeo</span></a>{/block:IfVimeoURL}
+                    {block:IfDeviantArtURL}<a href="{text:DeviantArt URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-deviantart"></i><span>DeviantArt</span></a>{/block:IfDeviantArtURL}
+                    {block:IfPinterestURL}<a href="{text:Pinterest URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-pinterest"></i><span>Pinterest</span></a>{/block:IfPinterestURL}
+                    {block:IfLinkedInURL}<a href="{text:LinkedIn URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-linkedin"></i><span>LinkedIn</span></a>{/block:IfLinkedInURL}
+                    {block:IfBehanceURL}<a href="{text:Behance URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-behance"></i><span>Behance</span></a>{/block:IfBehanceURL}
+                    {block:IfGitHubURL}<a href="{text:GitHub URL} {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}"><i class="icon-github"></i><span>GitHub</span></a>{/block:IfGitHubURL}
+                    {block:IfSpotifyURL}<a href="{text:Spotify URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-spotify"></i><span>Spotify</span></a>{/block:IfSpotifyURL}
+                    {block:IfSoundCloudURL}<a href="{text:SoundCloud URL}" {block:IfOpenSocialLinksInNewTab}target="_blank"{/block:IfOpenSocialLinksInNewTab}><i class="icon-soundcloud"></i><span>SoundCloud</span></a>{/block:IfSoundCloudURL}
+                </div>
+                {/block:IfShowFooterSocialLinksWidget}
+                {block:IfShowFooterTagsWidget}
+                <div class="ft-section categories">
+                    <div class="ft-label">
+                        <span>{text:Categories label in footer}</span>
+                    </div>
+                    {block:IfCategory1tag}<a href="/tagged/{text:Category 1 tag}">{text:Category 1 tag}</a>{block:IfCategory1tag}
+                    {block:IfCategory2tag}<a href="/tagged/{text:Category 2 tag}">{text:Category 2 tag}</a>{block:IfCategory2tag}
+                    {block:IfCategory3tag}<a href="/tagged/{text:Category 3 tag}">{text:Category 3 tag}</a>{block:IfCategory3tag}
+                    {block:IfCategory4tag}<a href="/tagged/{text:Category 4 tag}">{text:Category 4 tag}</a>{block:IfCategory4tag}
+                    {block:IfCategory5tag}<a href="/tagged/{text:Category 5 tag}">{text:Category 5 tag}</a>{block:IfCategory5tag}
+                    {block:IfCategory6tag}<a href="/tagged/{text:Category 6 tag}">{text:Category 6 tag}</a>{block:IfCategory6tag}
+                    {block:IfCategory7tag}<a href="/tagged/{text:Category 7 tag}">{text:Category 7 tag}</a>{block:IfCategory7tag}
+                    {block:IfCategory8tag}<a href="/tagged/{text:Category 8 tag}">{text:Category 8 tag}</a>{block:IfCategory8tag}
+                    {block:IfCategory9tag}<a href="/tagged/{text:Category 9 tag}">{text:Category 9 tag}</a>{block:IfCategory9tag}
+                    {block:IfCategory10tag}<a href="/tagged/{text:Category 10 tag}">{text:Category 10 tag}</a>{block:IfCategory10tag}
+                    {block:IfCategory11tag}<a href="/tagged/{text:Category 11 tag}">{text:Category 11 tag}</a>{block:IfCategory11tag}
+                    {block:IfCategory12tag}<a href="/tagged/{text:Category 12 tag}">{text:Category 12 tag}</a>{block:IfCategory12tag}
+                    {block:IfCategory13tag}<a href="/tagged/{text:Category 13 tag}">{text:Category 13 tag}</a>{block:IfCategory13tag}
+                    {block:IfCategory14tag}<a href="/tagged/{text:Category 14 tag}">{text:Category 14 tag}</a>{block:IfCategory14tag}
+                    {block:IfCategory15tag}<a href="/tagged/{text:Category 15 tag}">{text:Category 15 tag}</a>{block:IfCategory15tag}
+                </div>
+                {/block:IfShowFooterTagsWidget}
+                {block:IfShowFooterSearchWidget}
+                <div class="ft-section search">
+                    <div class="ft-label">
+                        <span>{text:Search label}</span>
+                    </div>
+                    <form action="/search" method="get">
+                        <input type="text" name="q" value="{SearchQuery}" placeholder="{text:Search box text}"/>
+                    </form>
+                </div>
+                {/block:IfShowFooterSearchWidget}
+            </div>    
+            <div class="copyright">
+                <div class="full-row">
+                    <span>&copy; {Title} {CopyrightYears} | THEME <a href="https://esten-theme.tumblr.com/">ESTEN</a></span>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/fA9n7ywrj/masonry.pkgd.min.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/Dlmoaejg1/moment.min.js"></script>      
+        <script src="https://static.tumblr.com/8wlin78/Q0rncaorg/livestamp.min.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/zpjncaoom/jquery.photoset-grid.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/O1Inimeia/socialstream.jquery.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/C5Wno0utj/imagesloaded.pkgd.min.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/Ll4ncaot0/nivo-lightbox.min.js"></script>
+        <script src="https://static.tumblr.com/8wlin78/Xn7oacp7q/estentheme.min.js"></script>      
+        
+        <script>
+            $(document).ready(function(){
+                /*Theme script init*/
+                $(document).estentheme({
+                   disqusID: '{text:Disqus Shortname}',
+                   sliderDelay: '{text:Header image rotation delay}'
+                });
+                /*Masonry init */
+                var container = document.querySelector('#posts');
+                msnry = new Masonry( container, {
+                    transitionDuration: 0,
+                    itemSelector: '.element',
+                    columnWidth: 324,
+                });
+                var ftcontainer = document.querySelector('#ft-con');
+                ftmsnry = new Masonry( ftcontainer, {
+                    transitionDuration: 0,
+                    itemSelector: '.ft-section',
+                    columnWidth: container.querySelector('.ft-section'),
+                });
+                /*Aspect ratio resize*/
+                setAspect = function() {
+                    var iframes = $('.typography iframe, .video-wrapper iframe, .video-wrapper video, .audio-wrapper iframe');
+                    for (var i = 0; i < iframes.length; i++) {
+                        var ci = $(iframes[i]),
+                            ciW = ci.attr('width'),
+                            ciH = ci.attr('height'),
+                            aspect = ciH / ciW,
+                            parentW = ci.parent().width();
+                        ci.css({"width": parentW, "height": parentW * aspect});
+                    }   
+                }
+                setAspect();
+                $(window).resize(function() {
+                    setAspect();
+                    msnry.layout();
+                    ftmsnry.layout();
+                });
+                
+                // Masonry layout
+                setInterval(function() {
+                    msnry.layout();
+                }, 2000);
+
+                
+                var footerFeeds = $('.social-feed');
+                if (footerFeeds.length) {
+                    setInterval(function() {
+                        ftmsnry.layout();
+                    }, 5000);
+                }
+                
+                scLoad = function() {
+                    var images = $('figure img');
+                    for (var j = 0; j < images.length; j++) {
+                        var i = $(images[j]),
+                            iSrc = i.attr('src');
+                        if (!i.is('.wraped')) {
+                            i.wrap('<a href="' + iSrc + '" class="nivo-lb" />');
+                            i.addClass('wraped');
+                       }
+                    }
+                    $('a.nivo-lb').nivoLightbox({
+                        effect: 'fadeScale'
+                    });
+                    var photosets = $('.photoset-grid');
+                    imagesLoaded(photosets, function() {
+                        photosets.photosetGrid({
+                            highresLinks: true,
+                            gutter: '3px',
+                            
+                            onComplete: function(){
+                                var photosets = $('.photoset-grid');
+                                for (var i = 0; i < photosets.length; i++) {
+                                    var curSet = $(photosets[i]),
+                                        pictures = curSet.find('a'),
+                                        photosetID = curSet.attr('data-id');
+                                    pictures.attr('data-lightbox-gallery', photosetID)
+                                    .nivoLightbox({
+                                        effect: 'fadeScale'
+                                    });
+                                }
+                            }
+                        });
+                        msnry.layout();
+                    });
+                    var images = $('img');
+                    imagesLoaded(images, function() {
+                        msnry.layout();
+                    });
+                    setAspect();
+                }    
+                scLoad();
+
+                /*Instagram Feed*/
+                {block:IfInstagramAccessToken}
+                var InstaToken = '{text:Instagram access token}',     
+                    InstaImageLimit = '{text:instagram image limit}',
+                    InstaFeed = $('.instagram-feed'),
+                    InstaFeedUl = $('<ul/>').addClass('instagram-list').appendTo(InstaFeed);
+                $.ajax({
+                    url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=' + InstaToken,
+                    dataType: 'jsonp'
+                })
+                    .done(function (r) {
+                        $.each(r.data, function (i, item) {
+                            if (i < InstaImageLimit) {
+                                var imgCap = item.caption,
+                                    imgAlt = '';
+                                if (imgCap) {
+                                    imgAlt = item.caption.text;
+                                }
+                                $('<img/>').attr({
+                                    alt: imgAlt,
+                                    src: item.images.thumbnail.url
+                                })
+                                    .appendTo(InstaFeedUl).wrap('<li><a href="' + item.link + '" title="' + imgAlt + '"></a></li>');
+                            }
+                        })
+                    })
+                {/block:IfInstagramAccessToken}
+                /*Flickr Feed*/
+                {block:IfFlickrUsername}
+                $('.flickr-feed').socialstream({
+                    socialnetwork: 'flickr',
+                    limit: {text:Flickr image limit},
+                    username: '{text:Flickr username}'
+                });
+                {/block:IfFlickrUsername}
+                
+            });
+        </script>
+        
+        {block:IfShowFooterTwitterWidget}{block:Twitter}
+            <script type="text/javascript" src="/tweets.js"></script>
+        {/block:Twitter}{/block:IfShowFooterTwitterWidget}
+        
+        {block:IfDisqusShortname}{block:IfShowPostCommentsCount}
+        <script type="text/javascript">
+            var disqus_shortname = '{text:Disqus Shortname}';        
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+        {/block:IfShowPostCommentsCount}{/block:IfDisqusShortname}
+        
+    </body>
+</html>
