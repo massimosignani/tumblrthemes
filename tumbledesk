@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="{Favicon}"/>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<title>{block:SearchPage}Search results for "{SearchQuery}" - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+<style type="text/css">
+#bottom{background:url(http://static.tumblr.com/ro5gmuq/0z7kkulls/footer2.png) no-repeat;height:154px;margin-left:6px;width:556px;}
+#bottom p{clear:both;padding-top:110px;text-align:center;}
+#bottom p span{font-size:8px;}
+#bottomwrap{margin:0 auto;width:550px;}
+#header{height:295px;position:relative;}
+#header-container{margin:auto;padding:0;width:750px;}
+#headerright{background:url(http://static.tumblr.com/ro5gmuq/lV2kkulmb/righthead.png) no-repeat;float:left;height:295px;margin-left:-55px;width:534px;}
+#logo{background:url(http://static.tumblr.com/ro5gmuq/Qy5kkuln2/logo.png) no-repeat;float:left;height:170px;margin-left:-37px;width:304px;}
+#logo h2{color:#fff;font:Arial, sans-serif;font-size:30px;margin:70px 0 0 60px;width:280px;}
+#logo p{color:#fff;margin-left:15px;text-align:center;}
+#main-blog{padding:15px 10px 0;width:400px;margin:0px auto;}
+#main-blog h1{font-family:Georgia, "Times New Roman", Times, serif;font-size:28px;font-weight:400;line-height:normal;padding-bottom:2px;}
+#main-blog h1 a,#main-blog h1 a:visited,#main-blog h1 a:active{border-bottom:1px solid #b2b0a4;color:#4a4131;text-decoration:none;}
+#main-blog h1 a:hover{border-bottom:1px solid #d21750;color:#d21750;text-decoration:none;}
+#maintop{margin:0 auto;position:relative;width:550px;}
+#maintopimg{background:url(http://static.tumblr.com/ro5gmuq/nudkkulnq/maintoppart.png);height:113px;padding:0;position:relative;}
+#mainwrap{margin:0 auto;width:550px;}
+#menu{height:55px;left:20px;margin:0;padding:0;position:absolute;text-transform:uppercase;top:248px;}
+#menu a,#menu a:hover{border:medium none;display:block;text-decoration:none;}
+#menu a,#menu a:visited{color:#332613;display:block;font-weight:700;padding:10px 12px;}
+#menu a:hover,#menu a:active{color:#D21750;text-decoration:none;}
+#menu li{background:transparent url(http://static.tumblr.com/ro5gmuq/xuJkkuloi/menu_button2.png) repeat scroll 0 0;float:left;height:61px;list-style-image:none;list-style-position:outside;list-style-type:none;margin-left:2px;margin-right:2px;text-align:center;width:99px;}
+#menu,#menu ul{line-height:3.5;list-style-image:none;list-style-position:outside;list-style-type:none;}
+#wrapper{background-image:url(http://static.tumblr.com/ro5gmuq/rNzkkulp5/mainmidpart.png);background-repeat:repeat-y;margin:0 auto;position:relative;width:550px;}
+*{margin:0;padding:0;}
+.clear{clear:both;height:5px;position:relative;}
+.single-meta{border-bottom:1px dashed;font-family:Georgia, "Times New Roman", Times, serif;font-size:16px;margin-right:10px;margin-top:0;text-align:right;}
+a:hover{text-decoration:underline;}
+a:link,a:visited,a:active,.post-comments a:hover,.widget ul li a{color:#d21750;text-decoration:none;}
+body{background:#ae8858 url(http://static.tumblr.com/ro5gmuq/JqDkkulpq/bg.jpg) repeat top center;color:#635537;font-family:"Lucida Grande", "Lucida Sans Unicode", sans-serif;font-size:12px;line-height:21px;margin:0;padding:0;}
+form.ddfm .credits{display:none;}
+h1{font-family:Georgia, "Times New Roman", Times, serif;font-size:25px;font-weight:400;line-height:normal;padding-bottom:2px;}
+h2{font-family:Georgia, "Times New Roman", Times, serif;font-size:20px;font-weight:400;line-height:normal;padding-bottom:11px;padding-top:15px;}
+h3{font-family:Georgia, "Times New Roman", Times, serif;font-size:17px;font-weight:400;line-height:normal;padding-bottom:10px;padding-top:14px;}
+p img{max-width:100%;padding:0;margin-top:10px;}
+.post ul{margin-left:35px;}
+.post{margin-bottom:30px;margin-top:20px;border-bottom:1px solid #BFB8A7;padding-bottom:30px;padding-top:20px;}
+.post p{margin:0;padding:0 0 10px;}
+.quote .source, .photo .caption { text-align:right;}
+.quote blockquote { font-size:2em; font-family:Georgia, "Times New Roman", Times, serif; }
+.link a { font-size:1.75em;}
+.conversation ul {list-style-type:none;margin-left:0px;}
+.conversation ul li {border:1px #DFD7C3 solid;border-left:0px;border-right:0px; }
+.conversation ul li.odd span.label { color: #785537;font-style: italic;font-weight:bold;}
+.conversation ul li.even span.label {color: #4F3722;font-style: italic;font-weight:bold;}
+.regular .timeago {font-size:0.8em;}
+.regular blockquote { margin-bottom:10px; font-size:1.5em; font-family:Georgia, "Times New Roman", Times, serif;}
+{CustomCSS}
+</style>
+<!--[if IE 6]>
+<style type="text/css">
+#menu{background:url(http://static.tumblr.com/ro5gmuq/QtTkkulqo/menu2ie.png) repeat-x;}
+#menu a:hover span{display:none;}
+#wrapper{background-image:url(http://static.tumblr.com/ro5gmuq/rNzkkulp5/mainmidpart.png));background-repeat:repeat-y;margin:0 auto 0 6px;position:relative;width:750px;}
+.cgravatar{border:0;float:left;height:60px;width:60px;}
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="mainwrap">
+<div id="header-container">
+
+	<div id="header">  <!-- Header -->
+
+		<div id="logo">
+			<h2>{Title}</h2>
+			        {block:Description}
+			        <p>{Description}</p>
+			        {/block:Description}
+		</div>
+		<div id="headerright"></div>
+
+<ul id="menu">
+  <li><a href="/">Home</a></li>
+  <li><a href="/archive" title="About">Archives</a></li>
+  <li><a href="/random" title="About">Random</a></li>
+  <li><a href="{RSS}" title="About">RSS</a></li>
+</ul>
+
+
+
+	</div> <!-- END Header -->
+	</div>
+<div id="maintop">
+<div id="maintopimg"></div>
+
+</div><!--end maintop-->
+
+<div id="wrapper">
+
+
+
+<div id="content">
+	<div id="main-blog">			
+
+        {block:posts}	
+			{block:NewDayDate}
+				<p class="single-meta">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</p>
+            {/block:NewDayDate}
+                            {block:Regular}
+                    <div class="post regular">
+                        {block:Title}
+                            <h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                        <div class="timeago">posted {TimeAgo}</div>
+                        <div class="body">{Body}</div>
+                    </div>
+                {/block:Regular}
+                
+                {block:Photo}
+                    <div class="post photo {TagsAsClasses}">
+                        {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
+                        {block:Caption}
+                            <div class="caption">{Caption}<br></div>
+                        {/block:Caption}
+                    </div>
+                {/block:Photo}
+                
+                {block:Quote}
+                    <div class="post quote">
+                        <blockquote>
+                        	{Quote}
+                        </blockquote>
+                        {block:Source}<div class="source">- {Source}</div>{/block:Source}
+                    </div>
+                {/block:Quote}
+                
+                {block:Link}
+                    <div class="post link">
+                        <a href="{URL}" class="link" {Target}>&#187; {Name}</a>
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </div>
+                {/block:Link}
+                
+                {block:Conversation}
+                    <div class="post conversation">
+                        {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+                        <ul>
+                            {block:Lines}
+                                <li class="{Alt}">
+                                    {block:Label}<span class="label">{Label}</span>{/block:Label}
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </div>
+                {/block:Conversation}
+                
+                {block:Audio}
+                    <div class="post audio">
+                        {AudioPlayerWhite}<br>
+                        {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+                    </div>
+                {/block:Audio}
+                
+                {block:Video}
+                    <div class="post video">
+                        {Video-400}
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div>
+                {/block:Video}
+        {/block:posts}
+
+							<div class="clear">&nbsp;</div>
+			
+
+{block:Pagination}
+<div id="navigate">
+
+            {block:PreviousPage}<a href="{PreviousPage}">Previous</a>{/block:PreviousPage}
+
+            {block:NextPage}<a href="{NextPage}">Next</a>{/block:NextPage}
+
+</div>
+{/block:Pagination}
+		
+	</div><!--end main blog-->
+
+
+<div class="clear"></div>
+
+
+
+</div><!--end content-->
+
+
+</div><!--end wrapper-->
+<div id="bottomwrap">
+<div id="bottom">
+
+<p>Copyright &copy; 2009 <strong>{Title}</strong> All rights reserved.<br />
+<span>TumbleDesk Theme by <a href="http://dave.id.au" target="_blank">Dave</a> &amp; <a href="http://www.geekwithlaptop.com/projects/desk-mess-wordpress-theme/" target="_blank">Laptop Geek.</a></span>
+</p>
+</div>
+</div>
+</div>
+</body>
+
+</html>
