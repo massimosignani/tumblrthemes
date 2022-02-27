@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!--
+
+    Revolve | Zen Themes
+ 
+    Release Date: May 20th, 2014
+    Last Update: Apr 14th, 2016
+
+-->
+
+<title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+ 
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="{Favicon}">
+
+{block:hidden}
+<meta name="image:Background" content=""/>
+<meta name="image:Cover" content=""/>
+<meta name="image:logo" content=""/>
+
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Main Background" content="#111111"/>
+<meta name="color:Main Title" content="#ffffff"/>
+<meta name="color:Main Title Hover" content="#cccccc"/>
+<meta name="color:Main Text" content="#eeeeee"/>
+<meta name="color:Main Links" content="#ffffff"/>
+<meta name="color:Main Links Border" content="#dddddd"/>
+<meta name="color:Main Overlay" content="#000000"/>
+<meta name="color:Post Background" content="#eeeeee"/>
+<meta name="color:Post Text" content="#777777"/>
+<meta name="color:Post Title" content="#555555"/>
+<meta name="color:Post Links" content="#555555"/>
+<meta name="color:Post Links Hover" content="#000000"/>
+<meta name="color:Post Information" content="#888888"/>
+<meta name="color:Post Information Hover" content="#333333"/>
+<meta name="color:Photo Overlay Text" content="#ffffff"/>
+<meta name="color:Photo Overlay Gradient Top" content="#000000"/>
+<meta name="color:Photo Overlay Gradient Bottom" content="#ffffff"/>
+
+<meta name="select:Layout" content="l-h" title="Header"/><meta name="select:Layout" content="l-s" title="Sidebar"/><meta name="select:Sidebar Position" content="p-l" title="Left"/><meta name="select:Sidebar Position" content="p-r" title="Right"/><meta name="select:Title Font" content="Montserrat" title="Montserrat"/><meta name="select:Title Font" content="Arial" title="Arial"/><meta name="select:Title Font" content="Abel" title="Abel"/><meta name="select:Title Font" content="courier new" title="Courier"/><meta name="select:Title Font" content="Domine" title="Domine"/><meta name="select:Title Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Title Font" content="Georgia" title="Georgia"/><meta name="select:Title Font" content="Helvetica" title="Helvetica"/><meta name="select:Title Font" content="Helvetica Neue" title="Helvetica Neue"/><meta name="select:Title Font" content="Karla" Title="Karla"/><meta name="select:Title Font" content="Lato" title="Lato"/><meta name="select:Title Font" content="Mako" title="Mako"/><meta name="select:Title Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Title Font" content="PT Mono" title="PT Mono"/><meta name="select:Title Font" content="Raleway" title="Raleway"/><meta name="select:Title Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Title Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Title Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Title Font" content="Source Sans Pro" title="Source Sans Pro"/><meta name="select:Title Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Body Font" content="Helvetica Neue" title="Helvetica Neue"/><meta name="select:Body Font" content="Arial" title="Arial"/><meta name="select:Body Font" content="Abel" title="Abel"/><meta name="select:Body Font" content="courier new" title="Courier"/><meta name="select:Body Font" content="Domine" title="Domine"/><meta name="select:Body Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Body Font" content="Georgia" title="Georgia"/><meta name="select:Body Font" content="Helvetica" title="Helvetica"/><meta name="select:Body Font" content="Karla" Title="Karla"/><meta name="select:Body Font" content="Lato" title="Lato"/><meta name="select:Body Font" content="Mako" title="Mako"/><meta name="select:Body Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Body Font" content="PT Mono" title="PT Mono"/><meta name="select:Body Font" content="Raleway" title="Raleway"/><meta name="select:Body Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Body Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Body Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Body Font" content="Source Sans Pro" title="Source Sans Pro"/><meta name="select:Body Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Post Size" content="ps" title="Default"/><meta name="select:Post Size" content="ps-1" title="180px"/><meta name="select:Post Size" content="ps-2" title="230px"/><meta name="select:Post Size" content="ps-3" title="280px"/><meta name="select:Post Size" content="ps-4" title="330px"/><meta name="select:Post Size" content="ps-5" title="380px"/><meta name="select:Post Margin" content="pm" title="Default"/><meta name="select:Post Margin" content="pm-1" title="10px"/><meta name="select:Post Margin" content="pm-2" title="20px"/><meta name="select:Post Margin" content="pm-3" title="30px"/><meta name="select:Post Margin" content="pm-4" title="40px"/><meta name="select:Post Margin" content="pm-5" title="50px"/>
+
+<meta name="if:Infinite Scrolling" content="1"/>
+<meta name="if:Main cover" content="1"/>
+<meta name="if:Large Blog Title" content="1"/>
+<meta name="if:Navigation Link Decoration" content="1"/>
+<meta name="if:Uppercase Blog Title" content="1"/>
+<meta name="if:Uppercase Navigation Links" content="1"/>
+<meta name="if:Show Archive Link" content="1"/>
+<meta name="if:Show Random Link" content="1"/>
+<meta name="if:Show RSS Link" content="1"/>
+<meta name="if:Show Credit" content="1"/>
+<meta name="if:Hide Description" content="0"/>
+<meta name="if:Hide Post Notes" content="0"/>
+<meta name="if:Post Rounded" content="0"/>
+<meta name="if:Hover Gradient" content="1"/>
+<meta name="if:Hover Style 1" content="1"/>
+<meta name="if:Hover Style 2" content="0"/>
+<meta name="if:Hover Style 3" content="0"/>
+
+<meta name="text:Cover Overlay Transparency" content="70"/>
+<meta name="text:Photo Overlay Transparency" content="70"/>
+<meta name="text:Ask Link Title" content="Ask"/>
+<meta name="text:Submit Link Title" content="Submit"/>
+<meta name="text:Archive Link Title" content="Archive"/>
+<meta name="text:Custom Link 1" content=""/>
+<meta name="text:Custom Link 1 Title" content=""/>
+<meta name="text:Custom Link 2" content=""/>
+<meta name="text:Custom Link 2 Title" content=""/>
+<meta name="text:Custom Link 3" content=""/>
+<meta name="text:Custom Link 3 Title" content=""/>
+<meta name="text:Custom Link 4" content=""/>
+<meta name="text:Custom Link 4 Title" content=""/>
+<meta name="text:Custom Link 5" content=""/>
+<meta name="text:Custom Link 5 Title" content=""/>
+<meta name="text:URL Flickr" content=""/>
+<meta name="text:URL Vimeo" content=""/>
+<meta name="text:URL Twitter" content=""/>
+<meta name="text:URL Facebook" content=""/>
+<meta name="text:URL Google Plus" content=""/>
+<meta name="text:URL Pinterest" content=""/>
+<meta name="text:URL Dribbble" content=""/>
+<meta name="text:URL Spotify" content=""/>
+<meta name="text:URL Instagram" content=""/>
+<meta name="text:URL Soundcloud" content=""/>
+<meta name="text:URL Behance" content=""/>
+<meta name="text:URL Linkedin" content=""/>
+<meta name="text:URL Stumbleupon" content=""/>
+<meta name="text:URL Github" content=""/>
+<meta name="text:URL Youtube" content=""/>
+{/block:hidden}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={select:Title Font}:400,700"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family={select:Body Font}:400,400italic,700,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"><link href="https://static.tumblr.com/j6tha7z/2Yxo5nq6y/s.css" rel="stylesheet" type="text/css"><style type="text/css">body{font:12px/2em "{select:Body Font}",sans-serif;color:{color:Post Text};background:{color:Background}}a{color:{color:Post Links}}a:hover{color:{color:Post Links Hover}}h1,h2,h3,h4,h5{font:700 16px/1.2em "{select:Title Font}","Helvetica Neue",sans-serif;color:{color:Post Title}}blockquote{border-left:3px solid rgba({RGBcolor:Post text},.08)}header{{block:ifmaincover}background:url("{image:Cover}") no-repeat center{color:Main Background};background-size:cover;-webkit-background-size:cover{/block:ifmaincover}{block:ifnotmaincover}background:{color:Background}{/block:ifnotmaincover}}header h1 a{{block:ifuppercaseblogtitle}text-transform:uppercase;letter-spacing:2px;{/block:ifuppercaseblogtitle}font:{block:iflargeblogtitle}3{/block:iflargeblogtitle}{block:ifnotlargeblogtitle}2{/block:ifnotlargeblogtitle}0px "{select:Title Font}",sans-serif;color:{color:Main Title}}header h1 a:hover{color:{color:Main Title Hover}}header #D{color:{color:Main Text}}header #D a{color:{color:Main Text};text-decoration:underline}header #S{display:none;{block:ifURLTwitter}display:block;{/block:ifURLTwitter}{block:ifURLFacebook}display:block;{/block:ifURLFacebook}{block:ifURLVimeo}display:block;{block:ifURLVimeo}{block:ifURLFlickr}display:block;{/block:ifURLFlickr}{block:ifURLGooglePlus}display:block;{/block:ifURLGooglePlus}{block:ifURLYoutube}display:block;{/block:ifURLYoutube}{block:ifURLPinterest}display:block;{/block:ifURLPinterest}{block:ifURLLinkedin}display:block;{/block:ifURLLinkedin}{block:ifURLDribbble}display:block;{/block:ifURLDribbble}{block:ifURLStumbleupon}display:block;{/block:ifURLStumbleupon}{block:ifURLSpotify}display:block;{/block:ifURLSpotify}{block:ifURLInstagram}display:block;{/block:ifURLInstagram}{block:ifURLBehance}display:block;{/block:ifURLBehance}{block:ifURLGithub}display:block;{/block:ifURLGithub}{block:ifURLSoundcloud}display:block;{/block:ifURLSoundcloud}}header #S a{color:{color:Main Links}}header #N li a{position:relative;{block:ifuppercasenavigationlinks}text-transform:uppercase;{/block:ifuppercasenavigationlinks}font:13px "{select:Title Font}",sans-serif;{block:ifnavigationlinkdecoration}border:2px solid rgba({RGBcolor:Main Links Border},1);{/block:ifnavigationlinkdecoration}color:{color:Main Links}}header #N li a:hover{color:{color:Main Background};background:{color:Main Links};{block:ifnavigationlinkdecoration}border:2px solid rgba({RGBcolor:Main Links},1){/block:ifnavigationlinkdecoration};z-index:25}header #G{{block:ifmaincover}background:rgba({RGBcolor:Main Overlay},.{text:Cover Overlay Transparency}){/block:ifmaincover}}#C{background:url("{image:background}") repeat}.X .p .h_1 a,.X .p .h_2 a,.X .p .h_3 a{color:{color:Photo Overlay Text}}.X .p .h_1 a{border:2px solid{color:Photo Overlay Text}}.X .p .h_1 a:hover,.X .p .h_2 a:hover{color:{color:Photo Overlay Gradient top};background:{color:Photo Overlay Text}}.X .p .h_2 a{color:{color:Photo Overlay Text};border:2px solid{color:Photo Overlay Text}}.X .p a.g{background:{color:Photo Overlay Gradient top};{block:ifhovergradient}background:-webkit-linear-gradient({color:Photo Overlay Gradient top};,{color:Photo Overlay Gradient Bottom});background:-o-linear-gradient({color:Photo Overlay Gradient top},{color:Photo Overlay Gradient Bottom});background:-moz-linear-gradient({color:Photo Overlay Gradient top},{color:Photo Overlay Gradient Bottom});background:linear-gradient({color:Photo Overlay Gradient top},{color:Photo Overlay Gradient Bottom});{/block:ifhovergradient}}.X .p:hover a.g{opacity:.{text:Photo Overlay Transparency}}.X .t .q h3{font:12px/2em "{select:Title Font}",sans-serif}.X .t .q h3 a{color:{color:Post Title}}.X .t .odd{background:rgba({RGBcolor:Post Text},.08)}.X .t a.link{font:13px/20px "{select:Title Font}";background:{color:Post Links}}.X .d a{font:11px/40px "{select:Title Font}";color:{color:Post Information}}.X .d a:hover{color:{color:Post Information Hover}}.X .t,.X .m,.X .c,.X .d,#pg,#P .p-b,#L{background:{color:Post Background}}#pg a{font:700 12px "{select:Title Font}",sans-serif;color:{color:Post Title};background:rgba({RGBcolor:Post Title},.08)}#pg a:hover{background:rgba({RGBcolor:Post Title},.25)}#P .p-b ol.notes li.more_notes_link_container,#P .p-b ol.notes li.more_notes_link_container a.more_notes_link{text-transform:uppercase;letter-spacing:1px;font:11px "{select:Title Font}";color:{color:Post Text}}{block:ifnotmaincover}body.l-h #Z{margin:-40px auto 0}{/block:ifnotmaincover}{block:ifpostrounded}.X,.X .p,.X a.g,.p-b{border-radius:3px}{/block:ifpostrounded}{block:ifinfinitescrolling}#pg{opacity:0 !important}#pg a{padding:0 !important;height:0 !important}#Z{padding:40px 0 160px}{/block:ifinfinitescrolling}{CustomCSS}</style></head>
+
+<body id="{block:indexpage}I{/block:indexpage}{block:permalinkpage}P{/block:permalinkpage}" class="{select:Layout} {select:Sidebar Position}{block:ifinfinitescrolling} is{/block:ifinfinitescrolling}">
+
+<header>{block:iflogoimage}<a href="/"><img src="{image:Logo}" alt="{title}"/></a>{/block:iflogoimage}{block:ifnotlogoimage}<h1><a href="/">{title}</a></h1>{/block:ifnotlogoimage}{block:ifnothidedescription}{block:Description}<div id="D">{Description}</div>{/block:Description}{/block:ifnothidedescription}<nav id="S">{block:ifURLTwitter}<a href="{text:URL Twitter}" class="twitter" target="_blank">1</a>{/block:ifURLTwitter}{block:ifURLFacebook}<a href="{text:URL Facebook}" class="facebook" target="_blank">2</a>{/block:ifURLFacebook}{block:ifURLVimeo}<a href="{text:URL Vimeo}" class="vimeo" target="_blank">3</a>{block:ifURLVimeo}{block:ifURLFlickr}<a href="{text:URL Flickr}" class="flickr" target="_blank">4</a>{/block:ifURLFlickr}{block:ifURLGooglePlus}<a href="{text:URL Google Plus}" class="google" target="_blank">5</a>{/block:ifURLGooglePlus}{block:ifURLYoutube}<a href="{text:URL Youtube}" class="youtube" target="_blank">u</a>{/block:ifURLYoutube}{block:ifURLPinterest}<a href="{text:URL Pinterest}" class="pinterest" target="_blank">6</a>{/block:ifURLPinterest}{block:ifURLLinkedin}<a href="{text:URL Linkedin}" class="linkedin" target="_blank">7</a>{/block:ifURLLinkedin}{block:ifURLDribbble}<a href="{text:URL Dribbble}" class="dribble" target="_blank">8</a>{/block:ifURLDribbble}{block:ifURLStumbleupon}<a href="{text:URL Stumbleupon}" class="stumbleupon" target="_blank">9</a>{/block:ifURLStumbleupon}{block:ifURLSpotify}<a href="{text:URL Spotify}" class="spotify" target="_blank">=</a>{/block:ifURLSpotify}{block:ifURLInstagram}<a href="{text:URL Instagram}" class="instagram" target="_blank">q</a>{/block:ifURLInstagram}{block:ifURLBehance}<a href="{text:URL Behance}" class="behance" target="_blank">e</a>{/block:ifURLBehance}{block:ifURLGithub}<a href="{text:URL Github}" class="github" target="_blank">r</a>{/block:ifURLGithub}{block:ifURLSoundcloud}<a href="{text:URL Soundcloud}" class="soundcloud" target="_blank">t</a>{/block:ifURLSoundcloud}</nav><nav id="N">{block:AskEnabled}<li><a href="/ask">{text:Ask Link Title}</a></li>{/block:AskEnabled}{block:SubmissionsEnabled}<li><a href="/submit">{text:Submit Link Title}</a></li>{/block:SubmissionsEnabled}{block:ifshowarchivelink}<li><a href="/archive">{text:Archive Link Title}</a></li>{/block:ifshowarchivelink}{block:ifshowrandomlink}<li><a href="/random">Random</a></li>{/block:ifshowrandomlink}{block:ifshowrsslink}<li><a href="{RSS}">RSS</a></li>{/block:ifshowrsslink}{block:HasPages}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{/block:HasPages}{block:ifCustomLink1Title}<li><a href="{text:Custom Link 1}">{text:Custom Link 1 Title}</a></li>{/block:ifCustomLink1Title}{block:ifCustomLink2Title}<li><a href="{text:Custom Link 2}">{text:Custom Link 2 Title}</a></li>{/block:ifCustomLink2Title}{block:ifCustomLink3Title}<li><a href="{text:Custom Link 3}">{text:Custom Link 3 Title}</a></li>{/block:ifCustomLink3Title}{block:ifCustomLink4Title}<li><a href="{text:Custom Link 4}">{text:Custom Link 4 Title}</a></li>{/block:ifCustomLink4Title}{block:ifCustomLink5Title}<li><a href="{text:Custom Link 5}">{text:Custom Link 5 Title}</a></li>{/block:ifCustomLink5Title}{block:ifshowcredit}<li id="zt"><a href="http://goo.gl/0CMwAC">Theme</a></li>{/block:ifshowcredit}</nav><div id="G"></div></header>
+
+<section id="C"><div id="Z-C"><div id="Z">{block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}<article id="{PostID}" class="X {select:Post Size} {select:Post Margin}">{block:Answer}<div class="t"><div class="q"><h3>{Asker}: {Question}</h3></div>{answer}</div>{/block:Answer}{block:Chat}<div class="t">{block:Title}<h2>{Title}</h2>{/block:Title}{block:Lines}<div class="{Alt} user_{UserNumber}">{block:Label}<b>{Label}</b>{/block:Label} {Line}</div>{/block:Lines}</div>{/block:Chat}{block:Link}<div class="t"><a class="link" href="{URL}">{Name}</a>{block:Description}{Description}{/block:Description}</div>{/block:Link}{block:Text}<div class="t">{block:Title}<h2>{Title}</h2>{/block:Title}{Body}</div>{/block:Text}{block:Quote}<div class="t quote"><h3>{Quote}</h3><div class="quote-symbol">“</div><div class="source">—    {Source}</div></div>{/block:Quote}{block:Photo}<div class="p">{block:indexpage}{block:ifnothoverstyle3}{block:ifnothoverstyle2}{block:ifhoverstyle1}<div class="h_1"><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero} / {Timeago}</a><a href="{permalink}">{NotecountWithLabel}</a><a href="{ReblogURL}">Reblog</a>{block:ContentSource}<a href="{SourceURL}">Source</a>{/block:ContentSource}{block:HighRes}<a href="{PhotoURL-HighRes}">High-Res</a>{/block:HighRes}</div>{/block:ifhoverstyle1}{/block:ifnothoverstyle2}{/block:ifnothoverstyle3}{block:ifnothoverstyle3}{block:ifhoverstyle2}<div class="h_2"><a href="{permalink}">v</a><a href="{ReblogURL}">c</a><a>z{LikeButton size="13"}</a></div>{/block:ifhoverstyle2}{/block:ifnothoverstyle3}{block:ifhoverstyle3}<div class="h_3"><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero}   [ {Timeago} ]</a><a href="{permalink}">{NoteCount}  [ Notes ]</a><a href="{ReblogURL}">Reblog Post</a></div>{/block:ifhoverstyle3}<a href="{permalink}" class="g"></a><img src="{PhotoURL-500}" alt="{PhotoAlt}">{/block:indexpage}{block:permalinkpage}{LinkOpenTag}<img src="{PhotoURL-HighRes}"alt="{PhotoAlt}">{LinkCloseTag}{/block:permalinkpage}</div>{/block:Photo}{block:Photoset}<div class="p pset">{block:indexpage}<div class="h_1"><a href="{permalink}">Photoset post</a><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero}</a><a href="{permalink}">{Timeago}</a><a href="{permalink}">{NotecountWithLabel}</a><a href="{ReblogURL}">Reblog</a></div><a href="{permalink}" class="g"></a>{/block:indexpage}<div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{PhotoURL-HighRes}"{block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}{block:Caption}alt="{Caption}"{/block:caption}/>{/block:Photos}</div></div>{/block:Photoset}{block:Audio}<div class="m">{block:IndexPage}{AudioEmbed-400}{/block:IndexPage}{block:permalinkpage}{AudioEmbed-640}{/block:permalinkpage}</div>{/block:Audio}{block:Video}<div class="m">{block:IndexPage}{VideoEmbed-400}{/block:IndexPage}{block:permalinkpage}{VideoEmbed-700}{/block:permalinkpage}</div>{/block:Video}{block:date}<div class="{block:indexpage}{block:Photo}non-display{/block:Photo}{block:Photoset}non-display{/block:Photoset}{/block:indexpage}">{block:Caption}<div class="c">{Caption}</div>{/block:Caption}<div class="d"><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero}</a><a href="{permalink}">{NoteCountWithLabel}</a><a href="{ReblogURL}">Reblog</a></div></div>{/block:date}</article>{block:PermalinkPage}{block:date}{block:ifnothidepostnotes}{block:PostNotes}<div class="p-b">{PostNotes-64}</div>{/block:PostNotes}{/block:ifnothidepostnotes}{/block:date}{/block:PermalinkPage}{/block:Posts}</div>
+
+<div id="pg" class="{select:Post Size} {select:Post Margin}">{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}" id="newer">Prev</a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}" id="older">Older</a>{/block:NextPage}{/block:Pagination}</div>
+
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script src="https://static.tumblr.com/j6tha7z/uy8o5nq86/s.js"></script>
+
+</body>
+</html>
