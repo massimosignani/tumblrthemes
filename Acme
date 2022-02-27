@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{block:SearchPage}{block:NoSearchResults}{lang:No results for SearchQuery}{/block:NoSearchResults}{SearchQuery} &mdash; {block:SearchPage}{block:TagPage}{lang:Showing TagResultCount posts tagged Tag} &mdash; {/block:TagPage}{Title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    <meta name="text:Facebook Username" content="">
+    <meta name="text:Twitter Username" content="">
+    <meta name="text:Pinterest Username" content="">
+    <meta name="text:Dribbble Username" content="">
+    <meta name="text:Instagram Username" content="">
+    <meta name="text:Google Font" content="Karla">
+    <meta name="color:Primary Text" content="#000">
+    <meta name="color:Secondary Text" content="#888">
+    <meta name="color:Tertiary Text" content="#AAA">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family={text:Google Font}:400,700">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <style type="text/css">
+        * {
+            transition: opacity linear 250ms;
+        }
+        
+        a,
+        abbr,
+        address,
+        article,
+        aside,
+        audio,
+        b,
+        blockquote,
+        body,
+        button,
+        canvas,
+        caption,
+        cite,
+        code,
+        dd,
+        del,
+        details,
+        dfn,
+        div,
+        dl,
+        dt,
+        em,
+        embed,
+        fieldset,
+        figcaption,
+        figure,
+        footer,
+        form,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        header,
+        hgroup,
+        html,
+        i,
+        iframe,
+        img,
+        input,
+        ins,
+        kbd,
+        label,
+        legend,
+        li,
+        mark,
+        menu,
+        nav,
+        object,
+        ol,
+        output,
+        p,
+        pre,
+        q,
+        ruby,
+        samp,
+        small,
+        section,
+        select,
+        span,
+        strong,
+        sub,
+        sup,
+        summary,
+        table,
+        time,
+        tbody,
+        td,
+        textarea,
+        tfoot,
+        th,
+        thead,
+        tr,
+        ul,
+        var,
+        video {
+            margin: 0;
+            padding: 0;
+            border: none;
+            font: inherit;
+            font-size: 100%;
+            line-height: normal;
+            vertical-align: baseline
+        }
+        
+        article,
+        aside,
+        canvas,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        output,
+        section,
+        video,
+        summary {
+            display: block
+        }
+        
+        html,
+        body {
+            display: block;
+            width: 100%;
+            overflow-x: hidden
+        }
+        
+        html {
+            font-size: 12pt
+        }
+        
+        a,
+        a:link,
+        a:hover,
+        a:active,
+        a:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        input,
+        input:focus,
+        textarea,
+        textarea:focus {
+            outline: none;
+        }
+        
+        .acme.-index .-hide-index,
+        .acme.-permalink .-hide-permalink {
+            display: none !important;
+        }
+        
+        .acme {
+            display: inherit;
+            width: inherit;
+        }
+        
+        .acme:not(.-loaded) {
+            opacity: 0
+        }
+        
+        .acme.-loaded {
+            animation: fade-in 1s;
+            -moz-animation: fade-in 1s;
+            -webkit-animation: fade-in 1s;
+            -o-animation: fade-in 1s
+        }
+        
+        .acme-icon-menu {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .acme-icon-menu-sprite,
+        .acme-icon-menu-sprite::before,
+        .acme-icon-menu-sprite::after {
+            position: inherit;
+            top: inherit;
+            right: inherit;
+            bottom: inherit;
+            left: inherit;
+            display: block;
+            width: 4px;
+            height: 4px;
+            margin: inherit;
+            background-color: #000;
+            border-radius: 50%
+        }
+        
+        .acme-icon-menu-sprite::before,
+        .acme-icon-menu-sprite::after {
+            content: ""
+        }
+        
+        .acme-icon-menu-sprite::before {
+            transform: translate3d(-7px, 0, 0)
+        }
+        
+        .acme-icon-menu-sprite::after {
+            transform: translate3d(7px, 0, 0)
+        }
+        
+        .acme-profile,
+        .acme-heading,
+        .acme-description {
+            display: block
+        }
+        
+        .acme-profile {
+            width: 60px;
+            height: auto;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            cursor: pointer
+        }
+        
+        .acme-heading {
+            margin: 0 auto 8px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+        .acme-heading.-text {
+            text-align: center
+        }
+        
+        .acme-heading.-logo {
+            width: 80px;
+            height: auto
+        }
+        
+        .acme-heading + .acme-heading {
+            display: none
+        }
+        
+        .acme-subheading {
+            font-size: 13px;
+            line-height: 20px;
+            text-align: center
+        }
+        
+        .acme-header {
+            position: relative;
+            width: inherit;
+            height: inherit;
+        }
+        
+        .acme-header-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100%
+        }
+        
+        .acme-header-masthead {
+            position: relative;
+            top: 56px;
+            display: block;
+            margin: 0 56px
+        }
+        
+        .acme-header-pages {
+            display: inline-block;
+            margin: auto;
+            vertical-align: middle;
+            list-style-type: none;
+        }
+        
+        .acme-header-pages-wrap {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .acme-header-pages-wrap::before {
+            content: "";
+            display: inline-block;
+            height: inherit;
+            vertical-align: middle;
+            margin-right: -.25em
+        }
+        
+        .acme-header-pages-wrap.-active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all
+        }
+        
+        .acme-header-pages-wrap.-active + .acme-header-pages-wrap-activate {
+            opacity: 0;
+            visibility: hidden
+        }
+        
+        .acme-header-pages-wrap-activate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            opacity: 1
+        }
+        
+        .acme-header-page {
+            display: block;
+            width: 7rem;
+            width: 112px;
+            margin: 12px auto;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .acme-header-page a {
+            color: inherit;
+        }
+        
+        .acme-header-page.-search {
+            text-decoration: none;
+            cursor: text;
+        }
+        
+        .acme-header-social {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            margin: 3px;
+            top: 3px;
+            cursor: auto;
+        }
+        
+        .acme-header-social-wrap {
+            position: absolute;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0 auto 56px;
+            margin: 0 auto 3.5rem;
+            width: 7rem;
+            width: 112px;
+        }
+        
+        .acme.-index .acme-body {
+            width: auto;
+            margin-left: 220px
+        }
+        
+        .acme.-index .acme-posts {
+            padding: 0 10px;
+        }
+        
+        .acme.-index .acme-posts[data-columns]::before {
+            content: "4 .column.size-1of4"
+        }
+        
+        .acme.-index .acme-posts .column {
+            float: left
+        }
+        
+        .acme.-index .acme-posts .size-1of1 {
+            width: 100%
+        }
+        
+        .acme.-index .acme-posts .size-1of2 {
+            width: 50%
+        }
+        
+        .acme.-index .acme-posts .size-1of4 {
+            width: 25%
+        }
+        
+        .acme.-index .acme-posts::after {
+            content: "";
+            display: table;
+            clear: both
+        }
+        
+        .acme.-index .acme-post {
+            position: relative;
+            margin: 20px 10px;
+            opacity: 1;
+        }
+        
+        .acme.-index .acme-post-text {
+            margin: 0 15px;
+        }
+        
+        .acme.-index .acme-post-media {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+        
+        .acme.-index .acme-post .acme-post-media .acme-post-info {
+            opacity: 0;
+        }
+        
+        .acme.-index .acme-post:hover .acme-post-media .acme-post-info {
+            opacity: 1;
+        }
+        
+        .acme.-index .acme-post.-photo .acme-post-media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 1px;
+            cursor: pointer
+        }
+        
+        .acme.-index .acme-posts:hover .acme-post {
+            opacity: .875
+        }
+        
+        .acme.-index .acme-posts.-active:hover .acme-post,
+        .acme.-index .acme-posts:hover .acme-post:hover {
+            opacity: 1
+        }
+        
+        .acme.-permalink {
+            margin: 56px 0;
+        }
+        
+        .acme.-permalink,
+        .acme.-permalink .acme-body,
+        .acme.-permalink .acme-posts,
+        .acme.-permalink .acme-post {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .acme.-permalink .acme-post-media {
+            position: relative;
+            display: block;
+            width: 700px;
+            margin: auto;
+        }
+        
+        .acme.-permalink .acme-post-media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 1px;
+            cursor: pointer
+        }
+        
+        .acme.-permalink .acme-post-text {
+            display: block;
+            width: 320px;
+            margin: auto;
+            padding: 1em;
+            text-align: center;
+        }
+        
+        .acme-post-text p {
+            line-height: 22px;
+            margin: 1em 0;
+        }
+            
+        .notes {
+            display: block;
+            width: 280px;
+            margin: auto;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        .notes::before,
+        .more_notes_link {
+            display: block;
+            margin: 12px auto;
+            text-align: center;
+        }
+        
+        .notes::before {
+            content: "Notes";
+            font-weight: bold;
+        }
+        
+        .note {
+            margin: 2px auto;
+            line-height: 20px;
+            text-align: center !important;
+        }
+        
+        .note img {
+            display: none;
+        }
+        
+        .html_photoset {
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .acme .acme-lightbox {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: table;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            background-color: #FFF;
+            visibility: hidden;
+            opacity: 0;
+        }
+                
+        .acme .acme-lightbox .acme-post {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: table;
+            width: 700px;
+            height: 500px;
+            margin: auto;
+        }
+        
+        .acme .acme-lightbox .acme-post.-photo .acme-post-media {
+            display: table-cell;
+            width: inherit;
+            height: inherit;
+            vertical-align: middle;
+        }
+        
+        .acme .acme-lightbox .acme-post.-photo .acme-post-media > img {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
+                
+        .acme.-lightbox-active {
+            overflow: hidden;
+        }
+        
+        .acme.-lightbox-active .acme-lightbox {
+            visibility: visible;
+            opacity: 1;
+            cursor: pointer;
+        }
+        
+        .acme-post-return {
+            position: fixed;
+            top: 40px;
+            left: 50px;
+            display: table;
+            font-size: 14px;
+        }
+        
+        .acme-post-info {
+            display: block;
+            line-height: 20px;
+        }
+        
+        .acme-post-media .acme-post-info {
+            position: absolute;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: auto;
+            margin: auto;
+            padding: 30px 15px 10px;
+            color: white;
+        }
+        
+        .acme-post-media .acme-post-info::before {
+            content: "";
+            position: inherit;
+            top: 0;
+            right: inherit;
+            bottom: inherit;
+            left: inherit;
+            margin: auto;
+            display: block;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+        }
+        
+        .like_button,
+        .acme-post-notecount,
+        .acme-post-reblog {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .acme-post-media .acme-post-info .like_button,
+        .acme-post-media .acme-post-info .acme-post-notecount {
+            float: left;
+        }
+        
+        .like_button {
+            top: 2px;
+            margin-right: 5px;
+        }
+        
+        .acme-post-reblog {
+            margin-left: 8px;
+        }
+        
+        .acme-post-media .acme-post-info .acme-post-reblog {
+            float: right;
+        }
+        
+        .acme-post-notecount:empty::before {
+            content: "0";
+        }
+        
+        .acme-post-meta {
+            position: fixed;
+            bottom: 40px;
+            left: 50px;
+            display: table;
+            font-size: 14px;
+        }
+        
+        .acme-post-meta-date {
+            margin-right: 12px;
+        }
+        
+        .acme-post-tags {
+            display: block;
+            margin-top: 6px;
+            list-style-type: none;
+            line-height: 18px;
+        }
+        
+        .acme-post-tags::before {
+            content: "Tags:";
+            display: inline-block;
+        }
+        
+        .acme-post-tag {
+            display: inline-block;
+            margin-left: 8px;
+        }
+        
+        .acme-post-nav {
+            position: fixed;
+            bottom: 40px;
+            right: 50px;
+            display: table;
+        }
+        
+        .acme-post-nav-prev {
+            margin-left: 8px;
+        }
+        
+        .acme-post-nav-next {
+            margin-right: 8px;
+        }
+        
+        iframe.flickr-embed-frame,
+        [data-flickr-embed] img {
+            width: 100% !important;
+        }
+        
+        [data-flickr-embed] img {
+            height: auto !important;
+        }
+            
+        @media only screen and (orientation: portrait),
+        only screen and (orientation: landscape) and (max-width: 640px) {
+            .acme.-index .acme-profile,
+            .acme.-index .acme-subheading,
+            .acme.-index .acme-header-pages-wrap,
+            .acme.-index .acme-header-pages-wrap-activate,
+            .acme.-index .acme-header-social-wrap {
+                display: none;
+            }
+            .acme.-index .acme-header-wrap {
+                position: relative;
+                width: 100%;
+                height: 80px;
+            }
+            .acme.-index .acme-body {
+                margin-left: 0;
+            }
+            .acme.-index .acme-posts {
+                margin: 0;
+                float: none;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .acme.-index .acme-posts[data-columns]::before {
+                content: '1 .column.size-1of1';
+            }
+        }
+        
+        @media only screen and (orientation: portrait) and (min-width: 481px),
+        only screen and (orientation: landscape) and (min-width: 641px) and (max-width: 1023px) {
+            .acme.-index .acme-posts[data-columns]::before {
+                content: '2 .column.size-1of2';
+            }
+        }
+        
+        @media only screen and (orientation: landscape) and (min-width: 1024px) {
+            .acme.-index .acme-posts[data-columns]::before {
+                content: '4 .column.size-1of4';
+            }
+        }
+        
+        @keyframes fade-in {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @-moz-keyframes fade-in {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @-webkit-keyframes fade-in {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @-o-keyframes fade-in {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+    <style type="text/css">
+        .unslider {
+            overflow: auto;
+            margin: 0;
+            padding: 0
+        }
+        
+        .unslider-wrap {
+            position: relative
+        }
+        
+        .unslider-wrap.unslider-carousel>li {
+            float: left
+        }
+        
+        .unslider-vertical>ul {
+            height: 100%
+        }
+        
+        .unslider-vertical li {
+            float: none;
+            width: 100%
+        }
+        
+        .unslider-fade {
+            position: relative
+        }
+        
+        .unslider-fade .unslider-wrap li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            z-index: 8
+        }
+        
+        .unslider-fade .unslider-wrap li.unslider-active {
+            z-index: 10
+        }
+        
+        .unslider li,
+        .unslider ol,
+        .unslider ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: none
+        }
+        
+        .unslider-arrow {
+            position: absolute;
+            left: 20px;
+            z-index: 2;
+            display: none;
+            cursor: pointer
+        }
+        
+        .unslider-arrow.next {
+            left: auto;
+            right: 20px
+        }
+                
+        /**
+         *   Here's where everything gets included. You don't need
+         *   to change anything here, and doing so might break
+         *   stuff. Here be dragons and all that.
+         */
+        
+        
+        /**
+         *   Default variables
+         *
+         *   While these can be set with JavaScript, it's probably
+         *   better and faster to just set them here, compile to
+         *   CSS and include that instead to use some of that
+         *   hardware-accelerated goodness.
+         */
+        
+        .unslider-nav {
+            position: absolute;
+            bottom: 16px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        
+        .unslider-nav ol {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .unslider-nav ol li {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 4px;
+            background: transparent;
+            border-radius: 5px;
+            overflow: hidden;
+            text-indent: -999em;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+        
+        .unslider-nav ol li.unslider-active {
+            background: #fff;
+            cursor: default;
+        }
+    </style>
+    <style type="text/css">
+        .acme {
+            background-color: {BackgroundColor};
+            font-family: {text:Google Font};
+        }
+        
+        .acme-heading,
+        .acme-header-pages,
+        .acme-header-social-wrap,
+        .acme-post-text,
+        .acme-post-return {
+            color: {color:Primary Text}
+        }
+        
+        .acme-subheading {
+            color: {color:Tertiary Text};
+        }
+        
+        .acme-post-meta {
+            color: {color:Secondary Text};
+        }
+        
+        .acme-post-nav .-disabled {
+            fill: {color:Tertiary Text};
+        }
+        {CustomCSS}
+    </style>
+    <!--[if lt IE 9]>
+    <script>
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('bdi');
+        document.createElement('details');
+        document.createElement('dialog');
+        document.createElement('figcaption');
+        document.createElement('figure');
+        document.createElement('footer');
+        document.createElement('header');
+        document.createElement('main');
+        document.createElement('mark');
+        document.createElement('menuitem');
+        document.createElement('meter');
+        document.createElement('nav');
+        document.createElement('progress');
+        document.createElement('rp');
+        document.createElement('rt');
+        document.createElement('ruby');
+        document.createElement('section');
+        document.createElement('summary');
+        document.createElement('time');
+        document.createElement('wbr');
+    </script>
+    <![endif]-->
+</head>
+
+<body>
+    <main id="acme" class="acme{block:IndexPage} -index{/block:IndexPage}{block:PermalinkPage} -permalink{/block:PermalinkPage}">
+        {block:IndexPage}
+        <div class="acme-header-wrap -hide-permalink">
+            <header class="acme-header">
+                <div class="acme-header-masthead" href="/">
+                    {block:ShowAvatar}
+                    <a href="/"><img class="acme-profile" src="{PortraitURL-128}" alt="{Title}"></a>
+                    {/block:ShowAvatar}
+                    {block:ShowTitle}
+                    <a href="/"><h1 class="acme-heading -text">{Title}</h1></a>
+                    {/block:ShowTitle}
+                    {block:ShowDescription}
+                    <p class="acme-subheading">{Description}</p>
+                    {/block:ShowDescription}
+                </div>
+                <div id="acme-pages" class="acme-header-pages-wrap">
+                    <ul class="acme-header-pages">
+                        {block:HasPages}
+                        {block:Pages}
+                        <li class="acme-header-page"><a href="{URL}">{Label}</a></li>
+                        {/block:Pages}
+                        {/block:HasPages}
+                        {block:AskEnabled}
+                        <li class="acme-header-page"><a href="/ask">{AskLabel}</a></li>
+                        {/block:AskEnabled}
+                        {block:SubmissionsEnabled}
+                        <li class="acme-header-page"><a href="/submit">{SubmitLabel}</a></li>
+                        {/block:SubmissionsEnabled}
+                        <form action="/search" method="get">
+                            <input class="acme-header-page -search" name="q" value="{block:SearchPage}{SearchQuery}{/block:SearchPage}" placeholder="{lang:Search}">
+                        </form>
+                    </ul>
+                </div>
+                <a class="acme-header-pages-wrap-activate acme-icon-menu">
+                    <span class="acme-icon-menu-sprite"></span>
+                </a>
+                <div class="acme-header-social-wrap" style="text-align: center;">
+                    {block:IfFacebookUsername}
+                    <a class="acme-header-social fa fa-facebook" href="//facebook.com/{text:Facebook Username}"></a>
+                    {/block:IfFacebookUsername}
+                    {block:IfTwitterUsername}
+                    <a class="acme-header-social fa fa-twitter" href="//twitter.com/{text:Twitter Username}"></a>
+                    {/block:IfTwitterUsername}
+                    {block:IfPinterestUsername}
+                    <a class="acme-header-social fa fa-pinterest-p" href="//pinterest.com/{text:Pinterest Username}"></a>
+                    {/block:IfPinterestUsername}
+                    {block:IfDribbbleUsername}
+                    <a class="acme-header-social fa fa-dribbble" href="//dribbble.com/{text:Dribbble Username}"></a>
+                    {/block:IfDribbbleUsername}
+                    {block:IfInstagramUsername}
+                    <a class="acme-header-social fa fa-instagram" href="//instagram.com/{text:Instagram Username}"></a>
+                    {/block:IfInstagramUsername}
+                </div>
+            </header>
+        </div>
+        {/block:IndexPage}
+        <div class="acme-body">
+            <a class="acme-post-return -hide-index" href="/">&larr; Back to {Title}</a>
+            <div id="acme-posts" class="acme-posts" data-columns>
+                {block:Posts inlineMediaWidth="700" inlineNestedMediaWidth="700"}
+                <div id="{PostID}" class="acme-post -{PostType}{block:More} -read-more{/block:More}" data-next-post="" data-prev-post="">
+                    {block:Text}
+                    <div class="acme-post-text">
+                        {block:Title}
+                        <h2 class="acme-post-text-title">{Title}</h2>
+                        {/block:Title}
+                        <div class="acme-post-text-body">
+                        {Body}
+                        </div>
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Text}
+                    {block:Photo}
+                    <div class="acme-post-media">
+                        {block:IndexPage}
+                        <a class="acme-lightbox-activate" href="{Permalink}" data-permalink-id="{PostID}">
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+                        </a>
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        {LinkOpenTag}
+                        <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+                        {LinkCloseTag}
+                        {/block:PermalinkPage}
+                        <div class="acme-post-info">{LikeButton size="14" color="white"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="{ReblogURL}">Reblog</a></div>
+                    </div>
+                    {block:Caption}
+                    <div class="acme-post-text -hide-index">
+                        {Caption}
+                    </div>
+                    {/block:Caption}
+                    {/block:Photo}
+                    {block:Panorama}
+                    <div class="acme-post-media">
+                        {block:IndexPage}
+                        <a class="acme-lightbox-activate" href="{Permalink}" data-permalink-id="{PostID}">
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}">
+                        </a>
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+                        {LinkCloseTag}
+                        {/block:PermalinkPage}
+                        <div class="acme-post-info">{LikeButton size="14" color="white"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="{ReblogURL}">Reblog</a></div>
+                    </div>
+                    {block:Caption}
+                    <div class="acme-post-text -hide-index">
+                        {Caption}
+                    </div>
+                    {/block:Caption}
+                    {/block:Panorama}
+                    {block:Photoset}
+                    {block:PermalinkPage}
+                    {Photoset}
+                    {/block:PermalinkPage}
+                    <div class="acme-post-media">
+                        {block:IndexPage}
+                        <div class="acme-post-media-photoset">
+                            <ul>
+                                {block:Photos}
+                                <li><a href="{Permalink}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a></li>
+                                {/block:Photos}
+                            </ul>
+                        </div>
+                        {/block:IndexPage}
+                        {block:PermalinkPage}
+                        <div class="acme-post-info">{LikeButton size="14" color="white"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="{ReblogURL}">Reblog</a></div>
+                        {/block:PermalinkPage}
+                    </div>
+                    {/block:Photoset}
+                    {block:Quote}
+                    <div class="acme-post-text">
+                    {Quote}
+                    {block:Source}<span class="acme-post-text-source">{Source}</span>{/block:Source}
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Quote}
+                    {block:Link}
+                    <div class="acme-post-text">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+                        {block:Description}
+                        <div class="description">{Description}</div>
+                        {/block:Description}
+                        {block:Excerpt}
+                        <p class="exerpt">{Excerpt}</p>
+                        {/block:Excerpt}
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Link}
+                    {block:Chat}
+                    <div class="acme-post-text">
+                        {block:Title}
+                        <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+                        <ul class="chat">
+                            {block:Lines}
+                            <li class="{Alt} user_{UserNumber}">
+                                {block:Label}
+                                <span class="label">{Label}</span>
+                                {/block:Label}
+                                {Line}
+                            </li>
+                            {/block:Lines}
+                        </ul>
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Chat}
+                    {block:Audio}
+                    <div class="acme-post-media">
+                        {AudioEmbed}
+                    </div>
+                    {block:Caption}
+                    <div class="acme-post-text">
+                        {Caption}
+                    </div>
+                    {/block:Caption}
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Audio}
+                    {block:Video}
+                    <div class="acme-post-media">
+                        {VideoEmbed-700}
+                    </div>
+                    {block:Caption}
+                    <div class="acme-post-text">
+                        {Caption}
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Caption}
+                    {/block:Video}
+                    {block:Answer}
+                    <div class="acme-post-text">
+                        <div class="question">
+                            <div class="asker">{Asker}</div>
+                            <div class="asker-question">{Question}</div>
+                            <img class="asker-avatar" src="{AskerPortraitURL-96}" alt="">
+                        </div>
+                        {block:Answerer}
+                        <div class="answer">
+                            <div class="answerer">{Answerer}</div>
+                            <div class="answerer-answer">{Answer}</div>
+                            <img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="">
+                        </div>
+                        {/block:Answerer}
+                        <div class="replies">
+                            {Replies}
+                        </div>
+                    </div>
+                    <div class="acme-post-text acme-post-info">{LikeButton size="14" color="black"}<span class="acme-post-notecount">{block:NoteCount}{NoteCount}{/block:NoteCount}</span><a class="acme-post-reblog" href="//tumblr.com/reblog/{PostID}">Reblog</a></div>
+                    {/block:Answer}
+                    {block:PermalinkPage}
+                    {block:Date}
+                    <div class="acme-post-meta">
+                        <p><span class="acme-post-meta-date">{Month} {DayOfMonth}, {Year}</span><span>{12Hour}:{Minutes}{AmPm}</span></p>
+                        {block:HasTags}
+                        <ul class="acme-post-tags">
+                            {block:Tags}
+                            <li class="acme-post-tag">
+                                <a href="{TagURL}">{Tag}</a>
+                            </li>
+                            {/block:Tags}
+                        </ul>
+                        {/block:HasTags}
+                    </div>
+                    {/block:Date}
+                    {block:PermalinkPagination}
+                    <div class="acme-post-nav">
+                        <a {block:NextPost}href="{NextPost}"{block:NextPost}>
+                            <svg class="acme-post-nav-next" width="18px" height="18px" viewBox="0 0 18 18">
+                                <polygon points="7.23 9 7.23 9 13.6 2.64 12.18 1.22 5.82 7.59 5.82 7.59 4.4 9 5.82 10.41 5.82 10.41 12.18 16.78 13.6 15.36 7.23 9 7.23 9" />
+                            </svg>
+                        </a>
+                        <a {block:PreviousPost}href="{PreviousPost}"{block:PreviousPost}>
+                            <svg class="acme-post-nav-prev" width="18px" height="18px" viewBox="0 0 18 18">
+                                <polygon points="10.77 9 10.77 9 4.4 2.64 5.82 1.22 12.18 7.59 12.18 7.59 13.6 9 12.18 10.41 12.18 10.41 5.82 16.78 4.4 15.36 10.77 9 10.77 9" />
+                            </svg>
+                        </a>
+                    </div>
+                    {/block:PermalinkPagination}
+                    {block:PostNotes}
+                    {PostNotes}
+                    {/block:PostNotes}
+                    {/block:PermalinkPage}
+                </div>
+                {/block:Posts}
+                {block:Pagination}
+                <div class="acme-pagination">
+                    {block:NextPage}
+                    <a class="acme-pagination-next" href="{NextPage}">Next Page</a>
+                    {/block:NextPage}
+                </div>
+                {/block:Pagination}
+            </div>
+        </div>
+        {block:IndexPage}
+        <div class="acme-lightbox">
+            
+        </div>
+        {/block:IndexPage}
+    </main>
+    <script src="//static.tumblr.com/zb6te2b/86Lnkv3qx/jquery.min.js"></script>
+    <script src="//static.tumblr.com/zb6te2b/dFwofvc0d/unslider.min.js"></script>
+    <script src="//static.tumblr.com/zb6te2b/wKJofv8ng/classlist.min.js"></script>
+    <script src="//static.tumblr.com/zb6te2b/JPWoglsez/imagesloaded.min.js"></script>
+    {block:IndexPage}
+    <script src="//static.tumblr.com/zb6te2b/vE0ofv8nf/salvattore.min.js"></script>
+    <script src="//static.tumblr.com/zb6te2b/WbOnkv3x8/jquery.infinitescroll.min.js"></script>
+    <script>
+        (function () {
+            var acme = document.getElementById("acme"),
+                pages = document.getElementById("acme-pages"),
+                posts = document.getElementById("acme-posts"),
+                previous;
+
+            window.addEventListener("mousemove", function (event) {
+                var target = event.target;
+
+                if (event.clientX <= document.body.clientWidth) {
+                    do {
+                        if (target.classList.contains("acme-post")) {
+                            if (previous !== true) {
+                                posts.classList.remove("-active");
+                                pages.classList.remove("-active");
+                            }
+                            previous = true;
+                            return true;
+                        } else if (target.classList.contains("acme-header-pages-wrap-activate")) {
+                            posts.classList.add("-active");
+                            pages.classList.add("-active");
+                            return true;
+                        } else {
+                            target = target.parentElement;
+                        }
+                    } while (target.parentElement);
+    
+                    if (previous !== false) {
+                        posts.classList.add("-active");
+                        pages.classList.remove("-active");
+                    }
+                    previous = false;
+                    return false;
+                }
+            });
+
+            function toggle(element, classname) {
+                if (element.classList.contains(classname)) {
+                    element.classList.remove(classname);
+                } else {
+                    element.classList.add(classname);
+                }
+            }
+
+            function lightbox(event) {
+                var target = event.target;
+
+                do {
+                    if (target.classList.contains("acme-lightbox-activate")) {
+                        toggle(acme, "-lightbox-active");
+                        return true;
+                    } else {
+                        target = target.parentElement;
+                    }
+                } while (target.parentElement);
+
+                if (acme.classList.contains("-lightbox-active")) {
+                    acme.classList.remove("-lightbox-active");
+                }
+                return false;
+            }
+
+            window.addEventListener("click", function (event) {
+                lightbox(event);
+            });
+
+            /*window.addEventListener("touchstart", function (event) {
+                lightbox(event);
+            });*/
+        }());
+
+        $(document).ready(function () {
+            /*
+            $(".acme-lightbox-activate").click(function (event) {
+                event.preventDefault();
+                $(".acme-lightbox").load($(this).attr("href") + " #" + $(this).data("permalink-id"));
+            });
+            */
+            window.slider = $('.acme-post-media-photoset').unslider({
+                animateHeight: true
+            });
+        });
+        
+        /*
+        $(document).infinitescroll({
+          navSelector    : ".acme-pagination",
+          nextSelector   : ".acme-pagination-next",
+          contentSelector: ".acme-posts",
+          itemSelector   : ".acme-post",
+          loadingText    : "Loading new posts...",
+          donetext       : "No more posts"
+        }, function(arrayOfNewElems) {
+            salvattore.appendElements(document.getElementById("acme-posts"), arrayOfNewElems);
+        });
+        */
+        
+        $.extend($.infinitescroll.prototype, {
+            _setup_click: function infscr_setup_click() {
+                var instance = this,
+                    opts = this.options;
+                this.options.loading.start = function(opts) {
+                    $(opts.nextSelector).on("click", function(e) {
+                        e.preventDefault();
+                        $(opts.textSelector).fadeOut(250);
+                        opts.loading.msg.appendTo(opts.loading.selector).fadeIn(250);
+                        window.setTimeout(function() {
+                            instance.beginAjax(opts);
+                        }, 2500);
+                    });
+                };
+                this.options.loading.finished = function() {
+                    opts.loading.msg.fadeOut(500);
+                    $(opts.textSelector).delay(1000).fadeIn("slow");
+                };
+                return false;
+            },
+            _showdonemsg: function infscr_showdonemsg() {
+                var opts = this.options;
+                if (!!opts.behavior && this["_showdonemsg_" + opts.behavior] !== undefined) {
+                    this["_showdonemsg_" + opts.behavior].call(this);
+                    return;
+                }
+                opts.loading.msg.find("img").hide().parent().find("div").html(opts.loading.finishedMsg).animate({
+                    opacity: 1
+                }, 2000, function() {
+                    $(opts.navSelector).fadeOut("fast");
+                });
+                opts.errorCallback.call($(opts.contentSelector)[0], "done");
+            }
+        });
+        $(".acme-body").infinitescroll({
+            loading: {
+                selector: ".acme-pagination",
+                finishedMsg: "{lang:No more posts}.",
+                msgText: "{lang:Loading}",
+                img: "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            },
+            navSelector    : ".acme-pagination",
+            nextSelector   : ".acme-pagination-next",
+            contentSelector: ".acme-posts",
+            itemSelector   : ".acme-post",
+            appendCallback: false
+        }, function(items) {
+            salvattore.appendElements(document.getElementById("acme-posts"), items);
+            window.slider = $('.acme-post-media-photoset').unslider({
+                animateHeight: true
+            });
+            var ids = $(items).map(function() {
+                return this.id;
+            }).get();
+            Tumblr.LikeButton.get_status_by_post_ids(ids);
+        });
+        $(".acme-body").infinitescroll("retrieve");
+    </script>
+    {/block:IndexPage}
+    <script>
+        $(document).imagesLoaded().always(function() {
+            var iframes = document.querySelectorAll('.acme-post-media > iframe'),
+                i;
+                
+            for (i = 0; i < iframes.length; i++) {
+        
+                var iframe = iframes[i],
+                    videoRatio = (iframe.height / iframe.width) * 100;
+        
+                    /*
+                     * Replace the iframe's dimensions and position
+                     * the iframe absolute, this is the trick to emulate
+                     * the video ratio
+                     */
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.width = '100%';
+                    iframe.height = '100%';
+        
+                    /*
+                     * Wrap the iframe in a new <div> which uses a
+                     * dynamically fetched padding-top property based
+                     * on the video's w/h dimensions
+                     */
+                    var wrap = document.createElement('div');
+                    wrap.className = 'fluid-vids';
+                    wrap.style.width = '100%';
+                    wrap.style.position = 'relative';
+                    wrap.style.paddingTop = videoRatio + '%';
+        
+                    /*
+                     * Add the iframe inside our newly created <div>
+                     */
+                    var iframeParent = iframe.parentNode;
+                    iframeParent.insertBefore(wrap, iframe);
+                    wrap.appendChild(iframe);
+            }
+            $(".acme").addClass("-loaded");
+        });
+    </script>
+</body>
+
+</html>
