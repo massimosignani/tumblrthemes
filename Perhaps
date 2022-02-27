@@ -1,0 +1,1049 @@
+<html>
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<meta name="text:Link 1 Name" content=""/>
+<meta name="text:Link 1 URL" content=""/>
+
+<meta name="text:Link 2 Name" content=""/>
+<meta name="text:Link 2 URL" content=""/>
+
+<meta name="text:Link 3 Name" content=""/>
+<meta name="text:Link 3 URL" content=""/>
+
+
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Crete+Round:400,400italic' rel='stylesheet' type='text/css'>
+          
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    
+    <style>
+
+    * { margin: 0; padding: 0; }    
+
+    body {
+        background: #eee url('http://static.tumblr.com/3mbebsn/v8ulzm2r5/bg.png') repeat;
+        font-family:'Crete Round';
+        font-size:80%;
+        color:#555;		
+		text-shadow:0px 1px 1px #fff;
+	}
+	
+	/* 
+	
+	Header and other important stuff
+	
+	*/
+	
+	ul#menu {
+  		margin:0px 10px;
+		list-style:none;
+		padding:0;
+		text-align:center;
+		
+	}
+	
+	ul#menu li {
+		display:inline;
+	}
+	
+	ul#menu li a {
+		padding:10px 25px 10px 2px;
+		text-decoration:none;
+		color:#111;
+		text-shadow:0px 1px 1px #fff;
+		font-weight:bold;
+		line-height:40px;
+	} 
+	
+	ul#menu li a:hover {
+		color:#555;
+	}
+
+	.container {
+		margin:0 auto;
+		width:500px;
+		clear: both;
+	
+
+	}
+
+	.page {
+		padding:20px 0;	
+	}
+		
+	a {
+		color:#888;
+		text-decoration:none;		
+	}
+	
+    	h1 {    
+       		
+        	font-size:350%;
+       		font-weight:normal;
+        	font-family:'Pacifico';
+        	text-align:center;
+        	line-height:60px;
+       	 	padding:10px;
+        	padding-top:10px;
+        	text-shadow:0px 1px 1px #fff;
+            	-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+        
+        }
+        
+	h1 a {
+	        color:#555;
+	}
+	
+	.post h3, .post h2, .post .h1 {
+		font-family: 'Varela Round';
+	}
+	
+	
+	#description {
+   		 margin:10px;
+    
+   	 }
+
+	/* 
+	
+	General Elements
+	
+	*/
+    
+    
+    .post blockquote {
+            font-style:italic;
+            padding:5px;
+            border-left:1px solid #ddd;
+        
+        }
+    
+    .button { 
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		padding:2px 15px;
+		-moz-box-shadow: inset 0 0 1px #eee;
+		-webkit-box-shadow: inset 0 0 1px #eee;
+		box-shadow: inset 0 0 1px #eee;
+		background:#333;
+		border:1px solid #222;
+		color:#fff;
+	 }
+	
+	input {
+		padding:5px;
+		border:1px solid #ddd;
+		margin:5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: inset 0 2 1px #eee;
+		-webkit-box-shadow: inset 0 2 1px #eee;
+		box-shadow: inset 0 2 1px #eee;
+	}	
+	
+	ol#posts {
+		list-style:none;
+		width:940px;
+		margin:0 auto;
+		clear:both;
+		}
+	
+	img {
+               
+		height:auto;
+		overflow: hidden;		
+		 }
+
+	/* 
+	
+	Posts
+	
+	*/
+
+	.post {
+		
+		background: #fefefe url('http://static.tumblr.com/3mbebsn/v8ulzm2r5/bg.png') repeat; 
+		width:492px;
+		padding:4px;
+		-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		border-bottom: 1px solid #aaa;
+		overflow: hidden;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		margin:5px;
+		float:left;
+		position:relative;
+	}
+
+
+
+   .photo-container:after {
+display: block;
+content: ' ';
+position: absolute;
+top: 1px;
+right: 1px;
+bottom: 0;
+left: 1px;
+height:20px;
+    -webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+-webkit-box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45);
+-moz-box-shadow: inset 0 1px 1px rgba(255,255,255,0.45);
+box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+    .post p {
+        margin-top:5px;
+        width:490px;
+        
+        }
+    
+
+	.quote {
+		font-size:150%;
+		font-weight:bold;
+		letter-spacing:-1px;
+	}
+
+	.source {
+		margin:10px 0 0 0;
+		font-size:70%;
+		font-weight:normal;
+		letter-spacing:0px;
+	}
+
+	 .link a.link, .text h3  {
+	 	font-family:'Varela Round';
+		font-size:150%;
+		font-weight:bold;
+		letter-spacing:-1px;
+		margin:0 0 10px 0;
+	}
+	
+	.chat ul {
+		list-style:none;	
+	}
+	
+	.chat ul li.odd {
+		background:#eee;
+		text-shadow:0px 1px 1px #fff;	
+	}
+	
+	.chat ul li {
+		padding:5px;
+	}
+	
+	.audio .clear {
+		overflow:hidden;
+		
+
+	}
+
+	.audio {
+		padding:0px;
+		    width:500px;
+
+	}
+
+	.audio .cover {
+		width:500px;
+		overflow: hidden;
+		float:left;
+		margin:0 0px 10px 0;
+	
+	}
+    
+    .audio .cover img {
+        width:500px;
+        height:auto;
+        }
+    
+	.audio .player, .audio .caption {
+		padding:2px;
+		width:496px;
+		margin:0 0 10px 0px;
+		float:left;
+		background:transparent;
+	}
+	
+	.text ul {
+		margin:0 0 0 20px;
+	}
+	
+	.photo .caption {
+		
+		float:left;
+	
+	}
+
+	.photo-container img {
+		display: inline-block;
+		overflow: hidden;
+	-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+        width:500px;
+        	height:auto;
+            margin:0px;
+            padding:0px;
+		-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+        
+    
+
+	}
+
+    	.photo-container {
+		position:relative;
+       		z-index:100;
+         width:500px;
+            overflow: hidden;
+        }
+        
+        img.avatar {width:auto; height:auto;}
+
+    	.photo-container .notes-overlay {
+        	top:0px;
+        }
+	
+	.photo, .video {
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px; padding:0px; 
+   		position:static;
+   		width:500px;
+	}
+    
+  	.photoset {
+        	list-style:none;
+       		-webkit-border-radius: 5px;
+    		-moz-border-radius: 5px;
+		border-radius: 5px; padding:0px; 
+      	 	
+   
+        }
+        
+        
+        .photoset img {
+        	display: inline-block;
+   	 	overflow: hidden;
+		margin-left:-55px;
+		-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(255, 255, 255, .5);
+            
+            }
+    
+    	 /* 
+	
+	Notes and overlay
+	
+	*/
+    	 
+    	 .notes-overlay {
+		visibility: hidden;
+		background-color: rgba(0,0,0,.7);
+		-moz-box-shadow: inset 0 0 20px #000;
+		-webkit-box-shadow: inset 0 0 20px #000;
+		box-shadow: inner 0 0 20px #000;
+		position: absolute;
+		bottom:0px;
+		width:216px;
+		padding:2px;
+		height:216px;
+		left:0px;
+		top:0px;
+    		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		color:#fff;
+		z-index:10;
+		text-shadow:0px 1px 1px #111;
+	}
+
+	.notes-overlay .date {
+		float:none;
+ 		margin:25% auto;
+  	   	font-size:120%;
+  		width:210px;
+     		padding:5px;
+     		text-align:center;
+    	}
+
+	.notes-overlay .notescount {
+ 		float:none;
+    		margin:35% auto;
+    		font-size:120%;
+    		width:210px;
+     		padding:5px;
+       		text-align:center;
+       }
+
+	.date {
+		line-height:12px;
+		width:200px;
+		float:left;
+		padding:3px 10px;
+		font-size:75%;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		z-index:0;
+	}
+	
+	.date a {
+		color:#aaa;
+		text-shadow:0px 1px 1px #fff;
+	}
+	
+	.notescount {
+		width:200px;
+		padding:3px 10px;
+		float:right;
+		text-align:right;	
+		font-size:75%;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 5px;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+		z-index:0;
+	
+	}
+	
+	.notescount a {
+		color:#aaa;
+		text-shadow:0px 1px 1px #fff;
+		
+	}
+    
+    	ul.tags {
+        	list-style:none;
+        	width:480px;
+        	float:left;
+       		margin:10px 10px 10px 10px;
+        }
+        
+    	ul.tags li {
+        	display:inline;
+        	font-size:75%;
+        
+        }    
+	
+	ol.notes {
+		list-style:none;
+		padding:5px;	
+        	width:500px;
+        	float:left;
+        	line-height:20px;
+	}
+    
+    	/* 
+    		
+	Permalink page hacks
+	
+	*/
+    
+
+        .wide {
+	    	padding:0px;
+	    	width:500px;
+	    	overflow: visible;
+		
+	}
+	
+    	.permaheader {
+    		width:520px !important;
+		margin:10px auto;
+       	 	height:auto !important;
+        	border:0px;
+        	float:none;
+        	background:none;
+	}
+    
+    
+	.perma {
+		
+		margin:10px auto;
+        	height:auto !important;
+		float:none;
+	}
+	
+	.perma img {
+    	
+    		height:auto !important; 
+    		float:left;
+    		margin-left:1% !important ; 
+    		padding:4px;
+    	}
+    
+	.permacaption {
+		float:left;
+    		width:500px;
+    		margin:10px;
+	}
+	
+	.perma .photoset { 
+		width:500px !important; 
+		height:500px !important;
+	}
+
+	.perma .photoset img {
+		height:auto;
+	}
+			
+	.perma .notescount, .perma .notescount a, .perma .date, .perma .date a {
+		color:#111;
+	}
+	
+	  
+	.perma img.avatar {
+		width:16px !important; 
+		height:16px !important; 
+		padding:1px;}
+		
+		/* 
+	
+	Footer and pagination buttons
+	
+	*/
+		
+    	
+	#footer 
+	{
+		padding:25px;
+		color:#555;
+		text-align:center;
+	}
+	
+	#footer a {
+		color:#111;
+	}
+	
+	
+	.sidenext {
+		list-style:none;
+		width:100%;
+		margin:20px auto;
+		text-align:center;
+	}
+
+	.sidenext a {
+		background:#fff;
+		border:1px solid #aaa;
+		padding:5px;
+		margin:10px 20px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 5px #ccc;
+		-webkit-box-shadow: 0 0 5px #ccc;
+		box-shadow: 0 0 5px #ccc;
+	}	
+
+.video {
+    background: #121212 url('http://static.tumblr.com/3mbebsn/v8ulzm2r5/bg.png') repeat; 
+    	border-bottom: 1px solid #000;
+    	color:#eee;
+    	text-shadow:0px 1px 1px #222;
+        border:1px solid #333;
+            -webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(0, 0, 0, .5);
+		-moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(0, 0, 0, .5);
+		box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .15), inset 0px 1px .5px 1px rgba(0, 0, 0, .5);
+    	
+    }
+
+.video p {
+    padding:5px;
+    }
+    
+    .video blockquote {
+        padding:5px;
+        padding-left:15px;
+        border-left:2px solid #555;
+        }
+
+  .ribbon {
+     font-size: 18px !important;
+     /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+    
+     width: 106%;
+    
+            text-shadow:0px 1px 1px #111;
+     position: relative;
+     background: #ff3c00;
+   background: -webkit-gradient(linear, left top, left bottom, from(#ff3c00), to(#c22a00));
+   background: -webkit-linear-gradient(top, #ff3c00, #c22a00);
+   background: -moz-linear-gradient(top, #ff3c00, #c22a00);
+   background: -ms-linear-gradient(top, #ff3c00, #c22a00);
+   background: -o-linear-gradient(top, #ff3c00, #c22a00);
+   background-image: -ms-linear-gradient(top, #ff3c00 0%, #c22a00 100%);
+   -webkit-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+   -moz-box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+   box-shadow: rgba(000,000,000,0.3) 0 1px 1px;
+     color: #fff;
+     text-align: center;
+     padding: 0.1em 0.2em; /* Adjust to suit */
+     margin: 0.3em auto 0.8em -1.0em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+    }
+    
+    .ribbon-stitches-top {
+   margin-top:1px;
+   border-top: 1px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+   }
+.ribbon-stitches-bottom {
+   margin-bottom:1px;
+   border-top: 1px dashed rgba(0, 0, 0, 0.2);
+   -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+   box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+   }
+    
+    .ribbon:before, .ribbon:after {
+     content: "";
+     position: absolute;
+     display: block;
+     bottom: -1em;
+      -moz-box-shadow: inset 0 0 1em #c22a00;
+     -webkit-box-shadow:inset 0 0 1em #c22a00;
+             box-shadow: inset 0 0 1em #c22a00; 
+     border: 1.0em solid #c22a00;
+     z-index: -1;
+    }
+    .ribbon:before {
+     left: -1.5em;
+     border-right-width: 1.5em;
+     border-left-color: transparent;
+    }
+    .ribbon:after {
+     right: -1.5em;
+     border-left-width: 1.5em;
+     border-right-color: transparent;
+    }
+    .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+     content: "";
+     position: absolute;
+     display: block;
+     border-style: solid;
+     border-color: #8f1f00 transparent transparent transparent;
+     bottom: -1em;
+    }
+    .ribbon .ribbon-content:before {
+     left: 0;
+     border-width: 1em 0 0 1em;
+    }
+    .ribbon .ribbon-content:after {
+     right: 0;
+     border-width: 1em 1em 0 0;
+    }
+    
+
+
+    
+
+{CustomCSS}
+	
+
+	</style>
+
+
+    </head>
+    <body>
+    
+     
+     
+
+        <div class="container page">
+        
+       
+     <ol id="posts">
+        
+          <div class="post wide">
+        	  
+            	
+            	
+     	<h1><a href="/">{Title}</a></h1>
+            
+
+        
+
+            	<div class="ribbon">
+                <div class="ribbon-stitches-top"></div>
+            <strong class="ribbon-content">{block:Description}
+          		  <p id="description">{Description}</p>
+        		{/block:Description}</strong>
+                
+        <div class="ribbon-stitches-bottom"></div>
+		</div> 
+				
+				<ul id="menu">
+	  <li><a href="/archive">archive</a></li>       
+	    <li><a href="{RSS}">feed</a></li>       
+	      {block:AskEnabled}
+	       <li><a href="/ask">{AskLabel}</a></li> 
+	      {/block:AskEnabled}
+	  
+      {block:IfLink1Name}<li><a href="{text:link 1 url}>{text:link 1 name}</a></li>{/block:IfLink1Name}
+{block:IfLink2Name}<li><a href="{text:link 2 url}>{text:link 2 name}</a></li>{/block:IfLink2Name}
+{block:IfLink3Name}<li><a href="{text:link 3 url}"class="nav">{text:link 3 name}</a></li>{/block:IfLink3Name}
+	      <li><a href="http://www.tumblr.com/themes/by/radel">theme</a></li>
+	</ul>
+            
+        </div>	
+        
+       <script type="text/javascript" src="http://codysherman.com/tools/infinite-scrolling/code"></script>
+       <div id="bloccopost" class = "autopagerize_page_element">
+            {block:Posts}
+               
+               
+               {block:Text}
+                    <li class="post text ">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    
+                      
+                     {block:HasTags}
+                    <ul class="tags">
+                        {block:Tags}
+                            <li>
+                                <a href="{TagURL}">#{Tag}</a>
+                            </li>
+                        {/block:Tags}
+                    </ul>
+                {/block:HasTags}
+                 
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                  
+                    </li>
+                {/block:Text}
+
+                {block:Photo}
+                
+                    <li class="post photo  ">
+             
+              
+
+             
+
+        <div class="photo-container">
+		 {LinkOpenTag}
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+		{LinkCloseTag}
+		{block:Caption}
+                            <div class="permacaption">{Caption}</div>
+                        {/block:Caption}
+		
+                                           
+                        
+                   
+                    
+                     {block:HasTags}
+                    <ul class="tags">
+                        {block:Tags}
+                            <li>
+                                <a href="{TagURL}">#{Tag}</a>
+                            </li>
+                        {/block:Tags}
+                    </ul>
+                {/block:HasTags}
+                   
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                   
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}
+                    
+                    
+                      
+                    </li>
+                    
+                  
+                    
+                {/block:Photo}
+
+
+
+                {block:Photoset}
+                    <li class="post photoset  ">
+                    {block:IndexPage} 
+                        {Photoset-500}
+		    {/block:IndexPage} 
+        
+        {block:PermalinkPage} 
+		  {Photoset-500}
+		    {block:Caption}
+                            <div class="permacaption">{Caption}</div>
+                        {/block:Caption}
+		{/block:PermalinkPage}
+                        
+                  
+                    
+                 
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                  
+                    </li>
+                 
+                  
+                {/block:Photoset}
+                
+                
+                
+
+                {block:Quote}
+                    <li class="post  ">
+                        <p class="quote">"{Quote}"</p>
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                        
+                  
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                  
+                    </li>
+                {/block:Quote}
+
+                {block:Link}
+                   
+                   <li class="post link  ">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                        
+                   
+                   
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                   
+                    </li>
+                {/block:Link}
+
+                {block:Chat}
+                    <li class="post chat  ">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                       
+                    
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                   
+                    </li>
+                {/block:Chat}
+
+                {block:Video}
+                    <li class="post video  ">
+                      
+                        
+                         {block:IndexPage} 
+                         	  {Video-500}
+                         {/block:IndexPage}
+               
+		{block:PermalinkPage} 
+				  {Video-500}
+		{/block:PermalinkPage}
+                        
+                        
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        
+                      
+                   
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+           
+                    </li>
+                {/block:Video}
+
+                {block:Audio}
+                    <li class="post audio  ">
+                      <div class="clear">
+                       {block:AlbumArt}
+			<img class="cover" src="{AlbumArtURL}">
+			{/block:AlbumArt}
+                        <div class="player">
+                      	   {AudioPlayerWhite}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                        
+                       
+                    {block:NoteCount}   
+                    <div class="notescount">
+                    ♥ <a href="{Permalink}">{NoteCount}</a>
+                    </div>
+                    {/block:NoteCount}
+                   <div class="date">
+                    <a href="{Permalink}"> {TimeAgo} </a>
+                    </div>
+                    {block:PostNotes}  
+                    <div class="postnotes">
+                    {PostNotes}
+                    </div>
+                    {/block:PostNotes}   
+                    
+                     </div>
+                    </li>
+                {/block:Audio}
+                
+            {/block:Posts}
+            </div>
+        </ol>
+	
+
+	
+	</div>
+	
+	</div>
+        
+        <div class="container">
+             <div class="sidenext">
+	 {block:PreviousPage}
+                <a href="{PreviousPage}">&#171; Previous</a>
+           
+            {/block:PreviousPage}
+
+            {block:NextPage}
+                <a href="{NextPage}">Next &#187;</a>
+            {/block:NextPage}
+
+	</div>
+        
+        <div id="footer">
+           
+ <p>Powered by <a href="http://tumblr.com/">Tumblr</a>. 
+	copyright {CopyrightYears} {Title} - theme by <a href="http://tumblr.bazinga.it">Marco Bonomo</a>
+           </div>
+        </div>
+        
+        
+      
+    </body>
+</html>
