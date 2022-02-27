@@ -1,0 +1,1087 @@
+<!---------------------------------------------------
+-----------------------------------------------------
+//      Masonify                       v1.0
+
+        Design & developed by: Gabriel Rios
+        Initially published: 1/18/2016
+        
+        All rights reserved.
+        
+        Use code as you like for personal purposes,
+        I really don't care what you do with it.
+        
+        For any questions/comments/concerns,
+        reach me at mr.gabrielrios@gmail.com.
+        
+        Enjoy xx                                   //
+-----------------------------------------------------
+---------------------------------------------------->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{block:TagPage}{Tag} | {/block:TagPage} {block:SearchPage}{lang:Search results for SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{Favicon}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}">
+    
+    <meta name="if:Infinite scrolling" content="1"/>
+    <meta name="font:Body font" content="Georgia"/>
+    <meta name="color:Background color" content="#ffffff"/>
+    <meta name="color:Text color" content="#222222"/>
+    <meta name="color:Link color" content="#754C78"/>
+    <meta name="color:Link hover color" content="#422C2F"/>
+    <meta name="color:Search bar background color" content="#dddddd"/>
+    <meta name="color:Search bar text color" content="#222222"/>
+    <meta name="color:Ask text background color" content="#dddddd"/>
+    <meta name="color:Text selection color" content="#EED2EE"/>
+    
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:500,700);
+    
+        * { margin: 0; padding: 0; }
+        
+        body {
+            font-family: {font:Body font};
+            font-size: 0.9em;
+            -webkit-font-smoothing: antialiased;
+	        -moz-osx-font-smoothing: grayscale;
+            background: {color:Background color};
+            color: {color:Text color};
+        }
+        
+        ::selection {
+            background: {color:Text selection color};
+        }
+        
+        ::-moz-selection {
+            background: {color:Text selection color};
+        }
+        
+        a {
+            color: {color:Link color};
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: {color:Link hover color};
+        }
+        
+        header {
+            padding: 40px 0 20px 0;
+            
+            text-align: center;
+        }
+        
+        span#blog-title {
+            font-size: 2em;
+        }
+        
+        p#blog-description {
+            margin: 15px 0;
+            
+            color: #666666;
+            line-height: 1.3em;
+        }
+        
+        header nav {
+            margin: 40px 0;
+        }
+        
+        header nav ul li {
+            margin: 0 10px;
+            display: inline;
+            
+            list-style: none;
+        }
+        
+        #search-bar {
+            width: 100%;
+            padding: 30px 0;
+            display: none;
+            
+            background: {color:Search bar background color};
+            color: {color:Search bar text color};
+        }
+        
+        #search-bar input {
+            background: inherit;
+            font-family: inherit;
+            font-size: 1.75em;
+            color: #222;
+            outline: none;
+            border: 0;
+            text-align: center;
+        }
+    
+        div#container {
+            width: 80%;
+            margin: 0 auto 20px auto;
+        }
+        
+        div.clear:after { 
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+        }
+        
+        div.post {
+            float: left;
+            position: relative;
+            width: 250px;
+            margin: 10px;
+        }
+        
+        div.permalink-post {
+            float: none; 
+            max-width: 500px; 
+            width: 90%; 
+            min-width: 320px; 
+            margin: 0 auto;
+        }
+        
+        div.metadata {
+            position: absolute;
+            top: 0;
+            left 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background: #000000;
+            opacity: 0;
+            
+            color: #ffffff;
+            text-align: center;
+            transition: opacity 0.2s;
+        }
+        
+        div.metadata_permalink_page {
+            width: 100%;
+            height: 16px;
+            margin: 10px 0;
+        }
+        
+        div.metadata:hover {
+            opacity: 0.9;
+        }
+        
+        ul.metadata_insert {
+            float: left;
+            position: relative;
+            margin: 0 auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        ul.metadata_insert li {
+            float: left;
+            display: inline;
+            margin: 0 5px;
+            
+            list-style: none;
+        }
+        
+        ul.metadata_insert_permalink_page li {
+            float: left;
+            display: inline;
+            margin: 0 5px;
+            
+            font-family: 'Raleway', Georgia, serif;
+            font-size: 0.9em;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            list-style: none;
+        }
+        
+        ul.metadata_insert_permalink_page li.permalink_date {
+            float: right;
+        }
+        
+        ul.metadata_insert li div, ul.metadata_insert li a, ul.metadata_insert li iframe, ul.metadata_insert li svg {
+            float: left;
+        }
+        
+        ul.metadata_insert li div.like_button, ul.metadata_insert li svg {
+            opacity: 0.75;
+            transition: opacity 0.2s;
+        }
+        
+        ul.metadata_insert li div.like_button:hover, ul.metadata_insert li svg:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+        
+        ul.metadata_insert_permalink_page li div.like_button, ul.metadata_insert_permalink_page li svg {
+            opacity: 0.35;
+            transition: opacity 0.2s;
+        }
+        
+        ul.metadata_insert_permalink_page li div.like_button:hover, ul.metadata_insert_permalink_page li svg:hover {
+            opacity: 0.8;
+        }
+        
+        li.notes_count {
+            font-family: 'Raleway', Georgia, serif;
+            font-size: 0.9em;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            line-height: 1.5em;
+            text-transform: uppercase;
+        }
+        
+        a.metadata_permalink {
+            line-height: 1.2em;
+            color: #ffffff;
+            transition: margin-left 0.2s;
+        }
+        
+        a.metadata_permalink:hover {
+            margin-left: 5px;
+        }
+        
+        div.post blockquote, div.permalink-post blockquote {
+            margin: 8px 0;
+            padding-left: 10px;
+            
+            line-height: 1.5em;
+            border-left: 3px solid #999999;
+        }
+        
+        div.text {
+            line-height: 1.5em;
+        }
+        
+        h2.title {
+            margin-bottom: 10px;
+            
+            font-weight: 500;
+            line-height: 1.2em;
+        }
+        
+        div.caption {
+            margin: 8px 0 0 0;
+            overflow: hidden;
+        }
+        
+        div.caption_permalink_page, div.caption_permalink_page_quote {
+            width: 100%;
+            margin: 25px 0 30px 0;
+            
+            font-style: normal;
+        }
+        
+        div.caption_permalink_page_quote {
+            font-size: 1em;
+            font-style: normal;
+            text-align: right;
+        }
+        
+        div.photo a.tumblr_blog, div.photoset a.tumblr_blog, a.tumblr_blog {
+            font-family: 'Raleway', Georgia, serif;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        div.quote blockquote {
+            line-height: 1.5em;
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            border: 0;
+        }
+        
+        p.l-quotemark {
+            float: left;
+            
+            font-size: 2.2em;
+            line-height: 0.7em;
+            opacity: 0.5;
+        }
+        
+        p.r-quotemark {
+            float: right;
+            
+            font-size: 2.2em;
+            line-height: 1em;
+            opacity: 0.5;
+        }
+        
+        p.caption {
+            float: right;
+            margin: 25px 0 0 0;
+            
+            font-size: 1em;
+            font-style: normal;
+            text-align: right;
+        }
+        
+        .link {
+            max-width: 250px;
+            padding: 10px 0;
+            
+            font-size: 1.6em;
+            background: #dddddd;
+            text-align: center;
+        }
+        
+        a.link-name {
+            transition: padding-left 0.2s;
+        }
+        
+        a.link-name:hover {
+            padding-left: 5px;
+        }
+        
+        div.chat ul.chat-lines li {
+            margin: 0 0 8px 0;
+            
+            line-height: 1.4em;
+            list-style: none;
+        }
+        
+        div.chat ul.chat-lines li span.label {
+            font-weight: bold;
+        }
+        
+        div.chat ul.chat-lines li.even {
+            margin: 0 0 8px 0;
+        }
+        
+        div.divider {
+            width: 100%;
+            height: 20px;
+        }
+        
+        div.tags-wrapper {
+            max-width: 500px;
+            width: 90%;
+            min-width: 320px;
+            margin: 30px auto 0 auto;
+        }
+        
+        div.tags-wrapper ul.tags li {
+            display: inline;
+            list-style: none;
+            margin: 0 5px;
+        }
+        
+        div.post-notes {
+            max-width: 500px;
+            width: 90%;
+            min-width: 320px;
+            margin: 30px auto;
+        }
+        
+        div.post-notes ol.notes li {
+            margin-bottom: 10px;
+            
+            list-style: none;
+            line-height: 1em;
+        }
+        
+        div.post-notes ol.notes li img {
+            margin: 0 8px 0 0;
+            
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+        }
+        
+        li.more_notes_link_container {
+            margin: 20px 0;
+        }
+        
+        div.pagination {
+            width: 150px;
+            margin: 0 auto 40px auto;
+            
+            text-align: center;
+        }
+        
+        div.answer {
+            padding: 8px 0;
+        }
+        
+        p.asker {
+            margin: 0 0 8px 0;
+        }
+        
+        h3.question_text {
+            margin: 0 0 16px 0;
+            padding: 8px;
+        
+            background: {color:Ask text background color};
+            border-radius: 5px;
+            font-weight: normal;
+            text-align: right;
+        }
+        
+        div.message {
+            width: 100%;
+            margin: 20px auto;
+            
+            font-size: 1.2em;
+            text-align: center;
+        }
+        
+        div.info {
+            float: left;
+            width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        
+        div.scrollToTop {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            padding: 8px 14px;
+            text-align: center;
+            z-index: 999;
+            
+            display: none;
+            border-radius: 4px;
+            background: #000000;
+            color: #ffffff;
+            transition: bottom 0.2s;
+        }
+        
+        div.scrollToTop:hover {
+            cursor: pointer;
+        }
+        
+        {CustomCSS}
+        
+    </style>
+  </head>
+
+  <body>
+    <header class="masthead">
+      <div class="meta-wrapper">
+
+        <div class="blog-details">
+          {block:ShowTitle}
+            <span id="blog-title"><a href="/" title="{lang:Home}">{Title}</a></span>
+          {/block:ShowTitle}
+
+          {block:ShowDescription}
+              {block:Description}
+                <p id="blog-description">{Description}</p>
+              {block:Description}
+          {/block:ShowDescription}
+        </div>
+      </div>
+
+      <div class="nav-wrapper">
+        <nav>
+          <ul>
+              {block:HasPages}
+                  {block:Pages}
+                  <li>
+                    <a href="{URL}">{Label}</a>
+                  </li>
+                  {/block:Pages}
+              {/block:HasPages}
+
+              {block:SubmissionsEnabled}
+              <li>
+                <a href="/submit">{SubmitLabel}</a>
+              </li>
+              {/block:SubmissionsEnabled}
+
+              {block:AskEnabled}
+              <li>
+                <a href="/ask">{AskLabel}</a>
+              </li>
+              {/block:AskEnabled}
+              
+              <li id="search-label">
+                <a href="#">Search</a>
+              </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="search-bar">
+          <form action="/search" method="get">
+            <input type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/>
+          </form>
+      </div>
+    </header>
+
+    <!-- Search results -->
+    {block:SearchPage}
+    <div class="search-page message">
+      {block:SearchResults}
+      <p class="search-result">{lang:Search results for SearchQuery 2}</p>
+      {/block:SearchResults}
+
+      {block:NoSearchResults}
+      <p class="search-result">{lang:Sorry no results for SearchQuery 2}</p>
+      {/block:NoSearchResults}
+
+      <span class="divider"></span>
+    </div>
+    {/block:SearchPage}
+
+    {block:TagPage}
+    <div class="tag-page message">
+      <p class="tag-wrapper">{lang:Showing posts tagged Tag 2}</p>
+
+      <span class="divider"></span>
+    </div>
+    {/block:TagPage}
+
+    <div id="container" class="clear">
+      {block:Posts}
+      
+      {block:ContentSource}
+        <!-- {SourceURL}
+            {block:SourceLogo}
+            <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />  
+            {/block:SourceLogo}
+            {block:NoSourceLogo}
+                {SourceLink}
+            {/block:NoSourceLogo} -->
+        {/block:ContentSource}
+        
+        <!--
+        {block:NoRebloggedFrom}
+            {block:RebloggedFrom}
+                {ReblogParentName}
+            {/block:RebloggedFrom}
+        {/block:NoRebloggedFrom} 
+        -->
+        
+        {block:Text}
+            <div {block:IndexPage} class="text post" {/block:IndexPage} {block:PermalinkPage} class="text permalink-post" {/block:PermalinkPage}>
+              {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              
+              {block:Title}
+              <h2 class="title">
+                <a href="{Permalink}">{Title}</a>
+              </h2>
+              {/block:Title}
+    
+              {Body}
+              {/block:IndexPage}
+              
+              {block:PermalinkPage}
+              {block:Title}
+              <h2 class="title">
+                <a href="{Permalink}">{Title}</a>
+              </h2>
+              {/block:Title}
+    
+              {Body}
+              
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+              {/block:PermalinkPage}
+              
+            </div>
+        {/block:Text}
+
+        {block:Photo}
+            <div {block:IndexPage} class="photo post" {/block:IndexPage} {block:PermalinkPage} class="photo permalink-post" {/block:PermalinkPage}>
+              {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              {LinkOpenTag}
+                <img src="{PhotoURL-250}" alt="{PhotoAlt}"/>
+              {LinkCloseTag}
+              {/block:IndexPage}
+              
+              {block:PermalinkPage}
+              
+              {LinkOpenTag}
+                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+              {LinkCloseTag}
+                
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+              {/block:PermalinkPage}
+    
+              {block:Caption}
+              <div {block:IndexPage} class="caption" {/block:IndexPage} {block:PermalinkPage} class="caption_permalink_page" {/block:PermalinkPage}>
+                {Caption}
+              </div>
+              {/block:Caption}
+              
+            </div>
+        {/block:Photo}
+
+        {block:Photoset}
+        <div {block:IndexPage} class="photoset post" {/block:IndexPage} {block:PermalinkPage} class="photoset permalink-post" {/block:PermalinkPage}>
+        
+          {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              {Photoset-250}
+              
+              {block:Caption}
+              <div {block:IndexPage} class="caption" {/block:IndexPage} {block:PermalinkPage} class="caption_permalink_page" {/block:PermalinkPage}>
+                {Caption}
+              </div>
+              {/block:Caption}
+          {/block:IndexPage}
+              
+          {block:PermalinkPage}
+              {Photoset-500}
+          
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+              
+              {block:Caption}
+              <div {block:IndexPage} class="caption" {/block:IndexPage} {block:PermalinkPage} class="caption_permalink_page" {/block:PermalinkPage}>
+                {Caption}
+              </div>
+              {/block:Caption}
+          {/block:PermalinkPage}
+        </div>
+        {/block:Photoset}
+
+        {block:Quote}
+        <div {block:IndexPage} class="quote post" {/block:IndexPage} {block:PermalinkPage} class="quote permalink-post" class="clear"{/block:PermalinkPage}>
+        
+          {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+        
+              <blockquote>
+                <p class="l-quotemark">&ldquo;</p>
+                    <br/>
+                    {Quote}
+                    <br/>
+                <p class="r-quotemark">&rdquo;</p>
+              </blockquote>
+              
+              {block:Source}
+              {block:IndexPage}<p class="caption"> {/block:IndexPage}
+              {block:PermalinkPage}<div class="caption_permalink_page_quote">{/block:PermalinkPage}
+                &mdash; {Source}
+                {block:PermalinkPage}</div>{/block:PermalinkPage}
+              {block:IndexPage}</p>{/block:IndexPage}
+              {/block:Source}
+          {/block:IndexPage}
+
+          {block:PermalinkPage}
+              <blockquote>
+                <p class="l-quotemark">&ldquo;</p>
+                    <br/>
+                    {Quote}
+                    <br/>
+                <p class="r-quotemark">&rdquo;</p>
+              </blockquote>
+              
+              {block:Source}
+              {block:IndexPage}<p class="caption"> {/block:IndexPage}
+              {block:PermalinkPage}<div class="caption_permalink_page_quote">{/block:PermalinkPage}
+                &mdash; {Source}
+                {block:PermalinkPage}</div>{/block:PermalinkPage}
+              {block:IndexPage}</p>{/block:IndexPage}
+              {/block:Source}
+          
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+          {/block:PermalinkPage}
+        </div>
+        {/block:Quote}
+
+        {block:Link}
+        <div class="link post">
+          <a {Target} href="{LinkURL}" class="link-name">{Name} &rsaquo;</a>
+
+          {block:Description}
+          <div class="caption">
+            {Description}
+          </div>
+          {/block:Description}
+        </div>
+        {/block:Link}
+
+        {block:Chat}
+        <div {block:IndexPage} class="chat post" {/block:IndexPage} {block:PermalinkPage} class="chat permalink-post" {/block:PermalinkPage}>
+          
+          {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              
+              <ul class="chat-lines">
+                {block:Lines}
+                <li class="{Alt}">
+                  {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+          {/block:IndexPage}
+              
+          {block:PermalinkPage}
+              <ul class="chat-lines">
+                {block:Lines}
+                <li class="{Alt}">
+                  {block:Label}<span class="label">{Label}</span>{/block:Label} {Line}
+                </li>
+                {/block:Lines}
+              </ul>
+              
+              <div class="divider"></div>
+              
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+          {/block:PermalinkPage}
+          
+          
+        </div>
+        {/block:Chat}
+
+<!-- take a look at different types of audio embeds -->
+
+        {block:Audio}
+        
+        <div {block:IndexPage} class="audio post" {/block:IndexPage} {block:PermalinkPage} class="audio permalink-post" class="clear"{/block:PermalinkPage}>
+          
+          {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              
+              
+          {block:AudioEmbed}
+            {AudioPlayer}
+              {AudioEmbed-250}
+          {/block:AudioEmbed}
+          {/block:IndexPage}
+              
+          {block:PermalinkPage}
+              
+          {block:AudioEmbed}
+            {AudioPlayer}
+              {AudioEmbed-500}
+          {/block:AudioEmbed}
+              
+              <div class="divider"></div>
+              
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+          {/block:PermalinkPage}
+          
+          {block:Caption}
+              <div {block:IndexPage} class="caption" {/block:IndexPage} {block:PermalinkPage} class="caption_permalink_page" {/block:PermalinkPage}>
+                {Caption}
+              </div>
+          {/block:Caption}
+        </div>
+        {/block:Audio}
+
+        {block:Video}
+        <div {block:IndexPage} class="video post" {/block:IndexPage} {block:PermalinkPage} class="video permalink-post" class="clear"{/block:PermalinkPage}>
+          
+          {block:IndexPage}
+              <div class="metadata">
+                <ul class="metadata_insert">
+                  <li>{LikeButton color="grey"}</li>
+                  <li>{ReblogButton color="grey"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                </ul>
+              </div>
+              
+              {Video-250}
+
+          {/block:IndexPage}
+              
+          {block:PermalinkPage}
+              
+              {Video-500}
+              
+              <div class="metadata_permalink_page">
+                <ul class="metadata_insert_permalink_page">
+                  <li>{LikeButton color="black"}</li>
+                  <li>{ReblogButton color="black"}</li>
+                  <li class="notes_count">{NoteCount} notes</li>
+                  <li><a class="metadata_permalink" href="{Permalink}"><b>&rarr;</b></a></li>
+                  <!-- add date customization -->
+                  <li class="permalink_date">
+                      {block:Date}
+                        {Month} {DayOfMonth}, {Year}
+                      {/block:Date}
+                  </li>
+                </ul>
+              </div>
+          {/block:PermalinkPage}
+          
+          {block:Caption}
+              <div {block:IndexPage} class="caption" {/block:IndexPage} {block:PermalinkPage} class="caption_permalink_page" {/block:PermalinkPage}>
+                {Caption}
+              </div>
+          {/block:Caption}
+        </div>
+        {/block:Video}
+        
+        {block:Answer}
+        <div class="answer post">
+          <div class="question">
+        	<p class="asker">
+        	  <span class="user-name">{Asker}</span>{block:English} asked{/block:English}:
+        	</p>
+        
+        	<h3 class="question_text">{Question}</h3>
+          </div>
+        
+          {block:Answerer}
+          <div class="answer">
+        	  <p class="answerer">
+        		<span class="user-name">{Answerer}</span>{block:English} answered{/block:English}:
+        	  </p>
+        
+        	  <div class="caption">
+        		  {Answer}
+        	  </div>
+          </div>
+          {/block:Answerer}
+        
+          <div class="replies">
+        	{Replies}
+          </div>
+        </div>
+        {/block:Answer}
+        
+        <div class="scrollToTop">
+            <b>&uarr;</b>
+        </div>
+
+        <footer class="contentinfo" role="contentinfo">
+        
+        {block:PermalinkPage}
+
+          {block:HasTags}
+          <div class="tags-wrapper">
+              <ul class="tags">
+            	<li class="tags-title"><b>Tags:</b></li>
+            	{block:Tags}
+            	    <li><a href="{TagURL}">#{Tag}</a></li>
+            	{/block:Tags}
+              </ul>
+          </div>
+          {/block:HasTags}
+        
+          {block:PostNotes}
+          <div class="post-notes">
+        	{PostNotes}
+          </div>
+          {/block:PostNotes}
+        
+         {/block:PermalinkPage}
+        
+        </footer>
+      {/block:Posts}
+      
+    </div>
+    
+    {block:Pagination}
+        <div class="pagination">
+            {block:PreviousPage}<a id="previous" href="{PreviousPage}">&larr; {lang:Newer}&nbsp;&nbsp;</a>{/block:PreviousPage}
+            {block:NextPage}<a id="next" href="{NextPage}">&nbsp;&nbsp;{lang:Older} &rarr;</a>{/block:NextPage}
+        </div>
+        
+        <div class="info">Theme made by <a href="http://mr.gabrielrios.tumblr.com">Gabriel Rios</a>, powered by Tumblr.</div>
+    {/block:Pagination}
+         
+         
+      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+    <script src="http://static.tumblr.com/3k45khs/9Yxo131g7/infinite_scroll.js"></script>
+    <script src="https://npmcdn.com/masonry-layout@4.0.0/dist/masonry.pkgd.min.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script>
+        
+        $(function(){
+            $('#search-label a').click(function(){
+                $('#search-bar').slideToggle(400);
+            })
+        })
+        
+    </script>
+    <script>
+        
+        $(document).ready(function(){
+	
+        	$(window).scroll(function(){
+        		if ($(this).scrollTop() > 200) {
+        			$('.scrollToTop').fadeIn();
+        		} else {
+        			$('.scrollToTop').fadeOut();
+        		}
+        	});
+        	
+        	$('.scrollToTop').click(function(){
+        		$('html, body').animate({scrollTop : 0}, 600);
+        		return false;
+        	});
+        	
+        });
+        
+    </script>
+    <script>
+    
+    jQuery(function($) {
+
+    var $container = $('#container');
+      $container.imagesLoaded(function(){
+        $container.masonry({
+          itemSelector: '.post',
+          isFitWidth: true
+        });
+      });
+      
+      {block:IfInfiniteScrolling}
+    
+      $container.infinitescroll ({
+        navSelector  : '#next',
+        nextSelector : 'a#next:last',
+        itemSelector : '#container .post',
+        loading: {
+          finished: undefined,
+          loadingText  : "Loading new posts...",
+          finishedMsg: 'No more pages to load.',
+          img: 'http://i.imgur.com/6RMhx.gif',
+          start: undefined,
+          animate:true
+        }
+      },
+      function( newElements ) {
+        var $newElems = $( newElements ).css({ opacity: 0 });
+        $newElems.imagesLoaded( function() {
+          $newElems.animate({ opacity: 1 });
+          $container.masonry( 'appended', $newElems );
+        }); 
+      });
+      
+      {/block:IfInfiniteScrolling}
+    });
+    
+	</script>
+  </body>
+</html>
