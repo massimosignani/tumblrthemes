@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!--
+
+    Legacy | Zen Themes
+ 
+    Release Date: Mar 15th, 2014
+    Last Update: Mar 24th, 2017
+
+-->
+
+<title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+ 
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="{favicon}">
+
+{block:hidden}
+<meta name="image:Logo" content=""/>
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Header Links" content="#767676"/>
+<meta name="color:Header Links Hover" content="#000000"/>
+<meta name="color:Dividers" content="#f2f2f2"/>
+<meta name="color:Post Background" content="#f6f6f6"/>
+<meta name="color:Post Text" content="#777777"/>
+<meta name="color:Post Title" content="#555555"/>
+<meta name="color:Post Links" content="#155d90"/>
+<meta name="color:Post Links Hover" content="#03090e"/>
+<meta name="color:Post Information" content="#7c7c7c"/>
+<meta name="color:Post Information Hover" content="#000000"/>
+<meta name="color:Photo Overlay" content="#353535"/>
+<meta name="color:Photo Overlay Button" content="#000000"/>
+<meta name="color:Photo Overlay Button Icons" content="#ffffff"/>
+
+<meta name="if:Infinite Scrolling" content="1"/>
+<meta name="if:Uppercase Blog Title" content="1"/>
+<meta name="if:Uppercase Navigation Links" content="1"/>
+<meta name="if:Bold Blog Title" content="0"/>
+<meta name="if:Bold Navigation Links" content="0"/>
+<meta name="if:Show To Top Button" content="1"/>
+<meta name="if:Show Archive Link" content="1"/>
+<meta name="if:Show Credit" content="1"/>
+<meta name="if:Show Random Link" content="0"/>
+<meta name="if:Show RSS Link" content="0"/>
+<meta name="if:Hide Post Notes" content="0"/>
+<meta name="if:Post Focus Effect" content="0"/>
+<meta name="if:Bottom Gradient Effect" content="1"/>
+<!--<meta name="if:Hover Noise Effect" content="1"/>-->
+<meta name="if:Hover Style 1" content="1"/>
+<meta name="if:Hover Style 2" content="1"/>
+<meta name="if:Hover Style 3" content="0"/>
+<meta name="if:Photo Captions" content="0"/>
+<meta name="if:Post Rounded" content="0"/>
+
+<meta name="select:Number of Columns" content="w" title="3 Columns"/>
+<meta name="select:Number of Columns" content="q" title="2 Columns"/>
+<meta name="select:Number of Columns" content="e" title="4 Columns"/>
+
+<meta name="select:Title Font" content="Montserrat" title="Montserrat"/><meta name="select:Title Font" content="Abel" title="Abel"/><meta name="select:Title Font" content="Alegreya Sans" title="Alegreya Sans"/><meta name="select:Title Font" content="Arial" title="Arial"/><meta name="select:Title Font" content="courier new" title="Courier"/><meta name="select:Title Font" content="Domine" title="Domine"/><meta name="select:Title Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Title Font" content="Georgia" title="Georgia"/><meta name="select:Title Font" content="helvetica" title="Helvetica"/><meta name="select:Title Font" content="helvetica neue" title="Helvetica Neue"/><meta name="select:Title Font" content="Karla" Title="Karla"/><meta name="select:Title Font" content="Lato" title="Lato"/><meta name="select:Title Font" content="Mako" title="Mako"/><meta name="select:Title Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Title Font" content="PT Mono" title="PT Mono"/><meta name="select:Title Font" content="Raleway" title="Raleway"/><meta name="select:Title Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Title Font" content="Questrial" title="Questrial"/><meta name="select:Title Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Title Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Title Font" content="Source Sans Pro" title="Source Sans Pro"/><meta name="select:Title Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Title Font" content="Varela" title="Varela"/><meta name="select:Body Font" content="helvetica neue" title="Helvetica Neue"/><meta name="select:Body Font" content="Abel" title="Abel"/><meta name="select:Body Font" content="Alegreya Sans" title="Alegreya Sans"/><meta name="select:Body Font" content="Arial" title="Arial"/><meta name="select:Body Font" content="courier new" title="Courier"/><meta name="select:Body Font" content="Domine" title="Domine"/><meta name="select:Body Font" content="Droid Sans" title="Droid Sans"/><meta name="select:Body Font" content="Georgia" title="Georgia"/><meta name="select:Body Font" content="helvetica" title="Helvetica"/><meta name="select:Body Font" content="Karla" Title="Karla"/><meta name="select:Body Font" content="Lato" title="Lato"/><meta name="select:Body Font" content="Mako" title="Mako"/><meta name="select:Body Font" content="Montserrat" title="Montserrat"/><meta name="select:Body Font" content="Noto Sans" title="Noto Sans"/><meta name="select:Body Font" content="PT Mono" title="PT Mono"/><meta name="select:Body Font" content="Questrial" title="Questrial"/><meta name="select:Body Font" content="Raleway" title="Raleway"/><meta name="select:Body Font" content="Roboto Slab" title="Roboto Slab"/><meta name="select:Body Font" content="Rokkitt" title="Rokkitt"/><meta name="select:Body Font" content="Ropa Sans" title="Ropa Sans"/><meta name="select:Body Font" content="Source Sans Pro" title="Source Sans Pro"/><meta name="select:Body Font" content="Times New Roman" title="Times New Roman"/><meta name="select:Body Font" content="Varela" title="Varela"/>
+
+<meta name="text:Photo Overlay Opacity" content="50"/>
+<meta name="text:Ask Link Title" content="Ask"/>
+<meta name="text:Submit Link Title" content="Submit"/>
+<meta name="text:Archive Link Title" content="Archive"/>
+<meta name="text:URL Flickr" content=""/>
+<meta name="text:URL Vimeo" content=""/>
+<meta name="text:URL Twitter" content=""/>
+<meta name="text:URL Facebook" content=""/>
+<meta name="text:URL Google Plus" content=""/>
+<meta name="text:URL Pinterest" content=""/>
+<meta name="text:URL Dribble" content=""/>
+<meta name="text:URL Spotify" content=""/>
+<meta name="text:URL Instagram" content=""/>
+<meta name="text:URL Soundcloud" content=""/>
+<meta name="text:URL Behance" content=""/>
+<meta name="text:URL Linkedin" content=""/>
+<meta name="text:URL Stumbleupon" content=""/>
+<meta name="text:URL Github" content=""/>
+<meta name="text:URL Youtube" content=""/>
+<meta name="text:Custom Link 1" content=""/>
+<meta name="text:Custom Link 1 Title" content=""/>
+<meta name="text:Custom Link 2" content=""/>
+<meta name="text:Custom Link 2 Title" content=""/>
+<meta name="text:Custom Link 3" content=""/>
+<meta name="text:Custom Link 3 Title" content=""/>
+<meta name="text:Custom Link 4" content=""/>
+<meta name="text:Custom Link 4 Title" content=""/>
+<meta name="text:Custom Link 5" content=""/>
+<meta name="text:Custom Link 5 Title" content=""/>
+{/block:hidden}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro|{select:Body Font}:400,400italic,700,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family={select:Title Font}:400,700"><link rel="stylesheet" href="https://static.tumblr.com/3zmswwt/Or2o5npur/s.css"/><style type="text/css">html{background:{color:background}}body{font:11px/1.6em "{select:Body Font}",san-serif;color:{color:Post Text}}a{color:{color:Post Links}}a:hover{color:{color:Post Links Hover}}h1,h2,h3,h4,h5{font:700 13px/1.6em "{select:Title Font}",sans-serif;color:{color:Post Title}}blockquote{border-left:3px solid rgba({RGBcolor:Post Text},.2)}#A{background:rgba({RGBcolor:Background},.97)}#A #S a{color:{color:Header Links}}#A #S a:hover{color:{color:Header Links Hover}}#A h1 a{{block:ifuppercaseblogtitle}text-transform:uppercase;letter-spacing:4px;{/block:ifuppercaseblogtitle}font:{block:ifboldblogtitle}700 {/block:ifboldblogtitle} 17px "{select:Title Font}",sans-serif;color:{color:Header Links}}#A h1 a:hover{color:{color:Header Links Hover}}#A #S{{block:ifURLTwitter}display:inline;{/block:ifURLTwitter}{block:ifURLFacebook}display:inline;{/block:ifURLFacebook}{block:ifURLVimeo}display:inline;{block:ifURLVimeo}{block:ifURLFlickr}display:inline;{/block:ifURLFlickr}{block:ifURLGooglePlus}display:inline;{/block:ifURLGooglePlus}{block:ifURLYoutube}display:inline;{/block:ifURLYoutube}{block:ifURLPinterest}display:inline;{/block:ifURLPinterest}{block:ifURLLinkedin}display:inline;{/block:ifURLLinkedin}{block:ifURLDribble}display:inline;{/block:ifURLDribble}{block:ifURLStumbleupon}display:inline;{/block:ifURLStumbleupon}{block:ifURLSpotify}display:inline;{/block:ifURLSpotify}{block:ifURLInstagram}display:inline;{/block:ifURLInstagram}{block:ifURLBehance}display:inline;{/block:ifURLBehance}{block:ifURLGithub}display:inline;{/block:ifURLGithub}{block:ifURLSoundcloud}display:inline;{/block:ifURLSoundcloud}}#A,#A #D,#A #SH,#A #N{border-bottom:1px solid {color:Dividers}}#A #SH form input[type="text"]{font:12px/17px "{select:Title Font}";color:{color:Header Links}}#A #SH form input[type="text"]:focus{background:rgba({RGBcolor:Post Background},1)}#A #N #L li a{{block:ifuppercasenavigationlinks}text-transform:uppercase;letter-spacing:1px;{/block:ifuppercasenavigationlinks}font:{block:ifboldnavigationlinks}700 {/block:ifboldnavigationlinks}11px "{select:Title Font}",sans-serif;color:{color:Header Links}}#A #N #L li a:hover{color:{color:Header Links Hover}}#A #D{font:11px/2em "{select:Title Font}",sans-serif}#A #B a{color:{color:Header Links}}#A #B a:hover{color:{color:Header Links Hover}}#G{background:-moz-linear-gradient(top,rgba({RGBcolor:Background},1) 0,rgba({RGBcolor:Background},0) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,rgba({RGBcolor:Background},1)),color-stop(100%,rgba({RGBcolor:Background},0)));background:-webkit-linear-gradient(top,rgba({RGBcolor:Background},1) 0,rgba({RGBcolor:Background},0) 100%);background:-o-linear-gradient(top,rgba({RGBcolor:Background},1) 0,rgba({RGBcolor:Background},0) 100%);background:-ms-linear-gradient(top,rgba({RGBcolor:Background},1) 0,rgba({RGBcolor:Background},0) 100%);background:linear-gradient(to bottom,rgba({RGBcolor:Background},1) 0,rgba({RGBcolor:Background},0) 100%)}.X .p a.G{background:{color:Photo Overlay}}.X:hover a.G{opacity:.{text:Photo Overlay Opacity}}.X .p .h_1 a,.X .p .h_2 a,.X .p .h_3 a{color:{color:Photo Overlay Button Icons};background:rgba({RGBcolor:Photo Overlay Button},.6);box-shadow:0 0 0 1px rgba({RGBcolor:Photo Overlay Button Icons},.08)}.X .p .h_1 a:hover,.X .p .h_2 a:hover,.X .p .h_3 a:hover{background:rgba({RGBcolor:Photo Overlay Button},1)}.X .p .h_1 a:active,.X .p .h_2 a:active,.X .p .h_3 a:active{background:rgba({RGBcolor:Photo Overlay Button},.8) url("https://static.tumblr.com/3zmswwt/Dxtn44o54/noise_1.gif") no-repeat center}.X .d a,#P .p-b .d a{border-right:1px solid rgba({RGBcolor:Post Information},.15)}.X .d a,.p-b a{color:{color:Post Information}}.X .d a:hover,.p-b a:hover{color:{color:Post Information Hover}}.X .t.ct li,.X .t .q{border-bottom:1px dotted rgba({RGBcolor:Post Information},.15)}#PG a{font:12px "{select:Title Font}",sans-serif;color:{color:Post Title}}#A #SH form input[type="text"],.X .t,.X .c,.X .d,#p-X,#infscr-loading img,#PG a,.p-b{background:rgba({RGBcolor:Post Background},.75)}#TT{font:700 10px/19px "{select:Body Font}",sans-serif}{block:ifPostFocusEffect}#Z:hover .X{opacity:.3}#Z .X:hover{opacity:1 !important}{/block:ifPostFocusEffect}{block:ifnotphotocaptions}.X .photo-post{display:none}{/block:ifnotphotocaptions}{block:ifpostrounded}.X .p img,.X a.G{border-radius:2px}#infscr-loading img,.X,.p-b{border-radius:4px}{/block:ifpostrounded}{block:ifinfinitescrolling}#PG{opacity:0 !important}#Z{padding-bottom:160px}{/block:ifinfinitescrolling}{CustomCSS}</style></head>
+
+<body {block:permalinkpage}id="P"{/block:permalinkpage} class="{select:Number of Columns}{block:ifinfinitescrolling} is{/block:ifinfinitescrolling}">
+
+<header id="A">{block:Description}<div id="D">{Description}</div>{/block:Description}<div id="SH"><form action="/search" method="get"><span>s</span><input type="text" name="q" value=""/></form></div><div id="N"><nav id="L">{block:AskEnabled}<li><a href="/ask">{text:Ask Link Title}</a></li>{/block:AskEnabled}{block:SubmissionsEnabled}<li><a href="/submit">{text:Submit Link Title}</a></li>{/block:SubmissionsEnabled}{block:ifshowarchivelink}<li><a href="/archive">{text:Archive Link Title}</a></li>{/block:ifshowarchivelink}{block:ifshowrandomlink}<li><a href="/random">Random</a></li>{/block:ifshowrandomlink}{block:ifshowrsslink}<li><a href="{RSS}">RSS</a></li>{/block:ifshowrsslink}{block:ifCustomLink1Title}<li><a href="{text:Custom Link 1}">{text:Custom Link 1 Title}</a></li>{/block:ifCustomLink1Title}{block:ifCustomLink2Title}<li><a href="{text:Custom Link 2}">{text:Custom Link 2 Title}</a></li>{/block:ifCustomLink2Title}{block:ifCustomLink3Title}<li><a href="{text:Custom Link 3}">{text:Custom Link 3 Title}</a></li>{/block:ifCustomLink3Title}{block:ifCustomLink4Title}<li><a href="{text:Custom Link 4}">{text:Custom Link 4 Title}</a></li>{/block:ifCustomLink4Title}{block:ifCustomLink5Title}<li><a href="{text:Custom Link 5}">{text:Custom Link 5 Title}</a></li>{/block:ifCustomLink5Title}{block:Pages}<li><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}{block:ifshowcredit}<li id="zt"><a href="http://goo.gl/Mva9nf">Theme</a></li>{/block:ifshowcredit}</nav><nav id="S">{block:ifURLTwitter}<a href="{text:URL Twitter}" class="twitter" target="_blank">1</a>{/block:ifURLTwitter}{block:ifURLFacebook}<a href="{text:URL Facebook}" class="facebook" target="_blank">2</a>{/block:ifURLFacebook}{block:ifURLVimeo}<a href="{text:URL Vimeo}" class="vimeo" target="_blank">3</a>{block:ifURLVimeo}{block:ifURLFlickr}<a href="{text:URL Flickr}" class="flickr" target="_blank">4</a>{/block:ifURLFlickr}{block:ifURLGooglePlus}<a href="{text:URL Google Plus}" class="google" target="_blank">5</a>{/block:ifURLGooglePlus}{block:ifURLYoutube}<a href="{text:URL Youtube}" class="youtube" target="_blank">u</a>{/block:ifURLYoutube}{block:ifURLPinterest}<a href="{text:URL Pinterest}" class="pinterest" target="_blank">6</a>{/block:ifURLPinterest}{block:ifURLLinkedin}<a href="{text:URL Linkedin}" class="linkedin" target="_blank">7</a>{/block:ifURLLinkedin}{block:ifURLDribble}<a href="{text:URL Dribble}" class="dribble" target="_blank">8</a>{/block:ifURLDribble}{block:ifURLStumbleupon}<a href="{text:URL Stumbleupon}" class="stumbleupon" target="_blank">9</a>{/block:ifURLStumbleupon}{block:ifURLSpotify}<a href="{text:URL Spotify}" class="spotify" target="_blank">=</a>{/block:ifURLSpotify}{block:ifURLInstagram}<a href="{text:URL Instagram}" class="instagram" target="_blank">q</a>{/block:ifURLInstagram}{block:ifURLBehance}<a href="{text:URL Behance}" class="behance" target="_blank">e</a>{/block:ifURLBehance}{block:ifURLGithub}<a href="{text:URL Github}" class="github" target="_blank">r</a>{/block:ifURLGithub}{block:ifURLSoundcloud}<a href="{text:URL Soundcloud}" class="soundcloud" target="_blank">t</a>{/block:ifURLSoundcloud}</nav></div>{block:iflogoimage}<a href="/"><img src="{image:Logo}" alt="{title}"></a>{/block:iflogoimage}{block:ifnotlogoimage}<h1><a href="/">{title}</a></h1>{/block:ifnotlogoimage}<nav id="B">{block:Description}<a id="cabout">a</a>{/block:Description}<a id="csearch">s</a><a id="cnavigation">d</a></nav></header>
+
+<section id="Z-C">
+
+<div id="F"></div>{block:ifBottomgradienteffect}<div id="G"></div>{/block:ifBottomgradienteffect}
+
+<div id="Z">
+
+{block:SearchPage}<div id="p-X"><h3>Search results for “{SearchQuery}”</h3>{block:NoSearchResults}<p>Sorry, nothing found.</p>{/block:NoSearchResults}</div>{/block:SearchPage}{block:TagPage}<div id="p-X"><h3>Posts tagged with “{Tag}”</h3></div>{/block:TagPage}
+
+{block:Posts}<article id="{PostID}" class="X{block:HasTags}{block:Tags} tag-{Tag}{/block:Tags}{/block:HasTags}" rel="{PostID}">{block:Answer}<div class="t"><div class="q"><h3>{Question}</h3><div class="sc">Asked by {Asker}</div></div>{answer}</div>{/block:Answer}{block:Chat}<div class="t ct">{block:Title}<h2>{Title}</h2>{/block:Title}{block:Lines}<li>{block:Label}<b>{Label}</b>{/block:Label} {Line}</li>{/block:Lines}</div>{/block:Chat}{block:Link}<div class="t"><h2><a class="link" href="{URL}">{Name} →</a></h2>{block:Description}{Description}{/block:Description}</div>{/block:Link}{block:Text}<div class="t">{block:Title}<h2>{Title}</h2>{/block:Title}{Body}</div>{/block:Text}{block:Quote}<div class="t qt"><h3>{Quote}</h3><div class="qt-s">“</div><div class="sc">— {Source}</div></div>{/block:Quote}{block:Photo}<div class="p">{block:indexpage}{block:ifnothoverstyle3}{block:ifnothoverstyle2}{block:ifhoverstyle1}<div class="h_1"><a href="{ReblogURL}" targe="_blank">x</a><a>z{LikeButton size="13"}</a></div>{/block:ifhoverstyle1}{/block:ifnothoverstyle2}{/block:ifnothoverstyle3}{block:ifnothoverstyle3}{block:ifhoverstyle2}<div class="h_2"><a href="{ReblogURL}" targe="_blank">x</a><a>z{LikeButton size="15"}</a><a href="{permalink}">c</a><span class="photoset-grid"><a href="{PhotoURL-HighRes}">s</a></span></div>{/block:ifhoverstyle2}{/block:ifnothoverstyle3}{block:ifhoverstyle3}<div class="h_3"><a class="t-1" href="{permalink}">{Month} {DayOfMonthWithZero}</a><a class="t-2" href="{permalink}">{Notecountwithlabel}</a><a class="t-3" href="{ReblogURL}" targe="_blank">Reblog Post</a></div>{/block:ifhoverstyle3}<a href="{permalink}" class="G"></a><img src="{PhotoURL-500}" alt="{PhotoAlt}">{/block:indexpage}{block:permalinkpage}{LinkOpenTag}<img src="{PhotoURL-HighRes}"alt="{PhotoAlt}">{LinkCloseTag}{/block:permalinkpage}</div>{/block:Photo}{block:Photoset}<div class="p"><div class="photoset-grid" data-layout="{PhotosetLayout}" data-id="photoset{PostID}">{block:Photos}<img src="{block:indexpage}{PhotoURL-HighRes}{/block:indexpage}{block:permalinkpage}{PhotoURL-500}{/block:permalinkpage}"{block:HighRes}data-highres="{PhotoURL-HighRes}"{/block:HighRes}{block:Caption}alt="{Caption}"{/block:caption}/>{/block:Photos}</div></div>{/block:Photoset}{block:Audio}<div class="m">{block:IndexPage}{AudioEmbed-400}{/block:IndexPage}{block:permalinkpage}{AudioEmbed-640}{/block:permalinkpage}</div>{/block:Audio}{block:Video}<div class="m">{block:IndexPage}{VideoEmbed-400}{/block:IndexPage}{block:permalinkpage}{VideoEmbed-700}{/block:permalinkpage}</div>{/block:Video}{block:indexpage}{block:date}<div class="{block:Photo}photo-post{/block:Photo}">{block:Caption}<div class="c">{Caption}</div>{/block:Caption}<div class="d"><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero}</a><a href="{permalink}">{NoteCountWithLabel}</a><a href="{ReblogURL}" target="_blank">Reblog</a></div></div>{/block:date}{/block:indexpage}</article>
+
+{block:PermalinkPage}{block:date}<div id="p-sidebar"><div class="p-b">{block:Caption}<div class="c">{Caption}</div>{/block:Caption}<div class="d"><a href="{permalink}">{ShortMonth} {DayOfMonthWithZero}</a><a href="{permalink}">{NoteCountWithLabel}</a><a href="{ReblogURL}">Reblog</a></div></div>{block:ifnothidepostnotes}{block:PostNotes}<div class="p-b">{PostNotes}</div>{/block:PostNotes}{/block:ifnothidepostnotes}</div>{/block:date}{/block:PermalinkPage}{/block:Posts}</div>
+
+{block:ifshowtotopbutton}<div id="TT"></div>{/block:ifshowtotopbutton}<nav id="PG">{block:Pagination}{block:PreviousPage}<a href="{PreviousPage}">← Newer</a>{/block:PreviousPage}{block:NextPage}<a href="{NextPage}" id="older">Older →</a>{/block:NextPage}{/block:Pagination}</nav>
+
+</section>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script><script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script><script type="text/javascript" src="https://static.tumblr.com/j6tha7z/OTYogbxwk/s.js"></script>
+
+</body>
+</html>
