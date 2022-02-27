@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!-- Royal v1.0.2 | Copyright ÂŠ 2014 by PixelRevel.com -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} â {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+
+    {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+
+    {block:Hidden}
+    <meta name="color:Accent Color" content="#39ae7b">
+    <meta name="color:Background" content="#fff">
+    <meta name="color:Blog Name" content="#666">
+    <meta name="color:Blog Tagline" content="#999">
+    <meta name="color:Body Text" content="#666">
+    <meta name="color:Button Border" content="#39AE7B">
+    <meta name="color:Button Hover Background" content="#39AE7B">
+    <meta name="color:Button Hover Text" content="#fff">
+    <meta name="color:Button Text" content="#39AE7B">
+    <meta name="color:Dividers" content="#eee">
+    <meta name="color:Footer Background" content="#39ae7b">
+    <meta name="color:Footer Links" content="#fff">
+    <meta name="color:Footer Text" content="#b8f0d8">
+    <meta name="color:Heading Text" content="#222">
+    <meta name="color:Lead Text" content="#222">
+    <meta name="color:Post Meta Text" content="#999">
+    <meta name="color:Quote Body Text" content="#888">
+    <meta name="color:Quote Heading Text" content="#fff">
+    <meta name="color:Quote Lead Text" content="#ccc">
+    <meta name="color:Quote Meta Text" content="#555">
+    <meta name="color:Quote Post Background" content="#111">
+    <meta name="color:Top Bar Background" content="#222">
+    <meta name="color:Top Bar Links Hover" content="#fff">
+    <meta name="color:Top Bar Links" content="#fff">
+    <meta name="color:Top Bar Social Icons Hover" content="#fff">
+    <meta name="color:Top Bar Social Icons" content="#666">
+    <meta name="color:Twitter Feed Icon" content="#e6e6e6">
+    <meta name="color:Twitter Feed Line" content="#d9d9d9">
+    <meta name="color:Twitter Feed Link" content="#39ae7b">
+    <meta name="color:Twitter Feed Text" content="#66">
+
+    <meta name="if:Background Photo Grayscale" content="1">
+    <meta name="if:Blog Name And Tagline Centered" content="1">
+    <meta name="if:Format First Paragraph" content="1">
+    <meta name="if:Generate Background for Photos" content="1">
+    <meta name="if:Infinite Scroll" content="1">
+    <meta name="if:Next Previous Links on Post Page" content="1">
+    <meta name="if:Show Archive Link" content="1">
+    <meta name="if:Show EXIF Data" content="1">
+    <meta name="if:Show follow button" content="1">
+    <meta name="if:Show Like Icon" content="1">
+    <meta name="if:Show Notes on Post Page" content="1">
+    <meta name="if:Show Post Icons on Homepage" content="1">
+    <meta name="if:Show Random Link" content="1">
+    <meta name="if:Show Reblog Icon" content="1">
+    <meta name="if:Show RSS Icon" content="1">
+    <meta name="if:Show RSS Link" content="1">
+    <meta name="if:Show Search Field" content="1">
+    <meta name="if:Show Share Icons" content="1">
+    <meta name="if:Show Single Photos on Homepage" content="1">
+    <meta name="if:Show Social Links" content="1">
+    <meta name="if:Show Twitter Feed" content="1">
+    <meta name="if:Show Tags on Homepage" content="1">
+    <meta name="if:Use Relative Dates" content="1">
+
+    <meta name="text:Behance Username" content="">
+    <meta name="text:DeviantArt Username" content="">
+    <meta name="text:Dribbble Username" content="">
+    <meta name="text:Email Address" content="">
+    <meta name="text:Facebook Username" content="">
+    <meta name="text:Flickr Username" content="">
+    <meta name="text:Github Username" content="">
+    <meta name="text:Instagram Username" content="">
+    <meta name="text:LinkedIn Username" content="">
+    <meta name="text:Pinterest Username" content="">
+    <meta name="text:Reddit Username" content="">
+    <meta name="text:Skype Username" content="">
+    <meta name="text:Twitter Username" content="">
+    <meta name="text:Vimeo Username" content="">
+
+    <meta name="text:Blog Name Font" content="Playfair Display" />
+    <meta name="text:Heading Font" content="Playfair Display" />
+    <meta name="text:Lead Font" content="Playfair Display" />
+    <meta name="text:Body Text Font" content="PT Serif" />
+
+    <meta name="text:Disqus Shortname" content="" />
+    <meta name="text:Google Analytics ID" content="" />
+    {/block:Hidden}
+
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <link rel="apple-touch-icon-precomposed" href="{PortraitURL-128}" />
+    <link rel="shortcut icon" href="{Favicon}" />
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={text:Blog Name Font}:400,700&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={text:Heading Font}:400,700&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={text:Lead Font}:400,700&subset=latin,latin-ext" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family={text:Body Text Font}:400,400italic,700&subset=latin,latin-ext" />
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://static.tumblr.com/gzeluq1/EW2nfjvnb/style.min.css">
+
+    <style>
+        html {
+            background: {color:Background};
+            color: {color:Body Text};
+            font-family: "{text:Body Text Font}", serif;
+        }
+
+        .post-body ul li:before,
+        .post-link .post-title a:hover,
+        a {
+            color: {color:Accent Color};
+        }
+
+        .post-overlay {
+            background: rgba({RGBcolor:Accent Color}, .75);
+        }
+
+        .post-popup__content li > a:hover,
+        .post-popup__content li > div:hover,
+        .post-photo .photoset a:before,
+        .post-link .post-title a {
+            background: {color:Accent Color};
+        }
+
+        .post-share-wrap > ul {
+            background: {color:Background};
+        }
+
+        .post-body blockquote {
+            border-left-color: {color:Accent Color};
+        }
+
+        .btn--primary {
+            color: {color:Button Text};
+            border-color: {color:Button Border};
+        }
+
+        .btn--primary.active,
+        .btn--primary:hover,
+        .btn--primary:focus {
+            background: {color:Button Hover Background};
+            border-color: {color:Button Hover Background};
+            color: {color:Button Hover Text};
+        }
+
+        .btn--primary.active:before,
+        .btn--primary:hover:before,
+        .btn--primary:focus:before {
+            border-color: {color:Button Hover Border};
+        }
+
+        .top-bar {
+            background: {color:Top Bar Background};
+        }
+
+        {block:IfBackgroundPhotoGrayscale}
+        .post-media__bg {
+            filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+            filter: gray;
+            -webkit-filter: grayscale(100%);
+        }
+        {/block:IfBackgroundPhotoGrayscale}
+
+        {block:IfBlogNameAndTaglineCentered}
+        .page-head .split {
+            text-align: center;
+        }
+        .page-head .split__title {
+            display: inline-block;
+            float: none;
+            text-align: center;
+        }
+        .page-head .toggle-nav {
+            float: right;
+        }
+        {/block:IfBlogNameAndTaglineCentered}
+
+        .top-bar .nav-top-bar a {
+            color: {color:Top Bar Links};
+        }
+
+        .top-bar .nav-top-bar a:hover {
+            color: {color:Top Bar Links Hover};
+        }
+
+        .top-bar .nav-social a {
+            color: {color:Top Bar Social Icons};
+        }
+
+        .top-bar .nav-social a:hover {
+            color: {color:Top Bar Social Icons Hover};
+        }
+
+        .format-lede .post-body > p:nth-of-type(1) {
+            color: {color:Lead Text};
+            font-family: "{text:Lead Font}", sans-serif;
+        }
+
+        .post-date,
+        .post-tags {
+            color: {color:Post Meta Text};
+        }
+
+        .page__logo {
+            color: {color:Blog Name};
+            font-family: "{text:Blog Name Font}", sans-serif;
+        }
+
+        .page__desc {
+            color: {color:Blog Tagline};
+        }
+
+        .post-title,
+        h1, h2, h3,
+        h4, h5, h6 {
+            color: {color:Heading Text};
+            font-family: "{text:Heading Font}", sans-serif;
+        }
+
+        .page-foot {
+            background: {color:Footer Background};
+            color: {color:Footer Text};
+        }
+
+        .page-foot a {
+            color: {color:Footer Links};
+        }
+
+        .twitter-feed {
+            border-top-color: {color:Twitter Feed Line};
+        }
+
+        .twitter-feed__icon {
+            color: {color:Twitter Feed Icon};
+        }
+
+        .twitter-feed__icon .fa {
+            background: {color:Background};
+        }
+
+        .twitter-feed__content {
+            color: {color:Twitter Feed Text};
+        }
+
+        .twitter-feed__content a {
+            color: {color:Twitter Feed Link};
+        }
+
+        .post-body blockquote {
+            border-left-color: {color:Accent Color};
+        }
+
+        .post-quote .post__inner,
+        .post-video .post__inner,
+        .post-audio .post__inner,
+        .post-quote .post__inner .post-share-wrap>ul,
+        .post-video .post__inner .post-share-wrap>ul,
+        .post-audio .post__inner .post-share-wrap>ul {
+            background: {color:Quote Post Background};
+        }
+
+        .page-index .post-quote > .post-foot,
+        .page-index .post-video > .post-foot,
+        .page-index .post-audio > .post-foot {
+            display: none;
+        }
+
+        .post-quote .post-title,
+        .post-video .post-title,
+        .post-audio .post-title {
+            color: {color:Quote Heading Text};
+        }
+
+        .post-quote .post-date,
+        .post-video .post-date,
+        .post-audio .post-date {
+            color: {color:Quote Meta Text};
+        }
+
+        .post-quote .post-body p,
+        .post-video .post-body p,
+        .post-audio .post-body p {
+            color: {color:Quote Body Text};
+        }
+
+        .format-lede .post-quote .post-body > p:nth-of-type(1),
+        .format-lede .post-video .post-body > p:nth-of-type(1),
+        .format-lede .post-audio .post-body > p:nth-of-type(1) {
+            color: {color:Quote Lead Text};
+        }
+
+        .notes .note ~ .note,
+        .chat li ~ li {
+            border-top-color: {color:Dividers};
+        }
+        {CustomCSS}
+    </style>
+
+    <script>
+        document.documentElement.className = document.documentElement.className.replace("no-js", "js");
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="http://static.tumblr.com/7v4ocid/e83mwvjmp/html5shiv-3.7.0.min.js"></script>
+    <![endif]-->
+</head>
+<body class="{block:PermalinkPage}page-permalink {/block:PermalinkPage}{block:IndexPage}page-index {block:IfInfiniteScroll}js-infinite-scroll {/block:IfInfiniteScroll}{block:IfNotShowPostIconsonHomepage}hide-post-icons {/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}{block:IfFormatFirstParagraph}format-lede {/block:IfFormatFirstParagraph}{block:IfNotShowSearchField}hide-search-form {/block:IfNotShowSearchField}">
+    <div class="top-bar js-top-bar" role="banner">
+        <div class="top-bar__primary">
+            <div class="wrapper">
+                <ul class="nav  nav-top-bar">
+                    <li class="search-form-wrap">
+                    {block:IfShowSearchField}
+                        <form action="/search" method="get" accept-charset="utf-8" class="search-form">
+                            <label class="js-search" for="search">
+                                <i class="search-form__icon fa fa-search"></i>
+                                <input class="search-form__input" id="search" type="search" name="q" value="{SearchQuery}">
+                            </label>
+                        </form><!-- /.search-form -->
+                    {/block:IfShowSearchField}
+                    </li>
+
+                    {block:IfShowArchiveLink}
+                    <li><a href="/archive">{lang:Archive}</a></li>
+                    {/block:IfShowArchiveLink}
+
+                    {block:AskEnabled}
+                    <li><a href="/ask">{AskLabel}</a></li>
+                    {/block:AskEnabled}
+
+                    {block:HasPages}
+                    {block:Pages}
+                    <li><a href="{URL}">{Label}</a></li>
+                    {/block:Pages}
+                    {/block:HasPages}
+
+                    {block:IfShowRandomLink}
+                    <li><a href="/random">{lang:Random}</a></li>
+                    {/block:IfShowRandomLink}
+
+                    {block:SubmissionsEnabled}
+                    <li><a href="/submit">{SubmitLabel}</a></li>
+                    {/block:SubmissionsEnabled}
+
+                    {block:IfShowRSSLink}
+                    <li><a href="{RSS}">RSS</a></li>
+                    {/block:IfShowRSSLink}
+                </ul><!-- /.nav-sidebar -->
+            </div><!-- /.wrapper -->
+        </div><!-- /.top-bar__primary -->
+
+        {block:IfShowSocialLinks}
+        <div class="top-bar__secondary">
+            <div class="wrapper">
+                <ul class="nav nav-social">
+                    {block:IfFacebookUsername}
+                    <li><a href="http://facebook.com/{text:Facebook Username}/"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    {/block:IfFacebookUsername}
+
+                    {block:IfTwitterUsername}
+                    <li><a href="http://twitter.com/{text:Twitter Username}"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    {/block:IfTwitterUsername}
+
+                    {block:IfInstagramUsername}
+                    <li><a href="http://instagram.com/{text:Instagram Username}"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    {/block:IfInstagramUsername}
+
+                    {block:IfFlickrUsername}
+                    <li><a href="https://www.flickr.com/photos/{text:Flickr Username}"><i class="fa fa-flickr" aria-hidden="true"></i></a></li>
+                    {/block:IfFlickrUsername}
+
+                    {block:IfLinkedInUsername}
+                    <li><a href="http://linkedin.com/in/{text:LinkedIn  Username}"><i class="fa  fa-linkedin-square"></i></a></li>
+                    {/block:IfLinkedInUsername}
+
+                    {block:IfDribbbleUsername}
+                    <li><a href="http://dribbble.com/{text:Dribbble Username}"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    {/block:IfDribbbleUsername}
+
+                    {block:IfDeviantArtUsername}
+                    <li><a href="http://{text:DeviantArt Username}.deviantart.com"><i class="fa fa-deviantart" aria-hidden="true"></i></a></li>
+                    {/block:IfDeviantArtUsername}
+
+                    {block:IfRedditUsername}
+                    <li><a href="http://www.reddit.com/user/{text:Reddit Username}"><i class="fa fa-reddit-square" aria-hidden="true"></i></a></li>
+                    {/block:IfRedditUsername}
+
+                    {block:IfGithubUsername}
+                    <li><a href="https://github.com//{text:Github Username}"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+                    {/block:IfGithubUsername}
+
+                    {block:IfBehanceUsername}
+                    <li><a href="https://www.behance.net/{text:Behance Username}"><i class="fa fa-behance-square" aria-hidden="true"></i></a></li>
+                    {/block:IfBehanceUsername}
+
+                    {block:IfVimeoUsername}
+                    <li><a href="https://www.vimeo.com/{text:Vimeo Username}"><i class="fa fa-vimeo-square" aria-hidden="true"></i></a></li>
+                    {/block:IfVimeoUsername}
+
+                    {block:IfPinterestUsername}
+                    <li><a href="https://www.pinterest.com/{text:Pinterest Username}"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+                    {/block:IfPinterestUsername}
+
+                    {block:IfSkypeUsername}
+                    <li><a href="skype:{text:Skype Username}?call"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+                    {/block:IfSkypeUsername}
+
+                    {block:IfEmailAddress}
+                    <li><a href="mailto:{text:Email Address}"><i class="fa fa-envelope-square" aria-hidden="true"></i></a></li>
+                    {/block:IfEmailAddress}
+
+                    {block:IfShowRSSicon}
+                    <li><a href="{RSS}"><i class="fa  fa-rss-square"></i></a></li>
+                    {/block:IfShowRSSicon}
+                </ul><!-- /.nav-social -->
+            </div><!-- /.wrapper -->
+        </div><!-- /.top-bar__secondary -->
+        {/block:IfShowSocialLinks}
+
+        <button class="toggle-nav  js-toggle-nav">
+            <i class="fa fa-bars"></i>
+        </button><!-- /.toggle-nav -->
+    </div><!-- /.top-bar -->
+
+    <header class="page-head js-page-head" role="banner">
+        <div class="wrapper">
+            <div class="split">
+                <div class="split__title">
+                    <a href="{BlogURL}" class="page__logo">{Title}</a>
+                    {block:Description}
+                    <p class="page__desc">{Description}</p>
+                    {/block:Description}
+                </div>
+
+                <button class="toggle-nav  js-toggle-nav">
+                    <i class="fa fa-bars"></i>
+                </button><!-- /.toggle-nav -->
+            </div><!-- /.split -->
+        </div><!-- /.wrapper -->
+    </header><!-- /.page-head -->
+
+    <div class="main" role="main">
+        <div class="wrapper">
+            <div class="search-result">
+                {block:SearchPage}
+                    {block:SearchResults}
+                    <h1>{SearchResultCount} results for {SearchQuery}</h1>
+                    {/block:SearchResults}
+
+                    {block:NoSearchResults}
+                    <h1>No search results for {SearchQuery}</h1>
+                    {/block:NoSearchResults}
+                {/block:SearchPage}
+            </div><!-- /.search-result -->
+        </div><!-- /.wrapper -->
+
+        <div class="posts">
+            {block:Posts}
+            <article class="post post-{PostType}" id="post-{PostID}" data-tags="{TagsAsClasses}">
+
+                {block:Answer}
+                <div class="wrapper">
+                    <header class="post-head">
+                        <h1 class="post-title">
+                            <a href="{Permalink}">{Asker}: {Question}</a>
+                        </h1><!-- /.post-title -->
+
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+
+                    <div class="post-body">
+                        {Answer}
+                    </div><!-- /.post-body -->
+                </div><!-- /.wrapper -->
+                {/block:Answer}
+
+
+                {block:Text}
+                <div class="wrapper">
+                    <header class="post-head">
+                        <h1 class="post-title">
+                            <a href="{Permalink}">{Title}</a>
+                        </h1><!-- /.post-title -->
+
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+
+                    <div class="post-body">
+                        {Body}
+                    </div><!-- /.post-body -->
+                </div>
+                {/block:Text}
+
+
+                {block:Chat}
+                <div class="wrapper">
+                    <header class="post-head">
+                        <h1 class="post-title">
+                            <a href="{Permalink}">{Title}</a>
+                        </h1><!-- /.post-title -->
+
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+
+                    <ol class="post-body chat">
+                        {block:Lines}
+                        <li>
+                            {block:Label}
+                            <span class="chat__name">{Label}</span>
+                            {/block:Label}
+
+                            <span class="chat__message">{Line}</span>
+                        </li>
+                        {/block:Lines}
+                    </ol><!-- /.post-body -->
+                </div>
+                {/block:Chat}
+
+
+                {block:Link}
+                <div class="wrapper">
+                    <header class="post-head">
+                        <h1 class="post-title">
+                            <a {Target} href="{URL}">{Name}<i class="fa fa-external-link-square" aria-hidden="true"></i></a>
+                        </h1><!-- /.post-title -->
+
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+
+                    {block:Description}
+                    <div class="post-body">
+                        {Description}
+                    </div><!-- /.post-body -->
+                    {/block:Description}
+                </div>
+                {/block:Link}
+
+
+                {block:Quote}
+                <div class="post__inner">
+                    <div class="wrapper">
+                        <header class="post-head">
+                            <blockquote class="post-title">
+                                <p>{Quote}</p>
+                            </blockquote><!-- /.post-title -->
+
+                            {block:Date}
+                            <a href="{Permalink}" class="post-date">
+                                {block:IfNotUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                                {/block:IfNotUseRelativeDates}
+
+                                {block:IfUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                                {/block:IfUseRelativeDates}
+                            </a><!-- /.post-date -->
+                            {/block:Date}
+                        </header><!-- /.post-head -->
+
+                        {block:Source}
+                        <div class="post-body">
+                            {Source}
+                        </div><!-- /.post-body -->
+                        {/block:Source}
+                    </div>
+                    {block:IndexPage}
+                    <div class="wrapper">
+                        <div class="post-share-wrap">
+                            <ul class="post-share">
+                               {block:IfShowLikeIcon}
+                               <li>{LikeButton size="14" color="gray"}</li>
+                               {/block:IfShowLikeIcon}
+
+                               {block:IfShowReblogIcon}
+                               <li>{ReblogButton size="14" color="gray"}</li>
+                               {/block:IfShowReblogIcon}
+
+                               {block:IfShowShareIcons}
+                                <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                    <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                    <ul class="js-popup-content post-popup__content">
+                                        <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Text}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Text}{block:Photo}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photo}{block:Photoset}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photoset}{block:Quote}{PlaintextQuote}%20-%20{/block:Quote}{block:Link}{PlaintextName}%20-%20{/block:Link}{block:Chat}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Chat}{block:Audio}{block:TrackName}{PlaintextTrackname}{/block:TrackName}{block:Artist}%20-%20{PlaintextArtist}{/block:Artist}%20%3A%20{/block:Audio}{block:Video}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Video}{block:Answer}{lang:Asker asked}%3A%0A{PlaintextQuestion}%20-%20{/block:Answer}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                        <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}{block:Answer}&amp;p[title]={lang:Asker asked}:%20{PlaintextQuestion}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={PlaintextAnswer}{/block:Answer}{block:Audio}&amp;p[title]={block:TrackName}{PlaintextTrackName}{/block:TrackName}{block:Artist}%20%3A%20{PlaintextArtist}{/block:Artist}&amp;p[images][0]={block:AlbumArt}{URLEncodedAlbumArtURL}{/block:AlbumArt}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Audio}{block:Chat}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={block:Lines}{block:Label}{PlaintextLabel}{/block:Label}{PlaintextLine}%0A{/block:Lines}{/block:Chat}{block:Link}&amp;p[title]={PlaintextName}&amp;p[images][0]=http://assets.tumblr.com/images/og/link_200.png&amp;p[summary]={block:Description}{PlaintextDescription}{/block:Description}{/block:Link}{block:Photo}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photo}{block:Photoset}&amp;p[title]={PlaintextTitle}{block:Photos}&amp;p[images][0]={URLEncodedPhotoURL-250}{/block:Photos}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photoset}{block:Quote}&amp;p[title]={PlaintextQuote}&amp;p[images][0]=http://assets.tumblr.com/images/og/quote_200.png&amp;p[summary]={block:Source}{PlaintextSource}{/block:Source}{/block:Quote}{block:Text}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/text_200.png&amp;p[summary]={PlaintextBody}{/block:Text}{block:Video}&amp;p[title]={block:Caption}{PlaintextCaption}{/block:Caption}&amp;p[images][0]={block:VideoThumbnail}{VideoThumbnailURL}{/block:VideoThumbnail}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Video}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                        <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                        <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                    </ul><!-- /.post-popup__content -->
+                                </li><!-- /.post-popup -->
+                                {/block:IfShowShareIcons}
+                            </ul><!-- /.post-share -->
+                        </div><!-- /.post-share-wrap -->
+                    </div><!-- /.wrapper -->
+                    {/block:IndexPage}
+                </div><!-- /.post__inner -->
+                {/block:Quote}
+
+
+                {block:Video}
+                <div class="post__inner">
+                    <div class="wrapper">
+                        <figure class="post-media">
+                            <div class="video elastic-media">
+                                {Video-700}
+                            </div><!-- /.video -->
+                        </figure><!-- /.post-media -->
+
+                        <header class="post-head">
+                            {block:Date}
+                            <a href="{Permalink}" class="post-date">
+                                {block:IfNotUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                                {/block:IfNotUseRelativeDates}
+
+                                {block:IfUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                                {/block:IfUseRelativeDates}
+                            </a><!-- /.post-date -->
+                            {/block:Date}
+                        </header><!-- /.post-head -->
+
+                        {block:Caption}
+                        <div class="post-body">
+                            {Caption}
+                        </div><!-- /.post-body -->
+                        {/block:Caption}
+                    </div> <!-- /.wrapper -->
+                    {block:IndexPage}
+                    <div class="wrapper">
+                        <div class="post-share-wrap">
+                            <ul class="post-share">
+                               {block:IfShowLikeIcon}
+                               <li>{LikeButton size="14" color="gray"}</li>
+                               {/block:IfShowLikeIcon}
+
+                               {block:IfShowReblogIcon}
+                               <li>{ReblogButton size="14" color="gray"}</li>
+                               {/block:IfShowReblogIcon}
+
+                               {block:IfShowShareIcons}
+                                <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                    <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                    <ul class="js-popup-content post-popup__content">
+                                        <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Text}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Text}{block:Photo}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photo}{block:Photoset}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photoset}{block:Quote}{PlaintextQuote}%20-%20{/block:Quote}{block:Link}{PlaintextName}%20-%20{/block:Link}{block:Chat}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Chat}{block:Audio}{block:TrackName}{PlaintextTrackname}{/block:TrackName}{block:Artist}%20-%20{PlaintextArtist}{/block:Artist}%20%3A%20{/block:Audio}{block:Video}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Video}{block:Answer}{lang:Asker asked}%3A%0A{PlaintextQuestion}%20-%20{/block:Answer}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                        <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}{block:Answer}&amp;p[title]={lang:Asker asked}:%20{PlaintextQuestion}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={PlaintextAnswer}{/block:Answer}{block:Audio}&amp;p[title]={block:TrackName}{PlaintextTrackName}{/block:TrackName}{block:Artist}%20%3A%20{PlaintextArtist}{/block:Artist}&amp;p[images][0]={block:AlbumArt}{URLEncodedAlbumArtURL}{/block:AlbumArt}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Audio}{block:Chat}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={block:Lines}{block:Label}{PlaintextLabel}{/block:Label}{PlaintextLine}%0A{/block:Lines}{/block:Chat}{block:Link}&amp;p[title]={PlaintextName}&amp;p[images][0]=http://assets.tumblr.com/images/og/link_200.png&amp;p[summary]={block:Description}{PlaintextDescription}{/block:Description}{/block:Link}{block:Photo}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photo}{block:Photoset}&amp;p[title]={PlaintextTitle}{block:Photos}&amp;p[images][0]={URLEncodedPhotoURL-250}{/block:Photos}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photoset}{block:Quote}&amp;p[title]={PlaintextQuote}&amp;p[images][0]=http://assets.tumblr.com/images/og/quote_200.png&amp;p[summary]={block:Source}{PlaintextSource}{/block:Source}{/block:Quote}{block:Text}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/text_200.png&amp;p[summary]={PlaintextBody}{/block:Text}{block:Video}&amp;p[title]={block:Caption}{PlaintextCaption}{/block:Caption}&amp;p[images][0]={block:VideoThumbnail}{VideoThumbnailURL}{/block:VideoThumbnail}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Video}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                        <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                        <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                    </ul><!-- /.post-popup__content -->
+                                </li><!-- /.post-popup -->
+                                {/block:IfShowShareIcons}
+                            </ul><!-- /.post-share -->
+                        </div><!-- /.post-share-wrap -->
+                    </div><!-- /.wrapper -->
+                    {/block:IndexPage}
+                </div><!-- /.post__inner -->
+                {/block:Video}
+
+
+                {block:Audio}
+                <div class="post__inner">
+                    <div class="wrapper">
+                        <figure class="post-media">
+                            <div class="audio elastic-media">
+                                {AudioPlayer}
+                            </div><!-- /.audio -->
+                        </figure><!-- /.post-media -->
+
+
+                        <header class="post-head">
+                            {block:Date}
+                            <a href="{Permalink}" class="post-date">
+                                {block:IfNotUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                                {/block:IfNotUseRelativeDates}
+
+                                {block:IfUseRelativeDates}
+                                <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                                {/block:IfUseRelativeDates}
+                            </a><!-- /.post-date -->
+                            {/block:Date}
+                        </header><!-- /.post-head -->
+
+                        {block:Caption}
+                        <div class="post-body">
+                            {Caption}
+                        </div><!-- /.post-body -->
+                        {/block:Caption}
+                    </div><!-- /.wrapper -->
+                    {block:IndexPage}
+                    <div class="wrapper">
+                        <div class="post-share-wrap">
+                            <ul class="post-share">
+                               {block:IfShowLikeIcon}
+                               <li>{LikeButton size="14" color="gray"}</li>
+                               {/block:IfShowLikeIcon}
+
+                               {block:IfShowReblogIcon}
+                               <li>{ReblogButton size="14" color="gray"}</li>
+                               {/block:IfShowReblogIcon}
+
+                               {block:IfShowShareIcons}
+                                <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                    <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                    <ul class="js-popup-content post-popup__content">
+                                        <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Text}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Text}{block:Photo}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photo}{block:Photoset}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photoset}{block:Quote}{PlaintextQuote}%20-%20{/block:Quote}{block:Link}{PlaintextName}%20-%20{/block:Link}{block:Chat}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Chat}{block:Audio}{block:TrackName}{PlaintextTrackname}{/block:TrackName}{block:Artist}%20-%20{PlaintextArtist}{/block:Artist}%20%3A%20{/block:Audio}{block:Video}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Video}{block:Answer}{lang:Asker asked}%3A%0A{PlaintextQuestion}%20-%20{/block:Answer}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                        <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}{block:Answer}&amp;p[title]={lang:Asker asked}:%20{PlaintextQuestion}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={PlaintextAnswer}{/block:Answer}{block:Audio}&amp;p[title]={block:TrackName}{PlaintextTrackName}{/block:TrackName}{block:Artist}%20%3A%20{PlaintextArtist}{/block:Artist}&amp;p[images][0]={block:AlbumArt}{URLEncodedAlbumArtURL}{/block:AlbumArt}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Audio}{block:Chat}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={block:Lines}{block:Label}{PlaintextLabel}{/block:Label}{PlaintextLine}%0A{/block:Lines}{/block:Chat}{block:Link}&amp;p[title]={PlaintextName}&amp;p[images][0]=http://assets.tumblr.com/images/og/link_200.png&amp;p[summary]={block:Description}{PlaintextDescription}{/block:Description}{/block:Link}{block:Photo}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photo}{block:Photoset}&amp;p[title]={PlaintextTitle}{block:Photos}&amp;p[images][0]={URLEncodedPhotoURL-250}{/block:Photos}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photoset}{block:Quote}&amp;p[title]={PlaintextQuote}&amp;p[images][0]=http://assets.tumblr.com/images/og/quote_200.png&amp;p[summary]={block:Source}{PlaintextSource}{/block:Source}{/block:Quote}{block:Text}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/text_200.png&amp;p[summary]={PlaintextBody}{/block:Text}{block:Video}&amp;p[title]={block:Caption}{PlaintextCaption}{/block:Caption}&amp;p[images][0]={block:VideoThumbnail}{VideoThumbnailURL}{/block:VideoThumbnail}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Video}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                        <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                        <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                    </ul><!-- /.post-popup__content -->
+                                </li><!-- /.post-popup -->
+                                {/block:IfShowShareIcons}
+                            </ul><!-- /.post-share -->
+                        </div><!-- /.post-share-wrap -->
+                    </div><!-- /.wrapper -->
+                    {/block:IndexPage}
+                </div><!-- /.post__inner -->
+                {/block:Audio}
+
+
+                {block:Photo}
+                <figure class="post-media  has-photo-bg">
+
+                    <div class="post-media__bg" {block:IfGenerateBackgroundforPhotos}style="background-image: url({PhotoURL-HighRes});"{/block:IfGenerateBackgroundforPhotos}></div>
+                    <div class="wrapper wrapper--wide">
+                        <div class="post-preview">
+                            <img src="{PhotoURL-HighRes}" width="{PhotoWidth-HighRes}" height="{PhotoHeight-HighRes}" alt="{PhotoAlt}" />
+
+                            <div class="post-overlay">
+                                {block:IndexPage}
+    					        {LinkOpenTag}{LinkCloseTag}
+    						
+    						    {block:LinkURL}
+    					        <a href="{LinkURL}"></a>
+    					        {/block:LinkURL}
+                                {/block:IndexPage}
+
+                                {block:PermalinkPage}
+                                <a href="{PhotoURL-HighRes}" class="post-overlay__link"></a>
+                                {/block:PermalinkPage}
+
+                                {block:IfShowEXIFData}
+                                {block:Exif}
+                                <ul class="post-exif">
+                                    {block:Camera}<li><div>Camera <strong>{Camera}</strong></div></li>{/block:Camera}
+                                    {block:Exposure}<li><div>Exposure <strong>{Exposure}</strong></div></li>{/block:Exposure}
+                                    {block:Aperture}<li><div>Aperture <strong>{Aperture}</strong></div></li>{/block:Aperture}
+                                    {block:FocalLength}<li><div>Focal length <strong>{FocalLength}</strong></div></li>{/block:FocalLength}
+                                </ul><!-- /.post-exit -->
+                                {/block:Exif}
+                                {/block:IfShowEXIFData}
+
+                                <ul class="post-share">
+                                   {block:IfShowLikeIcon}
+                                   <li>{LikeButton size="18" color="white"}</li>
+                                   {/block:IfShowLikeIcon}
+
+                                   {block:IfShowReblogIcon}
+                                   <li>{ReblogButton size="18" color="white"}</li>
+                                   {/block:IfShowReblogIcon}
+
+                                   {block:IfShowShareIcons}
+                                    <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                        <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                        <ul class="js-popup-content post-popup__content">
+                                            <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Caption}{PlaintextCaption}%20-%20{/block:Caption}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                            <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                            <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                            <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                            <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                        </ul><!-- /.post-popup__content -->
+                                    </li><!-- /.post-popup -->
+                                    {/block:IfShowShareIcons}
+                                </ul><!-- /.post-share -->
+                            </div><!-- /.post-overlay -->
+                        </div><!-- /.post-preivew -->
+                    </div><!-- /.wrapper -->
+
+                    <header class="post-head">
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+                </figure><!-- /.post-media -->
+
+                {block:PermalinkPage}
+                {block:Caption}
+                <div class="post-body wrapper">
+                    {Caption}
+                </div><!-- /.post-body -->
+                {/block:Caption}
+                {/block:PermalinkPage}
+                {/block:Photo}
+
+
+                {block:Photoset}
+                <figure class="post-media  has-photo-bg">
+
+                    {block:Photos}
+                    <div class="post-media__bg" {block:IfGenerateBackgroundforPhotos}style="background-image: url({PhotoURL-HighRes});"{/block:IfGenerateBackgroundforPhotos}></div>
+                    {/block:Photos}
+
+                    <div class="wrapper wrapper--wide">
+                        {block:PermalinkPage}
+                        <div class="photoset js-photoset" data-layout="{PhotosetLayout}">
+                            {block:Photos}
+                            <img src="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                            {/block:Photos}
+                        </div><!-- /.photoset -->
+                        {/block:PermalinkPage}
+
+                        {block:IndexPage}
+                        {block:IfNotShowSinglePhotosonHomepage}
+                        <div class="photoset js-photoset" data-layout="{PhotosetLayout}">
+                            {block:Photos}
+                            <img src="{PhotoURL-HighRes}" data-highres="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                            {/block:Photos}
+                        </div><!-- /.photoset -->
+                        {/block:IfNotShowSinglePhotosonHomepage}
+
+                        {block:IfShowSinglePhotosonHomepage}
+                        <div class="photoset has-one-photo" data-layout="1">
+                            {block:Photos}
+                            <a href="{Permalink}" class="thumbnail">
+                                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" />
+                            </a><!-- /.thumbnail -->
+                            {/block:Photos}
+                        </div><!-- /.photoset -->
+                        {/block:IfShowSinglePhotosonHomepage}
+                        {/block:IndexPage}
+                    </div><!-- /.wrapper -->
+
+                    <header class="post-head">
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+                </figure><!-- /.post-media -->
+
+                {block:PermalinkPage}
+                {block:Caption}
+                <div class="post-body wrapper">
+                    {Caption}
+                </div><!-- /.post-body -->
+                {/block:Caption}
+                {/block:PermalinkPage}
+                {/block:Photoset}
+
+
+                {block:Panorama}
+                <figure class="post-media  has-photo-bg" {block:IfGenerateBackgroundforPhotos}style="background-image: url({PhotoURL-Panorama});"{/block:IfGenerateBackgroundforPhotos}>
+                    <div class="post-media__bg"></div>
+                    <div class="wrapper wrapper--wide">
+                        <div class="post-preview">
+                            <img src="{PhotoURL-Panorama}" width="{PhotoWidth-Panorama}" height="{PhotoHeight-Panorama}" alt="{PhotoAlt}" />
+
+                            <div class="post-overlay">
+                                {block:IndexPage}
+    					        {LinkOpenTag}{LinkCloseTag}
+    						
+    						    {block:LinkURL}
+    					        <a href="{LinkURL}"></a>
+    					        {/block:LinkURL}
+                                {/block:IndexPage}
+
+                                {block:PermalinkPage}
+                                <a href="{PhotoURL-Panorama}" class="post-overlay__link"></a>
+                                {/block:PermalinkPage}
+
+                                {block:IfShowEXIFData}
+                                {block:Exif}
+                                <ul class="post-exif">
+                                    {block:Camera}<li><div>Camera <strong>{Camera}</strong></div></li>{/block:Camera}
+                                    {block:Exposure}<li><div>Exposure <strong>{Exposure}</strong></div></li>{/block:Exposure}
+                                    {block:Aperture}<li><div>Aperture <strong>{Aperture}</strong></div></li>{/block:Aperture}
+                                    {block:FocalLength}<li><div>Focal length <strong>{FocalLength}</strong></div></li>{/block:FocalLength}
+                                </ul><!-- /.post-exit -->
+                                {/block:Exif}
+                                {/block:IfShowEXIFData}
+
+                                <ul class="post-share">
+                                   {block:IfShowLikeIcon}
+                                   <li>{LikeButton size="18" color="white"}</li>
+                                   {/block:IfShowLikeIcon}
+
+                                   {block:IfShowReblogIcon}
+                                   <li>{ReblogButton size="18" color="white"}</li>
+                                   {/block:IfShowReblogIcon}
+
+                                   {block:IfShowShareIcons}
+                                    <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                        <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                        <ul class="js-popup-content post-popup__content">
+                                            <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Caption}{PlaintextCaption}%20-%20{/block:Caption}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                            <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                            <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                            <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                            <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                        </ul><!-- /.post-popup__content -->
+                                    </li><!-- /.post-popup -->
+                                    {/block:IfShowShareIcons}
+                                </ul><!-- /.post-share -->
+                            </div><!-- /.post-overlay -->
+                        </div><!-- /.post-preivew -->
+                    </div><!-- /.wrapper -->
+
+                    <header class="post-head">
+                        {block:Date}
+                        <a href="{Permalink}" class="post-date">
+                            {block:IfNotUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{Month} {DayOfMonth}{DayOfMonthSuffix}, {Year} at {12Hour}:{Minutes} {AmPm}</time>
+                            {/block:IfNotUseRelativeDates}
+
+                            {block:IfUseRelativeDates}
+                            <time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero} {24HourWithZero}:{Minutes}:{Seconds}">{TimeAgo}</time>
+                            {/block:IfUseRelativeDates}
+                        </a><!-- /.post-date -->
+                        {/block:Date}
+                    </header><!-- /.post-head -->
+                </figure><!-- /.post-media -->
+
+                {block:PermalinkPage}
+                {block:Caption}
+                <div class="post-body wrapper">
+                    {Caption}
+                </div><!-- /.post-body -->
+                {/block:Caption}
+                {/block:PermalinkPage}
+                {/block:Panorama}
+
+                <footer class="post-foot">
+                    <div class="wrapper">
+                        {block:PermalinkPage}
+                        {block:HasTags}
+                        <div class="post-tags">
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                            <ul class="post-tags__list">
+                                {block:Tags}<li><a href="{TagURL}" rel="tag">{Tag}</a></li>{/block:Tags}
+                            </ul><!-- /.post-tags__list -->
+                        </div><!-- /.post-tags -->
+                        {/block:HasTags}
+                        {/block:PermalinkPage}
+
+                        {block:IndexPage}
+                        {block:IfShowTagsonHomepage}
+                        {block:HasTags}
+                        <div class="post-tags">
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                            <ul class="post-tags__list">
+                                {block:Tags}<li><a href="{TagURL}" rel="tag">{Tag}</a></li>{/block:Tags}
+                            </ul><!-- /.post-tags__list -->
+                        </div><!-- /.post-tags -->
+                        {/block:HasTags}
+                        {/block:IfShowTagsonHomepage}
+                        {/block:IndexPage}
+
+                        <div class="post-share-wrap">
+                            <ul class="post-share">
+                               {block:IfShowLikeIcon}
+                               <li>{LikeButton size="14" color="gray"}</li>
+                               {/block:IfShowLikeIcon}
+
+                               {block:IfShowReblogIcon}
+                               <li>{ReblogButton size="14" color="gray"}</li>
+                               {/block:IfShowReblogIcon}
+
+                               {block:IfShowShareIcons}
+                                <li class="post-popup js-post-popup" {block:IndexPage}{block:IfNotShowPostIconsonHomepage}hidden{/block:IfNotShowPostIconsonHomepage}{/block:IndexPage}>
+                                    <button class="js-popup-trigger post-popup__trigger"><i class="fa fa-share" aria-hidden="true"></i></button>
+                                    <ul class="js-popup-content post-popup__content">
+                                        <li><a href="https://twitter.com/intent/tweet?url={URLEncodedShortURL}&amp;text={block:Text}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Text}{block:Photo}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photo}{block:Photoset}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Photoset}{block:Quote}{PlaintextQuote}%20-%20{/block:Quote}{block:Link}{PlaintextName}%20-%20{/block:Link}{block:Chat}{block:Title}{PlaintextTitle}%20-%20{/block:Title}{/block:Chat}{block:Audio}{block:TrackName}{PlaintextTrackname}{/block:TrackName}{block:Artist}%20-%20{PlaintextArtist}{/block:Artist}%20%3A%20{/block:Audio}{block:Video}{block:Caption}{PlaintextCaption}%20-%20{/block:Caption}{/block:Video}{block:Answer}{lang:Asker asked}%3A%0A{PlaintextQuestion}%20-%20{/block:Answer}"><i class="fa fa-twitter-square" aria-hidden="true"></i> Share on Twitter</a></li>
+
+                                        <li><a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]={URLEncodedShortURL}{block:Answer}&amp;p[title]={lang:Asker asked}:%20{PlaintextQuestion}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={PlaintextAnswer}{/block:Answer}{block:Audio}&amp;p[title]={block:TrackName}{PlaintextTrackName}{/block:TrackName}{block:Artist}%20%3A%20{PlaintextArtist}{/block:Artist}&amp;p[images][0]={block:AlbumArt}{URLEncodedAlbumArtURL}{/block:AlbumArt}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Audio}{block:Chat}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/chat_200.png&amp;p[summary]={block:Lines}{block:Label}{PlaintextLabel}{/block:Label}{PlaintextLine}%0A{/block:Lines}{/block:Chat}{block:Link}&amp;p[title]={PlaintextName}&amp;p[images][0]=http://assets.tumblr.com/images/og/link_200.png&amp;p[summary]={block:Description}{PlaintextDescription}{/block:Description}{/block:Link}{block:Photo}&amp;p[title]={PlaintextTitle}&amp;p[images][0]={URLEncodedPhotoURL-250}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photo}{block:Photoset}&amp;p[title]={PlaintextTitle}{block:Photos}&amp;p[images][0]={URLEncodedPhotoURL-250}{/block:Photos}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Photoset}{block:Quote}&amp;p[title]={PlaintextQuote}&amp;p[images][0]=http://assets.tumblr.com/images/og/quote_200.png&amp;p[summary]={block:Source}{PlaintextSource}{/block:Source}{/block:Quote}{block:Text}&amp;p[title]={block:Title}{PlaintextTitle}{/block:Title}&amp;p[images][0]=http://assets.tumblr.com/images/og/text_200.png&amp;p[summary]={PlaintextBody}{/block:Text}{block:Video}&amp;p[title]={block:Caption}{PlaintextCaption}{/block:Caption}&amp;p[images][0]={block:VideoThumbnail}{VideoThumbnailURL}{/block:VideoThumbnail}&amp;p[summary]={block:Caption}{PlaintextCaption}{/block:Caption}{/block:Video}"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a></li>
+
+                                        <li><a href="http://pinterest.com/pin/create/button/?url={URLEncodedShortURL}"><i class="fa fa-pinterest" aria-hidden="true"></i> Share on Pinterest</a></li>
+
+                                        <li><a href="https://plus.google.com/share?url={URLEncodedShortURL}"><i class="fa fa-google-plus" aria-hidden="true"></i> Share on Google+</a></li>
+
+                                        <li><a href="mailto:?subject={URLEncodedShareString}&amp;body={URLEncodedMailSummary}"><i class="fa fa-envelope" aria-hidden="true"></i> Send via e-mail</a></li>
+                                    </ul><!-- /.post-popup__content -->
+                                </li><!-- /.post-popup -->
+                                {/block:IfShowShareIcons}
+                            </ul><!-- /.post-share -->
+                        </div><!-- /.post-share-wrap -->
+
+                        {block:PermalinkPage}
+                        {block:IfDisqusShortname}
+                        <section class="post__section post-comments">
+                            <div id="disqus_thread"></div>
+
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </section><!-- /.post-comments -->
+                        {/block:IfDisqusShortname}
+
+                        {block:IfShowNotesonPostPage}
+                        {block:PostNotes}
+                        <section class="post__section post-notes">
+                            {block:NoteCount}
+                            <h2 class="post__section-title gamma">{NoteCountWithLabel}</h2>
+                            {/block:NoteCount}
+                            {PostNotes-64}
+                        </section><!-- /.post-notes -->
+                        {/block:PostNotes}
+                        {/block:IfShowNotesonPostPage}
+                        {/block:PermalinkPage}
+                    </div><!-- /.wrapper -->
+                </footer>
+            </article><!-- /.post -->
+            {/block:Posts}
+        </div><!-- /.posts -->
+    </div><!-- /.main -->
+
+    <div class="wrapper">
+        {block:IfNextPreviousLinksonPostPage}
+        {block:PermalinkPagination}
+            <div class="pagination">
+                {block:PreviousPost}
+                <a href="{PreviousPost}" class="pagination__prev  btn  btn--primary" title="{lang:Previous}">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a><!-- /.pagination__prev -->
+                {/block:PreviousPost}
+
+                {block:NextPost}
+                <a href="{NextPost}" class="pagination__next  btn  btn--primary" title="{lang:Next}">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a><!-- /.pagination__next -->
+                {/block:NextPost}
+            </div><!-- /.pagination -->
+        {/block:PermalinkPagination}
+        {/block:IfNextPreviousLinksonPostPage}
+
+        {block:Pagination}
+        <div class="pagination">
+            {block:IfInfiniteScroll}
+                {block:NextPage}
+                <a href="{NextPage}" class="pagination__more  btn  btn--primary  js-load-posts"><i class="fa fa-ellipsis-h"></i></a>
+                {/block:NextPage}
+            {/block:IfInfiniteScroll}
+
+            {block:IfNotInfiniteScroll}
+                {block:PreviousPage}
+                <a href="{PreviousPage}" class="pagination__prev  btn  btn--primary" title="{lang:Previous}">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a><!-- /.pagination__prev -->
+                {/block:PreviousPage}
+
+                {block:NextPage}
+                <a href="{NextPage}" class="pagination__next  btn  btn--primary" title="{lang:Next}">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a><!-- /.pagination__next -->
+                {/block:NextPage}
+            {/block:IfNotInfiniteScroll}
+        </div><!-- /.pagination -->
+        {/block:Pagination}
+    </div><!-- /.wrapper -->
+
+    {block:IfShowTwitterFeed}
+    {block:Twitter}
+    <div class="twitter-feed">
+        <div class="twitter-feed__icon">
+            <i class="fa  fa-twitter"></i>
+        </div><!-- /.twitter-feed__icon -->
+        <div class="twitter-feed__content  wrapper" id="js-twitter-feed-content"></div>
+        {block:IfShowFollowButton}
+        <div class="twitter-feed__follow">
+            <a href="https://twitter.com/{TwitterUsername}" class="twitter-follow-button" data-lang="en">Follow @{TwitterUsername}</a>
+        </div><!-- /.twitter-feed__follow -->
+        {/block:IfShowFollowButton}
+    </div><!-- /.twitter-feed -->
+    {block:Twitter}
+    {/block:IfShowTwitterFeed}
+
+    <footer class="page-foot" role="contentinfo">
+        <div class="wrapper">
+            &copy; 2013â2014 Copyright by <a href="{BlogURL}">{Title}</a>. All rights reserved. <a href="http://pixelrevel.com/themes/tumblr/royal">Royal Theme</a> by <a href="http://pixelrevel.com">Pixel Revel</a>.
+        </div>
+    </footer><!-- /.page-foot -->
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://static.tumblr.com/gzeluq1/SpXn7l0ia/plugins.js"></script>
+    <script src="http://static.tumblr.com/gzeluq1/nRWn7o1pv/script.js"></script>
+
+    {block:IfGoogleAnalyticsID}
+    <script>
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    {/block:IfGoogleAnalyticsID}
+
+    {block:IfDisqusShortname}
+    {block:PermalinkPage}
+    <script>
+        var disqus_shortname  = '{text:Disqus Shortname}';
+        var disqus_identifier = '{Permalink}';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    {/block:PermalinkPage}
+    {/block:IfDisqusShortname}
+
+    {block:Twitter}
+    <script>
+        var twitterUsername = "{TwitterUsername}";
+    </script>
+
+    <script src="/tweets.js"></script>
+    {/block:Twitter}
+</body>
+</html>
