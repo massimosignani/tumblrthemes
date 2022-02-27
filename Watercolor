@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article">
+<head>
+    <meta charset="utf-8">
+	{block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+    <meta name="text:Tagline" content="Your blog's tagline here"/>
+    <meta name="text:Facebook Username" content=""/>
+    <meta name="text:Twitter Username" content=""/>
+    <meta name="text:Pinterest Username" content=""/>
+    <meta name="text:LinkedIn Username" content=""/>
+    <meta name="text:Flickr Username" content=""/>
+    
+    <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+	<title>{Title}</title>
+	<link rel="shortcut icon" href="">
+	<script src="http://static.tumblr.com/gft68jr/Qu4m1u1b4/modernizr.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://use.typekit.com/vrd1mcb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script src="http://static.tumblr.com/gft68jr/mDgm1u13s/cufon.js" type="text/javascript"></script>
+	<script src="http://static.tumblr.com/gft68jr/O0nm1u14t/numbers_dividend_400.font.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/gft68jr/J3am1u16s/jquery.js"></script>
+	<script type="text/javascript">Cufon.replace('#main .post .date strong', { fontFamily: 'Numbers Dividend', textShadow: '0 -1px 1px #4e3245' });</script>
+    <script type="text/javascript" src="http://use.typekit.com/fwh5ope.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <style type="text/css" media="screen">
+    * {
+    margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url("http://static.tumblr.com/gft68jr/nP5m1u1c0/background.jpg") top left;
+}
+
+header {
+	width: 100%;
+	background: url("http://static.tumblr.com/gft68jr/dRkm1u1d3/paint-purple.jpg") no-repeat top center;
+}
+
+header h1 {
+	margin: 0 auto;
+	width: 447px;
+	height: 138px;
+	background: url("http://static.tumblr.com/gft68jr/2ebm1u1du/title.png") no-repeat top left;
+	position: relative;
+	top: 20px;
+	text-align: center;
+	font-family: "estilo-script";
+	font-weight: normal;
+	font-size: 44px;
+	padding: 50px 0 0 0;
+}
+
+header h1 a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: #575d76;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+header h2 {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	position: relative;
+	top: -48px;
+	z-index: 1;
+	height: 29px;
+	margin: 0 auto;
+}
+
+header h2 a {
+	background: url("http://static.tumblr.com/gft68jr/a4Nm1u1eh/tagline-bg.png") repeat-x top left;
+	padding: 7px 0 10px 0;
+	text-decoration: none;
+	color: #69435d;
+	}
+
+#container {
+	width: 836px;
+	margin: 10px auto 0;
+	background: url("http://static.tumblr.com/gft68jr/Jf3m1u1f6/divider-top.gif") repeat-x top left;
+	min-height: 50px;
+}
+
+#sidebar {
+	width: 235px;
+	float: left;
+	margin: 35px 30px 0 0;
+}
+
+#sidebar #archives {
+	background: rgba(0, 0, 0, 0.03);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	box-shadow: 0 1px 0 #fff, inset 0 1px 1px rgba(0,0,0,0.10);
+	padding: 0 0 8px 0;
+	margin: 25px 0 0 0;
+}
+
+#sidebar #archives h3 {
+	width: 100%;
+	height: 28px;
+	background: url("http://static.tumblr.com/gft68jr/gWWm1u1ft/archives-header.gif") no-repeat top center;
+	text-indent: -9999px;
+	position: relative;
+	top: -35px;
+}
+
+#sidebar #archives form {
+	background: url("http://static.tumblr.com/gft68jr/lcxm1u1gf/border-dotted.gif") repeat-x bottom left;
+	margin: -25px 10px 0;
+	padding: 0 0 14px 0;
+}
+
+#sidebar #archives form fieldset {
+	border: none;
+	}
+
+#sidebar #archives form fieldset input#search {
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	background: url("http://static.tumblr.com/gft68jr/Smum1u1h0/search.gif") no-repeat 0 0;
+	height: 33px;
+	margin: 10px 0 0 0;
+	text-indent: 36px;
+}
+
+#sidebar #archives form fieldset input#submit {
+	display: none;
+}
+
+#sidebar #archives a {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	display: block;
+	background: url("http://static.tumblr.com/gft68jr/qWom1u1hn/archives-arrow.gif") no-repeat 0 3px;
+	text-decoration: none;
+	text-indent: 17px;
+	margin: 9px 0 0 10px;
+	text-transform: uppercase;
+	color: #7b7f91;
+	letter-spacing: 0.2em;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#sidebar #archives a:hover {
+	color: #67425B;
+}
+
+#sidebar ul#elsewhere {
+	background: rgba(0, 0, 0, 0.03);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	box-shadow: 0 1px 0 #fff, inset 0 1px 1px rgba(0,0,0,0.10);
+	padding: 10px 0 2px 10px;
+	margin: 10px 0 0 0;
+	list-style: none;
+}
+
+#sidebar ul#elsewhere li {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 0 0 6px 0;
+	background: url("http://static.tumblr.com/gft68jr/qWom1u1hn/archives-arrow.gif") no-repeat 0 3px;
+	padding: 0 0 0 16px;
+	letter-spacing: 0.1em;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+#sidebar ul#elsewhere li a {
+	text-decoration: none;
+	color: #7B7F91;
+}
+
+#sidebar ul#elsewhere li a:hover {
+	color: #67425B;
+}
+
+#sidebar #about h3 {
+	width: 238px;
+	position: relative;
+	left: -2px;
+	text-indent: -9999px;
+	height: 64px;
+	background: url("http://static.tumblr.com/gft68jr/1epm1u1il/about-header.gif");
+	margin: 30px 0 13px 0;
+}
+
+#sidebar #about p {
+	color: #353641;
+	font-family: georgia, serif;
+	font-size: 13px;
+	line-height: 150%;
+}
+
+#sidebar #about p a {
+	color: #68425c;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#main {
+	float: right;
+	width: 571px;
+	padding: 25px 0 0 0;
+	min-height: 600px;
+}
+
+#main .post {
+	position: relative;
+	width: 508px;
+	left: 64px;
+	background: url("http://static.tumblr.com/gft68jr/lcxm1u1gf/border-dotted.gif") repeat-x bottom left;
+	padding: 0 0 20px 0;
+	margin: 0 0 20px 0;
+}
+
+#main .post ul {
+	list-style: none;
+}
+
+#main .post ul li,
+#main .post ol li {
+	background: url("http://static.tumblr.com/gft68jr/fGAm1u1kg/bullet.gif") no-repeat 0 8px;
+	padding: 0 0 0 15px;
+	font-family: georgia, serif;
+	font-size: 15px;
+	line-height: 130%;
+	color: #353641;
+	margin: 0 0 5px 0;
+}
+
+#main .post ol li {
+	background: none;
+	margin: 0 0 5px 19px;
+	padding: 0 0 0 5px;
+}
+
+#main .post p {
+	font-family: georgia, serif;
+	font-size: 15px;
+	line-height: 150%;
+	margin: 0 0 7px 0;
+	color: #353641;
+}
+
+#main .post p a,
+#main .post li a,
+#main .post blockquote a {
+	color: #67425b;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#main .post p a:hover,
+#main .post li a:hover,
+#main .post blockquote a:hover {
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+	background-color: rgba(105,67,93,0.3);
+	padding: 2px 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#main .post p + img {
+	margin-top: 7px;
+}
+
+#main .post h3 {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 17px;
+	letter-spacing: 0.1em;
+	text-shadow: 0 1px 0px #fff;
+	color: #7B7F91;
+	margin: 0 0 6px 0;
+}
+
+#main .post h3 a {
+	color: #7B7F91;
+	text-decoration: none;
+}
+
+#main .post.link h3 a {
+	background: url("http://static.tumblr.com/gft68jr/uuZm1u1kz/link-arrow.gif") no-repeat center right;
+	padding: 0 22px 0 0;
+}
+
+#main .post h3 a:hover {
+	color: #67425B;
+}
+
+#main .post img {
+	border: 4px solid #fff;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 0px -1px 1px rgba(0,0,0,0.18);
+	margin: 0 0 7px 0;
+}
+
+#main .post div.html_photoset {
+	border: 4px solid #fff;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 0px -1px 1px rgba(0,0,0,0.18);
+	margin: 0 0 7px 0;
+}
+
+#main .post div.html_photoset img {
+	border: 0px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	}
+
+#main .post .date {
+	width: 55px;
+	height: 57px;
+	display: block;
+	background: url("http://static.tumblr.com/gft68jr/WJOm1u1lm/date-circle.gif") no-repeat top left;
+	position: absolute;
+	top: 0;
+	left: -65px;
+	-webkit-transition: all 1s ease-in-out;
+	    -moz-transition: all 1s ease-in-out;
+	    -o-transition: all 1s ease-in-out;
+	    -ms-transition: all 1s ease-in-out;
+}
+
+#main .post .date a:hover {
+	transform: rotate(-10deg);
+	-webkit-transform: rotate(-10deg);
+	-moz-transform: rotate(-10deg);
+	-webkit-transition: all 0.2s ease-in-out;
+	    -moz-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    -ms-transition: all 0.2s ease-in-out;
+	    background-color: none;
+}
+
+#main .post .date strong {
+	font-size: 28px;
+	text-shadow: 0 -1px 1px #000;
+	width: 57px;
+	position: relative;
+	top: 4px;
+	left: -3px;
+	letter-spacing: -0.1em;
+	display: block;
+	padding: 0 2px 0 0;
+}
+
+#main .post .date strong.d20,
+#main .post .date strong.d21,
+#main .post .date strong.d22,
+#main .post .date strong.d01{
+	left: -2px;
+}
+
+#main .post .date a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: none;
+}
+
+#main .post .date .month {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	position: relative;
+	top: -1px;
+	left: 1px;
+	text-shadow: 0 -1px 1px #4e3245;
+}
+
+#main .post .date a .month:hover {
+	background-color: none;
+}
+
+#main .post ul.meta {
+	background: rgba(255,255,255,0.53) url("http://static.tumblr.com/gft68jr/i5vm1u1me/meta-border.gif") no-repeat top left;
+	list-style: none;
+	margin: 15px 0 0 0;
+	height: 43px;
+	color: #7b7f91;
+}
+
+#main .post ul.meta li {
+	float: left;
+	display: block;
+	height: 43px;
+	padding: 0 0 0 50px;
+	font-family: helvetica, arial, sans-serif;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #7b7f91;
+}
+
+#main .post ul.meta li strong {
+	font-family: "proxima-nova", helvetica, arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	display: block;
+	position: relative;
+	top: 9px;
+	margin: 0 0 8px 0;
+}
+
+#main .post ul.meta li a {
+	color: #5d5d66;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+#main .post ul.meta li.tagged {
+	background: url("http://static.tumblr.com/gft68jr/IRom1u1mz/tag.gif") no-repeat 20px 0;
+	width: 117px;
+}
+
+#main .post ul.meta li.commented {
+	background: url("http://static.tumblr.com/gft68jr/cq0m1u1ng/comment.gif") no-repeat 20px 0;
+	padding: 0 0 0 55px;
+	width: 114px;
+}
+
+#main .post ul.meta li.reblogged {
+	background: url("http://static.tumblr.com/gft68jr/UCBm1u1ny/reblog.gif") no-repeat 20px 0;
+	padding: 0 0 0 53px;
+	width: 114px;
+}
+
+#main .post blockquote {
+	font-family: georgia, serif;
+	color: #53556a;
+	font-size: 19px;
+	font-style: italic;
+	line-height: 160%;
+	margin: 0 0 7px 0;
+}
+
+#main .post blockquote:after {
+	content: url("http://static.tumblr.com/gft68jr/SPlm1u1oj/quote.gif");
+	position: relative;
+	top: 7px;
+	left: 5px;
+}
+
+#main .post.video iframe {
+	max-width: 500px;
+	border: 4px solid #fff;
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+	box-shadow: 0px -1px 1px rgba(0,0,0,0.18);
+	margin: 0 0 7px 0;
+}
+
+#main .post.audio img {
+	max-width: 100px;
+	max-height: 100px;
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+#main .post.audio ul.meta {
+	clear: both;
+}
+
+#main ol.notes {
+	position: relative;
+	width: 508px;
+	left: 64px;
+	padding: 0 0 20px 0;
+	margin: 0 0 20px 0;
+	list-style: none;
+}
+
+#main ol.notes li {
+	background: rgba(0, 0, 0, 0.03);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.10);
+	box-shadow: 0 1px 0 #fff, inset 0 1px 1px rgba(0,0,0,0.10);
+	padding: 4px;
+	margin-bottom: 4px;
+	color: #5D5D66;
+	font-family: helvetica, arial, sans-serif;
+	size: 11px;
+}
+
+#main ol.notes li a {
+	color: #7B7F91;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#main ol.notes li a:hover {
+	color: #67425B;
+}
+
+#main ol.notes li a img {
+	position: relative;
+	top: 2px;
+	left: 4px;
+	margin: 0 10px 0 0;
+}
+
+#main ol.notes li.note.more_notes_link_container {
+	height: 32px;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	border-radius: 16px;
+	width: 160px;
+	margin: 15px auto 0;
+	background-image: linear-gradient(bottom, rgb(214,212,208) 0%, rgb(242,241,239) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(214,212,208) 0%, rgb(242,241,239) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(214,212,208) 0%, rgb(242,241,239) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(214,212,208) 0%, rgb(242,241,239) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(214,212,208) 0%, rgb(242,241,239) 100%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0, rgb(214,212,208)),
+		color-stop(1, rgb(242,241,239))
+	);
+	border: 1px solid #b0afac;
+	-webkit-box-shadow: inset 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 0px #fff;
+	padding: 0;
+	text-align: center;
+	line-height: 32px;
+}
+
+#main ol.notes li.note.more_notes_link_container a {
+	color: #67425B;
+}
+
+nav {
+	background: url("http://static.tumblr.com/gft68jr/Jf3m1u1f6/divider-top.gif") repeat-x bottom right;
+}
+
+nav a {
+	height: 44px;
+	display: block;
+	text-indent: -9999px;
+	text-decoration: none;
+	margin: 0 0 40px 0;
+}
+
+nav a#older {
+	float: left;
+	background: url("http://static.tumblr.com/gft68jr/RHym1u1qv/older.png");
+	width: 111px;
+	position: relative;
+	left: 57px;
+}
+
+nav a#newer {
+	float: right;
+	background: url("http://static.tumblr.com/gft68jr/VCJm1u1rj/newer.png");
+	width: 119px;
+}
+
+#footer {
+	clear: both;
+	width: 100%;
+	height: 122px;
+	background: url("http://static.tumblr.com/gft68jr/ZcUm1u1s1/footer.jpg") no-repeat bottom center;
+}
+
+#footer div {
+	width: 836px;
+	background: url("http://static.tumblr.com/gft68jr/Jf3m1u1f6/divider-top.gif") repeat-x top center;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+	font-family: helvetica, arial, sans-serif;
+	color: #5D5D66;
+	font-size: 12px;
+}
+
+#footer div a {
+	color: #7b7f91;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#footer div p.copyright {
+	float: left;
+}
+
+#footer div p.promo {
+	float: right;
+}
+    </style>
+    <!--[if IE]>
+     <style type="text/css" media="screen">
+        #sidebar #archives a {
+            letter-spacing: 0;
+            }
+     </style>
+    <![endif]-->
+    {CustomCSS}
+</head>
+
+<body>
+
+	<header>
+		<h1><a href="/">{Title}</a></h1>
+		{block:IfTagline}<h2><a href="/">{text:Tagline}</a></h2>{/block:IfTagline}
+	</header>
+		
+	<div id="container">	
+		<section id="sidebar">
+			<div id="archives">
+				<h3>The Back Issues</h3>
+				<form action="/search" method="get">
+					<fieldset><input name="q" "type="text" id="search" placeholder="Search the archives" value="{SearchQuery}" /><input id="submit" type="submit" /></fieldset>
+				</form>
+				<a href="/archive">Browse the archives</a>
+			</div>
+			
+			<div id="about">
+				<h3>About This Blog</h3>
+				<p>{Description}</p>
+			</div>
+			
+			<ul id="elsewhere">
+                {block:IfFacebookUsername}<li><a href="http://www.facebook.com/{text:Facebook Username}">Facebook</a></li>{/block:IfFacebookUsername}
+                {block:IfTwitterUsername}<li><a href="http://www.twitter.com/{text:Twitter Username}">Twitter</a></li>{/block:IfTwitterUsername}
+                {block:IfPinterestUsername}<li><a href="http://www.pinterest.com/{text:Pinterest Username}">Pinterest</a></li>{/block:IfPinterestUsername}
+                {block:IfLinkedInUsername}<li><a href="http://www.linkedin.com/in/{text:LinkedIn Username}">LinkedIn</a></li>{/block:IfLinkedInUsername}
+                {block:IfFlickrUsername}<li><a href="http://www.flickr.com/photos/{text:Flickr Username}">Flickr</a></li>{/block:IfFlickrUsername}                
+			</ul>
+			
+		</section>
+		
+		<section id="main">
+             {block:Posts}
+             
+             {block:Text}
+             <div class="post text">
+    			{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+				{Body}
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Text}
+             
+             {block:Link}
+             <div class="post link">
+        		{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                <h3><a href="{URL}">{Name}</a></h3>
+				{block:Description}{Description}{/block:Description} 
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Link}
+             
+             {block:Photo}
+             <div class="post photo">
+        		{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                
+                {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}
+				{block:Caption}{Caption}{/block:Caption}
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Photo}
+             
+             {block:Video}
+             <div class="post video">
+            	{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                
+                {Video-500}
+				{block:Caption}{Caption}{/block:Caption}
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Video}
+             
+             {block:Audio}
+             <div class="post audio">
+            	{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                
+                {block:AlbumArt}<img class="albumart" src="{AlbumArtURL}" />{/block:AlbumArt}
+                {AudioPlayerWhite}
+                
+				{block:Caption}{Caption}{/block:Caption}
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Audio}
+             
+             {block:Photoset}
+             <div class="post photo">
+            	{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                
+                {Photoset-500}
+				{block:Caption}{Caption}{/block:Caption}
+                
+				<ul class="meta">
+					<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Photoset}
+             
+             {block:Quote}
+             <div class="post quote">
+        		{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+               
+				<blockquote>{Quote}</blockquote>
+                
+                {block:Source}<p>{Source}</p>{/block:Source}
+                
+				<ul class="meta">
+				<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Quote}
+             
+             {block:Chat}
+             <div class="post chat">
+        		{block:Date}<span class="date"><a href="{Permalink}"><strong class="d{DayOfMonthWithZero}">{DayOfMonthWithZero}</strong> <span class="month">{ShortMonth}</span></a></span>{/block:Date}
+                {block:Title}<h3><a href="{Permalink}">{Title}</a></h3>{/block:Title}
+				<ul>
+                {block:Lines}
+                <li>{block:Label}<strong>{Label} </strong>{/block:Label}{Line}</li>
+                {/block:Lines}
+                </ul>
+                
+				<ul class="meta">
+				<li class="tagged"><strong>Tagged:</strong>{block:HasTags}{block:Tags}<a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}</li>
+					<li class="commented"><strong>Noted:</strong> <a href="{Permalink}">{NoteCountWithLabel}</a></li>
+					<li class="reblogged"><strong>Reblogged:</strong> {block:RebloggedFrom}<a href="{ReblogParentURL}">{ReblogParentName}</a>{/block:RebloggedFrom} </li>
+				</ul>
+			</div>
+             {/block:Chat}
+             
+            {/block:Posts}
+            
+            {block:PostNotes}{PostNotes}{/block:PostNotes}
+			
+			{block:Pagination}
+            <nav>
+				{block:NextPage}<a id="older" href="{NextPage}">Older</a>{/block:NextPage}
+				{block:PreviousPage}<a id="newer" href="{PreviousPage}">Newer</a>{/block:PreviousPage}
+			</nav>
+            {/block:Pagination}
+		</section>
+			
+	</div>
+	
+	<section id="footer">
+		<div><p class="copyright">Content Copyright {Title}</p><p class="promo"><a href="http://www.tumblr.com/theme/34375">Watercolor Theme</a> by <a href="http://www.sarawhite.com">Sara White</a></div>
+	</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+        var textLength = $("h1 a").text().length;
+        if ((textLength > 17) && (textLength < 22)) {
+           $("h1").css('fontSize', 33);
+        }
+        else if ((textLength >= 22) && (textLength < 25)) {
+           $("h1").css('fontSize', 29);
+        }
+        else if (textLength >= 25) {
+           $("h1").css('fontSize', 25);
+        }
+         
+ });
+</script>
