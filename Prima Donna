@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+ Name: Prima Donna
+ Author: Kye Lu
+ Date: July 14, 2014
+ Tumblelog: http://kyeelovesyou.tumblr.com
+ Themeblog: http://themsbykye.tumblr.com
+ Copyright 2014
+ 
+ -Do not redistribute this theme on any site!
+ -Do not remove this!
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<link rel="stylesheet" href="http://static.tumblr.com/hn07h0y/1qRn8otsm/css3.css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+<meta name="text:Instagram Username" content="" />
+<meta name="text:Disqus Shortname" content="" />
+<meta name="image:Background" content="http://static.tumblr.com/hn07h0y/Kj4n8ord4/noise.png" />
+<meta name="image:Display Photo" content="http://static.tumblr.com/hn07h0y/Crin8orce/portrait.jpg" />
+<meta name="font:Font Family" content="Consolas" />
+<meta name="if:Show people I follow" content="1" />
+<meta name="if:Show Links and Tags" content="0" />
+<meta name="color:Background Color" content="#FFFFFF" />
+<meta name="color:Text" content="#E6867A" />
+<meta name="color:Link" content="#B05574" />
+<meta name="color:Link Hover" content="#eeeeee" />
+<meta name="color:Header and Footer" content="#ED4A6A" />
+<meta name="color:Header and Footer Link Color" content="#FFFFFF" />
+<meta name="color:Header and Footer Link Hover" content="#B05574" />
+<meta name="color:Quote and Link Post Background Color" content="#EEEEEE" />
+<meta name="color:Quote and Link Post Text Color" content="#ED4A6A" />
+<meta name="color:Blockquote" content="#EEEEEE" />
+<meta name="color:Tags BG Color" content="#EEEEEE" />
+<meta name="color:Tags Text Color" content="#ED4A6A" />
+
+<meta name="text:Facebook URL" content="" />
+<meta name="text:Twitter URL" content="" />
+<meta name="text:Pinterest URL" content="" />
+<meta name="text:Instagram URL" content="" />
+<meta name="text:Blogger URL" content="" />
+<meta name="text:Wordpress URL" content="" />
+
+<meta name="text:Link Name 1" content="" />
+<meta name="text:Link URL 1" content="" />
+<meta name="text:Link Name 2" content="" />
+<meta name="text:Link URL 2" content="" />
+<meta name="text:Link Name 3" content="" />
+<meta name="text:Link URL 3" content="" />
+<meta name="text:Link Name 4" content="" />
+<meta name="text:Link URL 4" content="" />
+<meta name="text:Link Name 5" content="" />
+<meta name="text:Link URL 5" content="" />
+<meta name="text:Link Name 6" content="" />
+<meta name="text:Link URL 6" content="" />
+<style type="text/css">
+body {
+	background-image: url('{image:Background}');
+	background-color: {color:Background Color};
+	font-family: {font:Font Family};
+	font-size: 9pt;
+	text-align: justify;}
+a:link, a:visited, a:active { color: {color:Link}; }
+a:hover { color: {color:Link Hover}; }
+#wrapper { color: {color:Text}; font-family: 'Noticia Text', {font:Font Family}; }
+.quote, #post-wrap .title{ font-family: 'Satisfy'; }
+#post-wrap .linkp a { background-color: {color:Quote and Link Post Background Color}; color: {color:Quote and Link Post Text Color}; }
+#post-wrap .linkp a:hover { background-color: {color:Quote and Link Post Text Color}; color: {color:Quote and Link Post Background Color} }
+div.odd { background-color: {color:Quote and Link Post Background Color}; color: {color:Quote and Link Post Text Color};
+	padding: 2px;}
+div.even { background-color: {color:Quote and Link Post Text Color}; color: {color:Quote and Link Post Background Color};
+	padding: 2px;}
+blockquote { border-left: 5px solid {color:Blockquote}; }
+#header { line-height: 35px; background-color: {color:Header and Footer}; }
+#header .link a {  text-shadow: 1px 1px 52px {color:Header and Footer Link Color}; color: {color:Header and Footer Link Color};}
+#header .link a:hover { color: {color:Header and Footer Link Hover}; }
+#desc { font-family: 'Cousine', {font:Font Family}; color: {color:Text}; }
+
+/* Corner Effect */
+.corners:after,
+.corners:before { background-image: url('{image:Background}'); background: {color:Background Color}; }
+.corners:after { background-image: url('{image:Background}'); }
+.corners:before { background-image: url('{image:Background}'); }
+.header-a h2 a { background: {color:Tags Text Color}; }
+.header-a h2 a:after { border-right: 6px solid {color:Tags Text Color}; }
+.header-a { background: {color:Tags BG Color}; margin: 10px 0 0 0; }
+.header-a h2 { background: {color:Tags BG Color}; }
+.header-a h2 a { color: {color:Background Color}; border-left: 5px solid {color:Background Color}; }
+.header-a h2 a:before { border-right: 8px solid {color:Background Color}; }
+div.ask { background-color: {color:Quote and Link Post Text Color}; color: {color:Quote and Link Post Background Color};
+	padding: 5px; }
+div.down-arrow { border-color: {color:Quote and Link Post Text Color} transparent;  }
+div.askimg { margin-top: 20px; line-height: 20px; float: left}
+div.asker { margin-top: 30px; }
+div.quote { background-color: {color:Quote and Link Post Background Color}; color: {color:Quote and Link Post Text Color}; }
+div.down-arrow2 { border-color: {color:Quote and Link Post Background Color} transparent; }
+input.textarea { background: {colot:Background Color} url(http://static.tumblr.com/hn07h0y/JDfn1ssgz/search.png) no-repeat right; }	
+input.textarea:focus, textarea:focus { box-shadow: 0 0 5px {color:Header and Footer}; border: 1px solid {color:Header and Footer}; }
+div.notes {	border-bottom: 1px dashed {color:Header and Footer}; } 
+div#footer { background-color: {color:Header and Footer}; font-family: 'Noticia Text', {font:Font Family}; }
+table.tags a { background-color: {color:Tags BG Color}; color: {color:Tags Text Color}; border-bottom: 1px solid {color:Tags Text Color}; }
+div#footer a { color: {color:Header and Footer Link Color}; }
+div#footer a:hover { color: {color:Header and Footer Link Hover}; }
+ol.notes { border-bottom: solid 1px {color:Header and Footer}; }
+ol.notes li.note { border-top: solid 1px {color:Header and Footer}; }
+ol.notes li.note blockquote { border-color: {color:Blockquote};}
+	{CustomCSS}
+</style>
+</head>
+
+<body>
+
+ <div id="header">
+  <div class="link">
+   {block:Pagination}{block:PreviousPage}<a href="{PreviousPage}">&laquo;</a>{/block:PreviousPage}{/block:Pagination}
+   <a href="/">{lang:Home}</a>
+   {block:AskEnabled}<a href="/ask">Ask</a>{/block:AskEnabled}
+   {block:SubmissionsEnabled}<a href="/submit">Submit</a>{/block:SubmissionsEnabled} 
+   <a href="/random">Random</a>
+   <a href="http://kyeelovesyou.tumblr.com" target="_blank">Theme</a>
+   {block:Pagination}{block:NextPage}<a href="{NextPage}">&raquo;</a>{/block:NextPage}{/block:Pagination}
+  </div>
+ </div>
+ <div id="wrapper">
+ 
+  <div id="info-wrap">
+ {block:IfDisplayPhotoImage}
+	<div class="corners">
+     <div class="dp">
+     <center><img src="{image:Display Photo}" /></center>
+     </div>
+	</div>
+    {/block:IfDisplayPhotoImage}
+    
+    {block:Description}
+     <div class="header-a"><h2>&nbsp;<a href="#">{lang:About Me}</a></h2></div>
+      <div id="desc">
+       <p>{Description}</p>
+      </div>
+    {/block:Description}
+    
+    {block:ifShowLinksAndTags}
+    <div class="header-a"><h2>Links & Tags<a href="#">Connect</a></h2></div>
+    <div id="desc">
+     <div class="links">
+      {block:IfFacebookURL}<a class="fb" href="{text:Facebook URL}" target="_blank"></a>{/block:IfFacebookURL}
+      {block:IfTwitterURL}<a class="tweet" href="{text:Twitter URL}" target="_blank"></a>{/block:IfTwitterURL}
+      {block:IfPinterestURL}<a class="pin" href="{text:Pinterest URL}" target="_blank"></a>{/block:IfPinterestURL}
+      {block:IfInstagramURL}<a class="ins" href="{text:Instagram URL}" target="_blank"></a>{/block:IfInstagramURL}
+      {block:IfBloggerURL}<a class="blogger" href="{text:Blogger URL}" target="_blank"></a>{/block:IfBloggerURL}
+      {block:IfWordpressURL}<a class="wp" href="{text:Wordpress URL}" target="_blank"></a>{/block:IfWordpressURL}
+      
+      <table class="tags" width="100%">
+      <tr>
+      <td valign="top" width="50%">
+      {block:IfLinkName1}<a href="{text:Link URL 1}">{text:Link Name 1}</a>{/block:IfLinkName1}
+      {block:IfLinkName3}<a href="{text:Link URL 3}">{text:Link Name 3}</a>{/block:IfLinkName3}
+      {block:IfLinkName5}<a href="{text:Link URL 5}">{text:Link Name 5}</a>{/block:IfLinkName5}
+      </td>
+      <td valign="top" width="50%">
+      {block:IfLinkName2}<a href="{text:Link URL 2}">{text:Link Name 2}</a>{/block:IfLinkName2}
+      {block:IfLinkName4}<a href="{text:Link URL 4}">{text:Link Name 4}</a>{/block:IfLinkName4}
+      {block:IfLinkName6}<a href="{text:Link URL 6}">{text:Link Name 6}</a>{/block:IfLinkName6}
+      </td>
+      </tr>
+      </table>
+     </div>
+    </div>
+    {/block:ifShowLinksAndTags}
+    
+    {block:ifInstagramUsername}
+    <div class="header-a"><h2>Instagram<a href="#">Feed</a></h2></div>
+     <iframe src="http://widget.stagram.com/in/{text:Instagram Username}/?s=43&w=4&h=4&b=1&bg=transparent&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;padding-top: 3px; overflow:hidden;width: 230px; height: 240px" ></iframe>
+    {/block:ifInstagramUsername}
+    
+     {block:IfShowPeopleIFollow}
+     {block:Following}
+     <div class="header-a"><h2>&nbsp;<a href="#">{lang:Following}</a></h2></div>
+      <div class="follow">
+       {block:Followed}
+        <a class="fpic" href="{FollowedURL}" title="{FollowedName}"><img src="{FollowedPortraitURL-30}" /></a>
+       {/block:Followed}
+      </div>
+	{/block:Following}
+    {/block:IfShowPeopleIFollow}
+
+    <div class="header-a"><h2>&nbsp;<a href="#">{lang:Search}</a></h2></div>
+    
+    <form action="/search" method="get">
+    <input class="textarea" type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}"/>
+</form>
+    
+    </div>
+    
+    
+    <div id="post-wrap">
+    {block:TagPage}<h2>Posts tagged "{Tag}"</h2>{/block:TagPage}
+        
+     {block:Posts}
+      {block:Text}
+      {block:Title}<div class="title">{Title}</div>{/block:Title}
+      <p>{Body}</p>
+      {block:More}<p><a href="{permalink}">Read More</a></p>{/block:More}
+      <br />
+      {/block:Text}
+      
+	  {block:Photo}
+      {LinkOpenTag}<center><img class="photo" src="{PhotoURL-HighRes}"  alt="{PhotoAlt}"/></center>{LinkCloseTag}
+      {block:Caption}<div class="pad"><p>{Caption}</p></div>{/block:Caption}
+      <br />
+      {/block:Photo}
+      
+      {block:Panorama}
+       {LinkOpenTag}<img class="panorama" src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+       {block:Caption}<div class="pad"><p>{Caption}</p></div>{/block:Caption}
+      <br />
+      {/block:Panorama}
+      
+      {block:Photoset}
+       <center>{Photoset-500}</center>
+       {block:Caption}<div class="pad"><p>{Caption}</p></div>{/block:Caption}
+       <br />
+      {/block:Photoset}
+      
+      {block:Quote}
+       <div class="quote">{Quote}</div>
+       <div class="down-arrow2"></div>
+       {block:Source}<div class="source"><b>{Source}</b></div>{/block:Source}
+      <br />
+      {/block:Quote}
+      
+      {block:Link}
+       <div class="linkp"><a href="{URL}" {Target}>{Name}</a></div>
+       {block:Description}<p>{Description}</p>{/block:Description}
+      <br />
+      {/block:Link}
+      
+      {block:Chat}
+      {block:Title}<div class="title">{Title}</div>{/block:Title}
+        {block:Lines}<div class="{Alt} user_{UserNumber}">
+         {block:Label}<span class="label">{Label} </span>{/block:Label}
+		  {Line}</div>
+        {/block:Lines}
+      <br />
+      {/block:Chat}
+      
+      {block:Audio}
+       <div class="audio">
+        <div class="album">
+         {block:AlbumArt}<img src="{AlbumArtURL}" />{/block:AlbumArt}
+        </div>
+        <div class="audiodetails">
+        {block:AudioEmbed}{AudioEmbed-250}{/block:AudioEmbed} 
+        {block:AudioPlayer}{AudioPlayerWhite}{/block:AudioPlayer}
+        {block:Artist}<b>Artist:</b> {Artist}<br />{/block:Artist}
+        {block:TrackName}<b>Title:</b> {TrackName}<br />{/block:TrackName}
+        {block:Album}From the Album <b>{Album}</b><br />{/block:Album}
+        {block:PlayCount}<b>{PlayCountWithLabel}</b><br />{/block:PlayCount}
+        {block:ExternalAudio}<a href="{ExternalAudioURL}">Download</a>{/block:ExternalAudio}
+        </div>
+        <div class="clear2" style="padding-bottom: 4px; "></div>
+       </div>
+       {block:Caption}<br><p>{Caption}</p>{/block:Caption}
+      <br />
+      {/block:Audio}
+      
+      {block:Video}
+       <center>{Video-500}</center>
+       {block:Caption}<p>{Caption}</p>{/block:Caption}
+      <br />
+      {/block:Video}
+      
+      {block:Answer}
+      <div class="ask">{Question}
+      <div class="down-arrow"></div></div>
+      <div class="askimg"><img src="{AskerPortraitURL-40}"/></div>
+      <div class="asker"> by <b>{Asker}</b></div>
+      <div class="clear"></div>
+       <p>{Answer}</p>
+      <br />
+      {/block:Answer}
+      
+      <div class="notes">
+        {block:Date}<a class="time" href="{Permalink}" title="{Month} {DayOfMonthWithZero}, {Year} at {12Hour}:{Minutes}{AmPm}">{TimeAgo}</a>{/block:Date}
+        {block:NoteCount}<a class="note" href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+        {block:IndexPage}{block:IfDisqusShortname}<a class="disqus" href="{Permalink}#disqus_thread">Comments</a>{/block:IfDisqusShortname}{/block:IndexPage}
+        {block:IndexPage}<a class="perma" href="{Permalink}">Permalink</a>{/block:IndexPage}
+       </div>
+      
+      {block:PermalinkPage}
+      {block:HasTags}<div class="tag">
+       {block:Tags} <a href="{TagURL}"><b>#{Tag}</b></a> {/block:Tags},<br />
+      </div>{/block:HasTags}
+      {block:IfDisqusShortname}
+       <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /**
+* var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread]
+*/
+  (function() {
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="/?ref_noscript={text:Disqus Shortname}">comments powered by Disqus.</a></noscript>
+<a href="" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{/block:Permalink}<script type="text/javascript">
+var disqus_shortname = '{text:Disqus Shortname}';
+(function () {
+  var s = document.createElement('script'); s.async = true;
+  s.src = 'http://{text:Disqus Shortname}.disqus.com/count.js';
+  (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).append
+Child(s);
+}());
+</script><br />{/block:IfDisqusShortname}
+      
+      {block:PostNotes}
+       {block:ContentSource}
+        <a href="{SourceURL}">Originally posted by: 
+        {block:SourceLogo} 
+         <img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+        {/block:SourceLogo}
+        {block:NoSourceLogo}<i>{SourceTitle}</i>{/block:NoSourceLogo}
+    	</a>
+		{/block:ContentSource}
+        
+       {PostNotes}
+    {/block:PostNotes}{/block:PermalinkPage}
+      
+     {/block:Posts}  
+    </div>
+    
+    <div class="clear"></div>
+ </div>
+ 
+ <div id="footer">
+  <a href="/archive">Archive</a> | <a href="{RSS}">Subscribe</a> | Powered by: <a href="http://tumblr.com" target="_blank">Tumblr</a> | Theme by: <a href="http://themesbykye.tumblr.com" target="_blank">Kye Lu</a> | Copyright &copy; 2014
+ </div>
+</body>
+</html>
