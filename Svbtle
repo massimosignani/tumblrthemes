@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="authenticity_token" name="csrf-param" />
+  <meta content="" name="csrf-token" />
+  <meta name="image:Logo" content="" />
+  <meta name="color:Theme Color" content="" />
+  <meta name="if:RSS Feed" content="1" />
+  <meta name="if:Archive Link" content="1" />
+  <meta name="text:Swiftype Search Key" content="" />
+  <meta name="text:Twitter Username" content="" />
+  <meta name="text:App dot net Username" content="" />
+  <meta name="text:Google Analytics ID" content="" />
+  <meta name='text:Disqus Shortname' content="" />
+  <meta name='text:Firebase Name' content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {block:Description}
+  <meta name="description" content="{MetaDescription}" />
+  {/block:Description}
+  {block:IndexPage}
+  <title>{Title}</title>
+  <meta property="og:type" content="blog" />
+  <meta property="og:url" content="{Permalink}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+  <title>{block:PostSummary}{PostSummary}{/block:PostSummary}</title>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
+  <meta property="og:title" content="{block:PostSummary}{PostSummary} &laquo; {/block:PostSummary}{Title}" />
+  <meta property="og:image" content="{image:Logo}" />
+  <meta property="og:site_name" property="{block:PostSummary}{PostSummary} &laquo; {/block:PostSummary}{Title}">
+  {block:Description}
+  <meta property="og:description" content="{MetaDescription}"/>
+  {/block:Description}
+  
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <link rel="stylesheet" href="http://static.tumblr.com/rb82j8l/uJUmty4eh/fonts.css" media="all">
+  <link href="http://static.tumblr.com/rb82j8l/zrOmtyjo3/style.min.css" media="all" rel="stylesheet" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <meta name="firebase-name" content="{text:Firebase Name}" />
+  {block:IfGoogleAnalyticsID}<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '{text:Google Analytics ID}');
+    ga('send', 'pageview');
+  </script>{/block:IfGoogleAnalyticsID}
+  <script src="http://static.tumblr.com/rb82j8l/3C1muapoi/theme.js"></script>
+</head>
+<body class="blog">
+<div id="touch_menu">&nbsp;</div>
+<h1 id="mlogotype"><a href="https://svbtle.com">Svbtle</a></h1>
+<nav id="master" class="blog">
+  <h2 id="logotype"><a href="https://svbtle.com">Svbtle</a></h2>
+  <a id="master_indicator" href="#show-drop">&nbsp;</a>
+  <ul id="master_drop">
+    <li><h5><a href="https://svbtle.com">{Title}<br/>is writing on the<br/><span>Tumblr</span> network.</a></h5></li>
+    {block:IfTwitterUsername}<li class="link twitter icons"><a href="http://twitter.com/{text:Twitter Username}" class="twitter_head">@{text:Twitter Username}&nbsp;on&nbsp;twitter</a></li>{/block:IfTwitterUsername}
+    {block:IfAppdotnetUsername}<li class="link adn icons"><a href="https://alpha.app.net/{text:App dot net Username}" class="adn_head" rel="me">@{text:App dot net Username}&nbsp;on&nbsp;app.net</a></li>{/block:IfAppdotnetUsername}
+    {block:HasPages}
+      {block:Pages}
+    <li class="link"><a href="{URL}">{Label}</a></li>
+      {/block:Pages}
+    {/block:HasPages}
+    {block:AskEnabled}<li class="link email"><a href="/ask">say&nbsp;hello</a></li>{/block:AskEnabled}
+    {block:IfRssFeed}<li class="link feed"><a href="{RSS}">rss</a></li>{/block:IfRssFeed}
+    {block:IfArchiveLink}<li class="link archive"><a href="/archive">archive</a></li>{/block:IfArchiveLink}
+    <li><a href="https://github.com/EricTendian/svbtle-tumblr" class="header_link">SVBTLE-TUMBLR</a></li>
+    <li><a href="http://tendian.io/" target="_blank">by @EricTendian</a></li>
+  </ul>
+</nav>
+<div id="touch_close">&nbsp;</div>
+
+<h1 id="home_logotype"><a href="http://www.tumblr.com/">Tumblr</a></h1>
+<section id="river" class="{block:IndexPage}userhome{/block:IndexPage}{block:PreviousPage} paginated{/block:PreviousPage}">
+  <header id="page_header">
+    {block:IndexPage}<ul id="user_nav">
+      {block:IfTwitterUsername}<li class="link twitter icons"><a href="http://twitter.com/{text:Twitter Username}" class="twitter_head">@{text:Twitter Username}</a></li>{/block:IfTwitterUsername}
+      {block:IfAppdotnetUsername}<li class="link adn icons"><a href="https://alpha.app.net/{text:App dot net Username}" class="adn_head" rel="me">@{text:App dot net Username}</a></li>{/block:IfAppdotnetUsername}
+      {block:IfSwiftypeSearchKey}<li id="search">
+        <form>
+          <input type="text" id="st-search-input" class="st-search-input" />
+        </form>
+        <div id="st-results-container"></div>
+        <script type="text/javascript">
+          var Swiftype = window.Swiftype || {};
+          (function() {
+            Swiftype.key = '{text:Swiftype Search Key}';
+            Swiftype.inputElement = '#st-search-input';
+            Swiftype.resultContainingElement = '#st-results-container';
+            Swiftype.attachElement = '#st-search-input';
+            Swiftype.renderStyle = "overlay";
+
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = "//swiftype.com/embed.js";
+            var entry = document.getElementsByTagName('script')[0];
+            entry.parentNode.insertBefore(script, entry);
+          }());
+        </script>
+        <style type="text/css">
+        form {
+          display: inline-block;
+        }
+        input#st-search-input {
+          font-size: 15px;
+          width: 150px;
+          background-color: white;
+          border: 2px solid #eee;
+          font-family: 'proxima-nova','Helvetica','Avenir',sans-serif;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
+        div.swiftype {
+          font-family: 'proxima-nova','Helvetica','Avenir',sans-serif;
+        }
+        div.swiftype div.st-result-listing div.st-search-summary h2, div.swiftype div.st-result-listing .st-results div.st-result .st-result-text h3 a {
+          font-size: 14px;
+        }
+        div.swiftype div.st-result-listing .st-results div.st-result .st-result-text .st-metadata .st-snippet {
+          font-size: 13px;
+        }
+        </style>
+      </li>{/block:IfSwiftypeSearchKey}
+    </ul>{/block:IndexPage}
+    <figure class="logo main">
+      <a href="/">{Title}</a>
+    </figure>
+    <h2 id="page_title"><a href="/">{Title}</a></h2>
+    <h3 id="page_subtitle">{Description}</h3>
+  </header>
+  {block:IndexPage}
+  <section id="top_article">
+    <aside id="read_this_first">
+      <h6>Read&nbsp;this&nbsp;first</h6>
+    </aside>
+  {block:Posts}{block:Post1}
+    <article id="eid{PostID}" class="post">
+      <h1 class="article_title">
+        <a href="{Permalink}">
+          {block:Text}{Title}{/block:Text}
+          {block:Photo}Photo{/block:Photo}
+          {block:Panorama}Panorama{/block:Panorama}
+          {block:Photoset}Photos{/block:Photoset}
+          {block:Quote}Quote{/block:Quote}
+          {block:Link}{Name}{/block:Link}
+          {block:Chat}Conversation{/block:Chat}
+          {block:Video}Video{/block:Video}
+          {block:Audio}Audio{/block:Audio}
+          {block:Answer}Answer{/block:Answer}
+        </a>
+      </h1>
+      <section class="post_content">
+        {block:Text}
+          {Body}
+        {/block:Text}
+        {block:Photo}
+          <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Photo}
+        {block:Panorama}
+          {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Panorama}
+        {block:Photoset}
+          {block:Photos}
+            <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Photos}
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Photoset}
+        {block:Quote}
+          <blockquote>"{Quote}"</blockquote>
+          {block:Source}
+          <h2>{Source}</h2>
+          {/block:Source}
+        {/block:Quote}
+        {block:Link}
+          {block:Description}
+          {Description}
+          {/block:Description}
+        {/block:Link}
+        {block:Chat}
+          <ul class="chat">
+              {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+          </ul>
+        {/block:Chat}
+        {block:Video}
+          {Video-500}
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Video}
+        {block:Audio}
+          {AudioPlayerBlack}
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Audio}
+        {block:Answer}
+          <p>{Asker} wrote:</p>
+          <blockquote>{Question}</blockquote>
+          {block:Answerer}<p>{Answerer} said:</p>{/block:Answerer}
+          <p{block:Answerer} style="display:none"{/block:Answerer}>{Title} replied:</p>
+          <blockquote>{Answer}</blockquote>
+        {/block:Answer}
+      </section>
+      <p><a href="{Permalink}" class="buttonize">Continue reading</a></p>
+    </article>
+  {/block:Post1}{/block:Posts}
+  </section>
+  <section id="more_articles">
+    <aside id="also_by_user">
+      <h6{block:PreviousPage} style="display:none"{/block:PreviousPage}>More&nbsp;by&nbsp;{Title}</h6>
+      <h6>{block:PreviousPage}Page {CurrentPage}{/block:PreviousPage}</h6>
+    </aside>
+
+    {block:Posts}
+    <article id="eid{PostID}" class="mini post">
+      <h1 class="article_title">
+        <a href="{Permalink}">
+          {block:Text}{Title}{/block:Text}
+          {block:Photo}Photo{/block:Photo}
+          {block:Panorama}Panorama{/block:Panorama}
+          {block:Photoset}Photos{/block:Photoset}
+          {block:Quote}Quote{/block:Quote}
+          {block:Link}{Name}{/block:Link}
+          {block:Chat}Conversation{/block:Chat}
+          {block:Video}Video{/block:Video}
+          {block:Audio}Audio{/block:Audio}
+          {block:Answer}Answer{/block:Answer}
+        </a>
+      </h1>
+      {block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="article_time">{Month} {DayOfMonth}, {Year}</time>{/block:Date}
+      <section class="post_content">
+        <div class="permalink" data-permalink="{Permalink}">
+          {block:Text}
+            {Body}
+          {/block:Text}
+          {block:Photo}
+            <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Photo}
+          {block:Panorama}
+            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Panorama}
+          {block:Photoset}
+            {block:Photos}
+              <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+              {block:Caption}
+              <p>{Caption}</p>
+              {/block:Caption}
+            {/block:Photos}
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Photoset}
+          {block:Quote}
+            <blockquote>"{Quote}"</blockquote>
+            {block:Source}
+            <h2>{Source}</h2>
+            {/block:Source}
+          {/block:Quote}
+          {block:Link}
+            {block:Description}
+            {Description}
+            {/block:Description}
+          {/block:Link}
+          {block:Chat}
+            <ul class="chat">
+                {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+            </ul>
+          {/block:Chat}
+          {block:Video}
+            {Video-500}
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Video}
+          {block:Audio}
+            {AudioPlayerBlack}
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+          {/block:Audio}
+          {block:Answer}
+            <p>{Asker} wrote:</p>
+            <blockquote>{Question}</blockquote>
+            {block:Answerer}<p>{Answerer} said:</p>{/block:Answerer}
+            <p{block:Answerer} style="display:none"{/block:Answerer}>{Title} replied:</p>
+            <blockquote>{Answer}</blockquote>
+          {/block:Answer}
+        </div>
+        <p class="continue_mark"><a href="{Permalink}" class="continue_button">Continue &rarr;</a></p>
+      </section>
+    </article>
+    <hr class="articlesplit" />
+    {/block:Posts}
+
+  </section>
+  <div>&nbsp;</div>
+  {block:Pagination}
+  <nav class="pagination">
+    {block:PreviousPage}<span class="prev"><a href="{PreviousPage}" rel="prev">&larr;&nbsp;&nbsp;&nbsp;Previous</a></span>{/block:PreviousPage}
+    {block:NextPage}<span class="next"><a href="{NextPage}" rel="next">Next&nbsp;&nbsp;&nbsp;&rarr;</a></span>{/block:NextPage}
+  </nav>
+  {/block:Pagination}
+  {/block:IndexPage}
+
+  {block:PermalinkPage}{block:Posts}
+  <article id="eid{PostID}" class="post {block:Link}linked {/block:Link}oldx">
+    <h1 class="article_title">
+      {block:Link}<a href="{URL}">{Name}</a>{/block:Link}
+      <a href="{Permalink}"{block:Link} class="anchor"{/block:Link}>
+        {block:Text}{Title}{/block:Text}
+        {block:Photo}Photo{/block:Photo}
+        {block:Panorama}Panorama{/block:Panorama}
+        {block:Photoset}Photos{/block:Photoset}
+        {block:Quote}Quote{/block:Quote}
+        {block:Link}&nbsp;{/block:Link}
+        {block:Chat}Conversation{/block:Chat}
+        {block:Video}Video{/block:Video}
+        {block:Audio}Audio{/block:Audio}
+        {block:Answer}Answer{/block:Answer}
+      </a>
+    </h1>
+    {block:Date}<time datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}" class="article_time">{Month} {DayOfMonth}, {Year}</time>{/block:Date}
+    <section class="post_content">
+      {block:Text}{Body}{/block:Text}
+      {block:Photo}
+        <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+      {/block:Photo}
+      {block:Panorama}
+        {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+      {/block:Panorama}
+      {block:Photoset}
+        {block:Photos}
+          <a href="{PhotoURL-HighRes}" target="_blank"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/></a>
+          {block:Caption}
+          <p>{Caption}</p>
+          {/block:Caption}
+        {/block:Photos}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+      {/block:Photoset}
+      {block:Quote}
+        <blockquote>"{Quote}"</blockquote>
+        {block:Source}
+        <h2>{Source}</h2>
+        {/block:Source}
+      {/block:Quote}
+      {block:Link}
+        {block:Description}
+        {Description}
+        {/block:Description}
+      {/block:Link}
+      {block:Chat}
+        <ul class="chat">
+            {block:Lines}<li class="{Alt}">{block:Label} {Label} {/block:Label}{Line}</li>{/block:Lines}
+        </ul>
+      {/block:Chat}
+      {block:Video}
+        {Video-500}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+      {/block:Video}
+      {block:Audio}
+        {AudioPlayerBlack}
+        {block:Caption}
+        <p>{Caption}</p>
+        {/block:Caption}
+      {/block:Audio}
+      {block:Answer}
+        <p>{Asker} wrote:</p>
+        <blockquote>{Question}</blockquote>
+        {block:Answerer}<p>{Answerer} said:</p>{/block:Answerer}
+        <p{block:Answerer} style="display:none"{/block:Answerer}>{Title} replied:</p>
+        <blockquote>{Answer}</blockquote>
+      {/block:Answer}
+
+      <figure class="kudo able clearfix" id="kudo_eid{PostID}">
+        <a href="#kudo">
+          <div class="filling">&nbsp;</div>
+        </a>
+        <div class="num">0</div>
+        <div class="txt">Kudos</div>
+      </figure>
+      <figure class="side kudo able clearfix" id="kudo_side_eid{PostID}">
+        <a href="#kudo">
+          <div class="filling">&nbsp;</div>
+        </a>
+        <div class="num">0</div>
+        <div class="txt">Kudos</div>
+      </figure>
+
+    </section>
+    <section id="disqus_thread">
+    </section>
+    {block:IfDisqusShortname}
+    <script type="text/javascript">
+        /* * * DISQUS CONFIGURATION * * */
+        var disqus_shortname = '{text:Disqus Shortname}';
+        var disqus_url = '{Permalink}';
+        var disqus_title = '{block:PostTitle}{PostTitle}{/block:PostTitle}';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    {/block:IfDisqusShortname}
+    {block:PostNotes}<p><a href="#notes" onclick="$('section#notes').fadeToggle('fast');$(this).find('span').text($(this).find('span').text()=='Show'?'Hide':'Show');"><strong><span>Show</span> Notes</strong></a></p>
+    <section id="notes" style="display:none">
+    {PostNotes}
+    </section>{/block:PostNotes}
+  </article>
+
+  <div>&nbsp;</div>
+  {/block:Posts}{/block:PermalinkPage}
+</section>
+
+<footer id="masthead"{block:IndexPage} class="userhome"{/block:IndexPage}>
+  {block:PermalinkPagination}<div id="readnext">
+    <a href="/random">
+      <span class="flank_head">Read this next:</span><br/>
+      <span class="flank_title">More by Eric</span>
+    </a>
+  </div>
+  <div class="separator"></div>{/block:PermalinkPagination}
+  <div id="foot_logo">
+    <a href="https://svbtle.com"><span>Svbtle</span></a>
+  </div>
+  <div id="foot_userbar">
+    <a href="/" id="bottom_tagline">
+      <span>{Title}</span> {Description}
+    </a>
+    {block:IfTwitterUsername}<a href="http://twitter.com/{text:Twitter Username}" class="linkout twitter">@{text:Twitter Username}</a>{/block:IfTwitterUsername}
+    {block:IfAppdotnetUsername}<a href="https://alpha.app.net/{text:App dot net Username}" class="linkout appdotnet" rel="me">@{text:App dot net Username}</a>{/block:IfAppdotnetUsername}
+    {block:AskEnabled}<a href="/ask" class="linkout contact">say&nbsp;hello</a>{/block:AskEnabled}
+  </div>
+  <div id="foot_more">
+    <a href="/"><span>Full blog &raquo;</span></a>
+  </div>
+  <div id="copyright">
+    &copy; {CopyrightYears}
+  </div>
+</footer>
+
+<style scoped>
+  blockquote,
+  a blockquote,
+  h2#page_title a:hover,
+  div#readnext:hover span.flank_title,
+  div#foot_more:hover a,
+  div#foot_userbar a#bottom_tagline span:hover,
+  article.linked h1.article_title a:hover,
+  a.continue_button:hover,
+  article p a:hover,
+  ul#lightning_drop {
+    border-color: {color:Theme Color};
+  }
+  body,
+  figure.kudo.complete div.filling,
+  ul#lightning_drop li a:hover,
+  section#sidebar,
+  section#river.userhome p a.buttonize {
+    background-color:{color:Theme Color}
+  }
+  figure.kudo.complete div.filling {
+    background-image:url({Image:Logo});
+  }
+  div#readnext:hover span.flank_title,
+  div#foot_more:hover span,
+  div#foot_userbar a#bottom_tagline span:hover,
+  article.linked h1.article_title:hover,
+  h2#page_title a:hover,
+  section#river.userhome header#page_header h2#page_title a,
+  body section#river.userhome article h1.article_title:hover a,
+  aside#read_this_first h6,
+  aside#also_by_user h6,
+  article.post.mini h1.article_title:hover a,
+  a.continue_button:hover,
+  a.continue_button,
+  article p a:hover,
+  ul#lightning_drop li.userinfo a.user_name,
+  body ul#lightning_drop li.userinfo:hover a.user_name {
+    color: {color:Theme Color};
+  }
+
+  footer#masthead {
+    border-bottom: 24px solid {color:Theme Color};
+  }
+  figure.logo a {
+    background: {color:Theme Color} url({Image:Logo}) center center no-repeat;
+    background-size: 100%;
+  }
+
+  section#river.paginated section#top_article, section#river:not(.paginated) article.post.mini:nth-child(2), section#river:not(.paginated) hr.articlesplit:nth-child(3) {
+    display: none;
+  }
+  section#river:not(.paginated) article.post.mini:nth-child(4) {
+    margin-top: 40px;
+  }
+
+  article p iframe, article p object {
+    min-width: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  section#disqus_thread, section#notes {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  section#notes ol.notes {
+    clear: both;
+    padding-left: 18px !important;
+    list-style: none;
+    border-left: 10px solid {color:Theme Color};
+  }
+  section#notes li.note img.avatar {
+    display: inline-block;
+    width: auto !important;
+  }
+  section#notes li.note span.action a {
+    font-weight: 700;
+  }
+  section#notes li.note blockquote {
+    border-left: none;
+  }
+</style>
+<script>
+$(function() {
+  $('#tumblr_controls').css('z-index', '');
+  {block:IndexPage}
+  $('section#top_article section.post_content').each(function () {
+    if ($(this).text().length>550 && $(this).html().length>575) $(this).html($(this).html().substring(0,575)+"...");
+  });
+  $('section#more_articles section.post_content>div.permalink a').contents().unwrap();
+  $('section#more_articles section.post_content>div.permalink').each(function () {
+    if ($(this).text().length>550 && $(this).html().length>575)
+      $(this).replaceWith('<a href="'+$(this).attr('data-permalink')+'" class="content">'+$(this).html().substring(0,575)+"...</a>");
+    else $(this).replaceWith('<a href="'+$(this).attr('data-permalink')+'" class="content">'+$(this).html()+"</a>");
+  });
+  {/block:IndexPage}
+  {block:Permalink}
+  $('figure.kudo div.num').text(parseInt($('figure.kudo div.num').first().text().replace(/,/g, "")).toLocaleString());
+  {/block:Permalink}
+  {block:PermalinkPagination}
+  $.ajax({
+    url: '/random',
+    dataType: 'html',
+    success: function(html) {
+      $('footer#masthead #readnext a').attr('href', $(html).filter('meta[property="og:url"]').attr('content'));
+      $('footer#masthead #readnext a .flank_title').text($(html).filter('title').text());
+    }
+  });
+  {/block:PermalinkPagination}
+});
+</script>
+
+</body>
+</html>
