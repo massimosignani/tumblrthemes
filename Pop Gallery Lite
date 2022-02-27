@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}{block:PortuguesePT}pt{/block:PortuguesePT}{block:PortugueseBR}pt{/block:PortugueseBR}{block:Dutch}nl{/block:Dutch}{block:Korean}ko{/block:Korean}">
+<head>
+
+<!--
+==========================================================================
+  __  __                 __          __  _    
+ / /_/ /  ___ __ _  ___ / /__ ____  / /_(_)___
+/ __/ _ \/ -_)  ' \/ -_) / _ `/ _ \/ __/ / __/
+\__/_//_/\__/_/_/_/\__/_/\_,_/_//_/\__/_/\__/ 
+                                              
+Pop Gallery Lite v1.1
+Updated: 19th May, 2015
+Website: http://themelantic.com
+Copyright 2015 Themelantic. All rights reserved.
+
+==========================================================================
+-->
+
+<meta charset="UTF-8">
+<title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PermalinkPage}{block:PostSummary} — {PostSummary}{/block:PostSummary}{/block:PermalinkPage}</title>
+{block:Description}<meta name="description" content="{block:IndexPage}{MetaDescription}{/block:IndexPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}">{/block:Description}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="alternate" type="application/rss+xml" title="{Title}" href="{RSS}">
+<link rel="stylesheet" href="http://static.tumblr.com/6az34or/mahnolq57/popgallerylite-main.min.css">
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="apple-touch-icon" href="{PortraitURL-128}">
+
+<!-- Facebook OpenGraph -->
+
+{block:IndexPage}
+<meta property="og:title" content="{Title}">
+<meta property="og:description" content="{MetaDescription}">
+<meta property="og:url" content="{BlogURL}">
+<meta property="og:type" content="tumblr-feed:tumblelog">
+<meta property="og:image" content="{PortraitURL-128}">
+{/block:IndexPage}
+
+{block:PermalinkPage}
+<meta property="og:title" content="{Title}{block:PostSummary} — {PostSummary}{/block:PostSummary}">
+<meta property="og:description" content="{block:PostSummary}{PostSummary}{/block:PostSummary}">
+<meta property="og:url" content="{Permalink}">
+<meta property="og:site_name" content="{Title}">
+<meta property="og:type" content="article">
+
+{block:Posts}
+{block:Photo}<meta property="og:image" content="{PhotoURL-250}">{/block:Photo}
+{block:Photoset}{block:Photos}<meta property="og:image" content="{PhotoURL-250}">{/block:Photos}{/block:Photoset}
+{block:Quote}<meta property="og:image" content="{PortraitURL-64}">{/block:Quote}
+{block:Link}<meta property="og:image" content="{PortraitURL-64}">{/block:Link}
+{block:Chat}<meta property="og:image" content="{PortraitURL-64}">{/block:Chat}
+{block:Answer}<meta property="og:image" content="{PortraitURL-64}">{/block:Answer}
+{block:Audio}{block:AlbumArt}<meta property="og:image" content="{AlbumArtURL}">{/block:AlbumArt}{/block:Audio}
+{block:Video}{block:VideoThumbnail}<meta property="og:image" content="{VideoThumbnailURL}">{/block:VideoThumbnail}{/block:Video}
+
+{block:Date}
+<!-- Canonical & Shortlink -->
+<link rel="canonical" href="{Permalink}">
+<link rel="shortlink" href="{ShortURL}">
+{/block:Date}
+{/block:Posts}
+
+{/block:PermalinkPage}
+
+
+
+{block:Hidden}
+<!-- THEME OPTIONS ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- images ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<meta name="image:Logo" content="">
+<meta name="image:Mobile Logo" content="">
+<meta name="image:PageBkg" content="">
+
+
+<!-- colors ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!--
+	white:			#ffffff
+	light gray:		#dddddd
+	medium gray:	#979797
+	dark gray:		#333333
+	teal:			#39b2b2
+	red: 			#cc2727
+-->
+
+<meta name="color:Background" content="#ffffff">
+<meta name="color:Header Background" content="#ffffff">
+<meta name="color:Thumbnail" content="#efefef">
+<meta name="color:Accent" content="#39b2b2">
+<meta name="color:Overlay" content="#cc2727">
+<meta name="color:Text" content="#292929">
+
+
+
+<!-- booleans /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<meta name="if:Infinite Scrolling" content="1">
+<meta name="if:Round Thumbnails" content="1">
+
+
+<!-- text /////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<meta name="text:Page Bkg Repeat" content="repeat top left"><!-- v.1.9 -->
+<meta name="text:Copyright Text" content="">
+
+
+<!-- social media /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<meta name="text:Facebook URL" content="">
+<meta name="text:Google URL" content="">
+<meta name="text:LinkedIn URL" content="">
+<meta name="text:Twitter URL" content="">
+<meta name="text:YouTube URL" content="">
+
+
+<!-- plugins / misc ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<meta name="text:Footer HTML Code" content="">
+<meta name="text:Google Analytics ID" content="">
+<meta name="text:Disqus Shortname" content="">
+
+
+<!-- /THEME OPTIONS -->
+{/block:Hidden}
+
+<!-- CSS //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<style>
+
+/* Theme Options Styles ///////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: {TitleFont}, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+	font-weight: {TitleFontWeight};
+	}
+
+
+/* {color:Background} */
+html { background: {color:Background} {block:IfPageBkgImage}url({image:PageBkg}) {text:Page Bkg Repeat}{/block:IfPageBkgImage} }
+
+
+.site-header { background-color: {block:IfNotPageBkgImage}{color:Header Background}{/block:IfNotPageBkgImage}{block:IfPageBkgImage}transparent{/block:IfPageBkgImage} }
+
+/* {color:Text} */
+body, .nav-page a, .nav-page a:visited { color: {color:Text} }
+
+hr,
+.bt,
+.bb { border-color: RGBA({RGBcolor:Text},.1) }
+
+pre { background: RGBA({RGBcolor:Text},.1) }
+
+
+/* {color:Accent} */
+a, a:visited,
+h1, h2, h3, h4, h5, h6,
+.nav-page a:hover,
+a.btn-home,
+.thumbnail-text-wrap h3,
+.thumbnail.quote h3:before,
+.thumbnail .odd,
+.pagetitle,
+.is-chat li.odd,
+.logo-text  { color: {color:Accent}}
+
+.l-content a:hover, .l-content a:focus { border-bottom: 1px dotted {color:Accent} }
+
+
+/* {color:Overlay} */
+#back-top a:hover, #back-top a:focus { background-color: {color:Overlay} }
+
+/* RGBA({RGBcolor:Text},.5) */
+#back-top a { background: RGBA({RGBcolor:Text},.5) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAYAAAAougcOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyM0Y0RDMwMzAwRUUxMUUyQUE1OUQ0MkVDNTczMEY3RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyM0Y0RDMwNDAwRUUxMUUyQUE1OUQ0MkVDNTczMEY3RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIzRjREMzAxMDBFRTExRTJBQTU5RDQyRUM1NzMwRjdGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIzRjREMzAyMDBFRTExRTJBQTU5RDQyRUM1NzMwRjdGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+raFtmgAAARNJREFUeNpi+P//PwMRmAeIK4H4KhB/B+LrQFwHFSeonxgLxIH42n/s4BpUniJLuID4xH/84ARUHVmWMALx6v/EgZVQ9SRb0v6fNNBGqiXR/0kH/6D6iLLEFoh//icPgPRZE7JEBYhf/acMvIKag9USfjxJFTlI5kJpfOAy1DwUS1iAeC8RrqyBqq8nQu1uIGZGtmQaEZqWICVTRiifEJgGsyScCMXHgZgNLf44iMioIBACUnyGgKK7QCyKI6mDxO8T0H8GpPAXHgUfgFiXQNGjC1WHC/wAKXqIQ/IPELsTWUp7QtVjAw9ACspxJNUMIi2A4TQcSbsCllKqgfg5yGtAfJQEH6BjD6j+H1DzqkDmAwQYADo12X4b0z+pAAAAAElFTkSuQmCC) no-repeat center center }
+
+
+
+footer,
+.nav-tag:before,
+.thumbnail-text-wrap,
+.thumbnail-text-wrap .date { color: RGBA({RGBcolor:Text},.5); }
+
+.button, .button:visited { background-color: {color:Accent}; }
+
+.button:hover, .button:visited:hover, .button:focus { background-color: {color:Overlay}; }
+
+
+
+/* pagination links */
+.page-number  { background-color: RGBA({RGBcolor:Text},.1) }
+.current-page {
+	background-color: {color:Background};
+	border-color: RGBA({RGBcolor:Text},.1);
+	}
+
+.pagination a:hover, .pagination a:focus,
+a.btn-home:hover, a.btn-home:focus { background-color: {color:Accent} }
+
+
+/* Navigation */
+
+
+.nav a:hover, .nav a:focus,
+.postinfo .tags a:hover, .postinfo .tags a:focus {
+	background-color: RGBA({RGBcolor:Text},.1);
+}
+
+
+.search-form input[type="text"] {
+  border: 1px solid RGBA({RGBcolor:Text},.1);
+}
+
+
+
+/* background colors */
+.thumbnail.text .thumbnail-text,
+.thumbnail.quote .thumbnail-text,
+.thumbnail.link .thumbnail-text,
+.thumbnail.chat .thumbnail-text,
+.thumbnail.answer .thumbnail-text {
+	background-color: {color:Thumbnail};
+}
+
+
+a.thumbnail-link:hover .thumbnail-text-status,
+a.thumbnail-link:focus .thumbnail-text-status {
+	background-color: RGBA({RGBcolor:Overlay},.8);
+	display: block
+}
+
+/* opacity fix for IE8 */
+.lt-ie9 a.thumbnail-link:hover .thumbnail-text-status,
+.lt-ie9 a.thumbnail-link:focus .thumbnail-text-status {
+	background-color: {color:Overlay};
+}
+
+a.thumbnail-link:hover .thumbnail-text-status,
+a.thumbnail-link:focus .thumbnail-text-status,
+.lt-ie9 a.thumbnail-link:hover .thumbnail-text-status,
+.lt-ie9 a.thumbnail-link:focus .thumbnail-text-status {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjpJREFUeNq8l0FEREEYx9/uEsuyLMtjWZZliYgodYnNslkiOtWl7LVTXaJTp4g9RWxiu+whOkXEiihRpBWl1Cktq1U6pJTy+n/MYY2ZfTNv9vXxO8y8N+M/M9983zcBx3EsF4uDAhgGSdYmuwGP4AQcWKZGQiQkwRb4cdztCRQ7zOWK7MMC+HD07RqkuyGkB1QcM3sBOV0hAc5HqmBacooNUAPfrE3+kgMhwb+fYATUvfjIvGSFZ2BUspIoWAZvEr+J6R5NjG0pb6uKE5Ff3AvGr+sKKQkmKWmec4LtQrt9gZSqkLBgNy5ByIP3FwQLWlMVkhcMnjKICWfcXFcq44Lw1wHOf9/BvkGM3OHafSDiNoiEpLm+Ort+Xu1c0JdSEcKrbRlmDdH4qIqQb91BLhaVBDhXIQ2uL2MoJCOJyq5CLri+BBg0EDLBtalUaKoIofzxy/UvG+zGJNe3qzKQhLyCPcGqJjVF9ICyIAnWdJLeoCCoUT2SVQxiVD5UJUnzFtg69ciGYBKqzlZApMMk/eBUoWCyVesR2tpjiaO22PFRsLpjdSsFqTzIKh4d1bhjUsfllNksN/hl0p0JcrqarLIyr8rF1gsOgS26NZYg6Y2DGfDwb2IUbgPVGGW2re32DI7AEit+KibHZJm8RThCJmK6KcSrGLoc4YDCk9OLVcCsxv+LQZ9uxxzY1kmUfgnRFRP3U4iOmLpfPqLjM1QhDnX71nRiTZLhi6JHuN82zB75SRa1N1kStf4EGAA6pAJzLYM+AwAAAABJRU5ErkJggg==);
+	background-position: center center;
+	background-repeat: no-repeat
+}
+
+
+/* text formatting on overlay tags */
+.status-tag {
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.75em;
+	width: 100%;
+	display: table-cell; /* dont remove in order for the text to be vertically centered */
+	vertical-align: middle; /* dont remove in order for the text to be vertically centered */
+}
+
+
+/* text on thumbnails */
+
+.thumbnail-text-wrap .date:first-letter {
+	border-top: 1px solid RGBA({RGBcolor:Text},.5);
+}
+
+
+
+
+/* -- Audio thumbnails -- */
+
+
+.audioart {
+	border: 1px solid RGBA({RGBcolor:Text},.1);
+}
+
+
+{block:IndexPage}
+	/* Audio Spotify Thumbnails */
+	iframe.spotify_audio_player {
+		width: 500px;
+		height: 500px;
+		overflow: hidden;
+		position: relative;
+		top: -70%;
+		left: -50%;
+		padding: 87px 16px 0 16px;
+		background: #333;
+
+	}
+
+	/* Audio Soundcloud Thumbnails */
+	iframe.soundcloud_audio_player {
+		height: 500px;
+		width: 500px;
+		position: relative;
+		left: -50%;
+		top: -50%;
+		overflow: hidden;
+		padding: 30px;
+		background: #f5f5f5;
+	}
+
+	.widgetContainer {
+		border: 0 !important;
+	}
+
+	/* Video thumbnails */
+	.video .thumbnail-image img {
+		height: 400px;
+		margin-top: -75px;
+		margin-left: -55%;
+	}
+{/block:IndexPage}
+
+
+
+/* Permalink page */
+
+
+.postinfo blockquote {
+	line-height: 1.25em;
+	margin: 0.75em;
+	padding-left: 0.75em;
+	margin-left: 1.65em;
+	font-style: italic;
+	border-left: 1px dotted {color:Accent};
+	}
+
+
+
+
+ol.notes {
+	border-bottom: 1px solid RGBA({RGBcolor:Text},.1);
+}
+
+ol.notes li {
+	border-top: 1px solid RGBA({RGBcolor:Text},.1);
+}
+
+ol.notes li blockquote {
+	border-left: 1px dotted {color:Accent};
+}
+
+
+.is-quote blockquote {
+	background: {color:Thumbnail};
+}
+
+
+
+
+.is-index .pagination .previous {
+	display: block;
+	float: left;
+	}
+
+.l-s-left .is-index .pagination .previous { margin-left: 1em; }
+.l-s-right .is-index .pagination .next { margin-right: 1em; }
+
+.is-index .pagination .next {
+	display: block;
+	float: right;
+	}
+
+
+/* CSS3 Border-Radius */
+
+
+/* If rounded corners */
+
+{block:IfRoundThumbnails}
+	.thumbnail .round,
+	.thumbnail-image.round img {
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.circle-mask {
+		-webkit-mask-image: url(http://static.tumblr.com/6az34or/1hYme9rt0/circle.svg);
+		-o-mask-image: url(http://static.tumblr.com/6az34or/1hYme9rt0/circle.svg);
+		-moz-mask-image: url(http://static.tumblr.com/6az34or/1hYme9rt0/circle.svg);
+		mask-image: url(http://static.tumblr.com/6az34or/1hYme9rt0/circle.svg);
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	iframe.spotify_audio_player,
+	iframe.soundcloud_audio_player {
+		-o-border-image: 50%;
+		overflow: hidden;
+	}
+
+{/block:IfRoundThumbnails}
+
+
+
+
+/* Media-Queries / Mobile */
+
+
+@media only screen
+and (max-width : 30em) {
+
+	header .logo h1 {
+		color: {color:Title};
+		}
+	.nav li:after {
+	   color: {color:Accent};
+	 }
+
+}
+
+@media only screen
+and (max-width : 53.0625em) {
+
+  .site-description  {text-align: center}
+  .socialmedia {
+    width: 9em;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+
+
+
+/* Custom CSS /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+{CustomCSS}
+
+</style>
+
+
+
+
+</head>
+
+
+<body id="top" class="{block:IndexPage}is-index {/block:IndexPage}
+{block:PermalinkPage}is-page
+{block:Posts}
+{block:Date}is-post {/block:Date}
+is-{PostType}
+{block:Audio}is-media {/block:Audio}
+{block:Video}is-media {/block:Video}
+{block:Photo}is-media {/block:Photo}
+{block:Photoset}is-photoset {block:Photoset}
+{block:RebloggedFrom}is-reblog {/block:RebloggedFrom}
+{block:NotReblog}is-notreblog {/block:NotReblog}
+{/block:Posts}
+{/block:PermalinkPage}
+{block:TagPage}is-tag is-nothome {/block:TagPage}
+{block:SearchPage}is-search is-nothome {/block:SearchPage}
+{block:IndexPage}
+{block:Pagination}{block:PreviousPage}is-nothome{/block:PreviousPage}{/block:Pagination}
+{/block:IndexPage} {block:PermalinkPage}{block:Posts}post-{PostID}{/block:Posts}{/block:PermalinkPage} l-3col-w l-a-center l-s-left l-i-right">
+
+
+<!-- header ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<header id="site-header" class="site-header l-block">
+	<div class="l-wrap l-block">
+		<!-- header image -->
+		<div class="t-left customfont">
+		<!-- if mobile -->
+			{block:IndexPage}{block:IfMobileLogoImage}<a href="/" class="visible-phone mobile"><img src="{image:Mobile Logo}" alt="{Title}" class="logo-mobile"></a>{/block:IfMobileLogoImage}{block:IfNotMobileLogoImage}<h1 class="mobile-text-logo visible-phone mobile t-center"><a href="/">{Title}</a></h1>{/block:IfNotMobileLogoImage}{/block:IndexPage}
+		<!-- if not mobile -->
+			{block:IfLogoImage}<a href="/" class="hidden-phone"><img src="{image:Logo}" alt="{Title}" class="logo-image"></a>{/block:IfLogoImage}
+			{block:IfNotLogoImage}<a href="/"><h1 class="hidden-phone logo-text">{Title}</h1></a>{/block:IfNotLogoImage}
+		</div>
+		<!-- /header image -->
+	</div>
+</header>
+<!-- /header -->
+
+
+
+
+<!-- content //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START #site-main -->
+<div id="site-main" class="l-wrap l-block">
+
+
+<!-- sidebar //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<aside id="site-sidebar" class="l-sidebar l-block {block:PermalinkPage}hidden-phone{/block:PermalinkPage}">
+
+<!-- BEGIN site nav -->
+<nav id="site-nav" class="l-block hidden-phone">
+	<ul class="nav nav-pages customfont">
+	<li class="nav-page nav-home bb"><a href="/" title="{lang:Home}">{lang:Home}</a></li>
+{block:HasPages}
+	<!-- pages -->
+	{block:Pages}<li class="nav-page bb"><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}
+{/block:HasPages}
+
+{block:AskEnabled}
+	<!-- ask -->
+	<li class="nav-page nav-ask bb"><a href="/ask">{AskLabel}</a></li>
+{/block:AskEnabled}
+
+{block:SubmissionsEnabled}
+	<!-- submissions -->
+	<li class="nav-page nav-submit"><a href="/submit">{SubmitLabel}</a></li>
+	<!-- /submissions -->
+{/block:SubmissionsEnabled}
+
+	<li class="search-area">
+	<!-- search -->
+		<form action="/search" method="get" class="search-form">
+		<input type="text" name="q" value="{SearchQuery}">
+		<input type="submit" value="{lang:Search}" class="button search-button">
+		</form>
+	<!-- /search -->
+	</li>
+</ul>
+</nav>
+
+
+<!-- social media links -->
+<ul class="nav l-block socialmedia {block:PermalinkPage}hidden-phone{/block:PermalinkPage}">
+	{block:IfFacebookURL}<li class="facebook"><a href="{text:Facebook URL}" title="Facebook">Facebook</a></li>{/block:IfFacebookURL}
+	{block:IfGoogleURL}<li class="google"><a href="{text:Google URL}" title="Google">Google</a></li>{/block:IfGoogleURL}
+	{block:IfLinkedInURL}<li class="linkedin"><a href="{text:LinkedIn URL}" title="LinkedIn">LinkedIn</a></li>{/block:IfLinkedInURL}
+	{block:IfTwitterURL}<li class="twitter"><a href="{text:Twitter URL}" title="Twitter">Twitter</a></li>{/block:IfTwitterURL}
+	{block:IfYouTubeURL}<li class="youtube"><a href="{text:YouTube URL}" title="YouTube">YouTube</a></li>{/block:IfYouTubeURL}
+</ul>
+<!-- /social media links -->
+
+</aside>
+<!-- /sidebar -->
+
+
+
+<!-- main content /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- back to top link -->
+<p id="back-top"><a href="#top">Back to top</a></p>
+
+
+<!-- START #site-content -->
+<div id="site-content" class="l-main">
+
+
+{block:TagPage}
+<!--tag page title-->
+<h2 class="tagtitle customfont">{Tag}</h2>
+<!--/tag page title-->
+{/block:TagPage}
+
+{block:SearchResults}
+<!-- Search Results -->
+{block:SearchPage}
+<h2 class="tagtitle customfont">{lang:SearchResultCount results for SearchQuery}:</h2>
+{/block:SearchPage}
+<!-- /Search Results -->
+{/block:SearchResults}
+
+{block:NoSearchResults}
+<!-- No Search Results -->
+<h2 class="tagtitle customfont">{lang:No results for SearchQuery}</h2>
+<!-- /No Search Results -->
+{/block:NoSearchResults}
+
+
+{block:IndexPage}
+<!-- START IndexPage //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START Thumbnails -->
+<ul class="l-grid">
+
+
+<!-- START Infinite Scroll -->
+{block:IfInfiniteScrolling}<div class="autopagerize_page_element">{/block:IfInfiniteScrolling}
+
+  {block:Posts}
+  <!-- Posts -->
+
+	<li class="thumbnail {PostType}{block:Photoset} photoset{/block:Photoset}{block:HasTags}{block:Tags} tag-{Tag}{/block:Tags}{/block:HasTags}">
+		<a href="{Permalink}" class="thumbnail-link thumbnail-mask {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}">
+
+			<div class="thumbnail-text {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}">
+
+					<div class="thumbnail-text-wrap smooth">
+
+						{block:Text}<!-- text -->
+							{block:Title}<h3 class="customfont t-center">{Title}</h3>{/block:Title}
+						{/block:Text}
+
+						{block:Quote}<!-- quote -->
+							<h3 class="customfont truncate-text-short t-center">{PlaintextQuote}</h3>
+						{/block:Quote}
+
+						{block:Link}<!-- link -->
+							<h3 class="customfont truncate-text-short t-center">{PlaintextName}</h3>
+						{/block:Link}
+
+						{block:Chat}<!-- chat -->
+							{block:Lines}<h3 class="{Alt} thumbnail-chat-line t-center">{block:Label}<strong class="customfont">{Label} </strong>{/block:Label}{Line}</h3>{/block:Lines}
+						{/block:Chat}
+
+						{block:Answer}<!-- answer -->
+							<h3 class="customfont truncate-text-short t-center">{Question}</h3>
+						{/block:Answer}
+
+					</div>
+			</div>
+			<div class="thumbnail-text-status {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}"></div>
+
+
+
+			{block:Photo}<!-- photo -->
+        <div class="thumbnail-image {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}" style="background: transparent url('{PhotoURL-500}') no-repeat top center; background-size: cover"></div>
+			{/block:Photo}
+
+			{block:Photoset}<!-- photoset -->
+				<div class="photosetwrap">
+					{block:Photos}
+				    <div class="thumbnail-image {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}" style="background: transparent url('{PhotoURL-500}') no-repeat top center; background-size: cover"></div>
+				    {/block:Photos}
+				</div>
+			{/block:Photoset}
+
+			{block:Audio}<!-- audio -->
+				<div class="thumbnail-image {block:IfRoundThumbnails}round{/block:IfRoundThumbnails} circle-mask" {block:AlbumArt}style="background: transparent url('{AlbumArtURL}'); background-size: cover;"{/block:AlbumArt}></div>
+				<!-- if audio is embedded -->
+				{block:AudioEmbed}
+				<div class="thumbnail-image">
+					<div class="{block:IfRoundThumbnails}round{/block:IfRoundThumbnails} circle-mask">{AudioEmbed-250}</div>
+				</div>
+				{/block:AudioEmbed}
+			{/block:Audio}
+
+			{block:Video}
+			{block:VideoThumbnail}
+  		    <div class="thumbnail-image {block:IfRoundThumbnails}round{/block:IfRoundThumbnails}" style="background: transparent url('{VideoThumbnailURL}') no-repeat top center; background-size: cover"></div>
+			{/block:VideoThumbnail}
+			{/block:Video}
+
+
+		</a>
+	</li>
+
+
+  <!-- /Posts -->
+  {/block:Posts}
+
+
+{block:IfInfiniteScrolling}</div>{/block:IfInfiniteScrolling}<!--/ END Infinite Scroll -->
+
+
+</ul><!-- /END Thumbnails -->
+
+{block:IfNotInfiniteScrolling}
+{block:Pagination}
+<!-- START pagination -->
+<div class="pagination l-main l-block customfont {block:IfInfiniteScrolling}visible-phone{/block:IfInfiniteScrolling}">
+
+		<!-- not reversed pagination -->
+		{block:PreviousPage}<a href="{PreviousPage}" class="page-number previous">&#8592;<span class="hidden-phone-inline"> {lang:Previous}</span></a>{/block:PreviousPage}
+
+		<!-- not reversed pagination -->
+		{block:NextPage}<a href="{NextPage}" class="page-number next"><span class="hidden-phone-inline">{lang:Next} </span>&#8594;</a>{/block:NextPage}
+
+</div>
+<!-- /END pagination -->
+{/block:Pagination}
+{/block:IfNotInfiniteScrolling}
+
+
+<!-- /indexpage -->
+{/block:IndexPage}
+
+
+
+<!-- START PermalinkPage //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+{block:PermalinkPage}
+
+<!-- Alternate Header for Mobile Permalink Pages -->
+<div class="visible-phone mobile"><a href="/" class="customfont btn-home">&#8592; Home</a></div>
+
+
+{block:Posts}
+
+<!-- Article //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- START Article -->
+<article class="article l-content {block:HasTags}{block:Tags}tag-{URLSafeTag} {/block:Tags}{/block:HasTags}">
+
+{block:Photo}
+<!-- Post Photo ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<a href="{LinkURL}" title="{PhotoAlt}" class="link-photo"><img src="{PhotoURL-1280}" alt="{PhotoAlt}" class="photo"></a>
+{/block:Photo}
+
+
+{block:Text}
+<!-- Post Text ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="textpost">
+		{block:Title}<h2 class="pagetitle customfont">{Title}</h2>{/block:Title}
+		<div class="text">{Body}</div>
+	</div>
+{/block:Text}
+
+
+{block:Quote}
+<!-- Post Quote ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="textpost quote">
+		<blockquote class="customfont">{Quote}</blockquote>
+	</div>
+{/block:Quote}
+
+
+{block:Answer}
+<!-- Post Answer //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="textpost">
+		<h2 class="pagetitle customfont">{Question}</h2>
+		<div class="text">{Answer}</div>
+	</div>
+{/block:Answer}
+
+
+{block:Link}
+<!-- Post Link ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="textpost link">
+		<div class="text">
+			<h2><a href="{URL}" {Target}>{Name}</a></h2>
+			{block:Description}{Description}{/block:Description}
+			<p class="source"><strong>Source:</strong> <a href="{URL}" {Target}>{URL}</a></p>
+		</div>
+	</div>
+{/block:Link}
+
+
+{block:Chat}
+<!-- Post Chat ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="textpost chat">
+		<div class="text">
+			{block:Title}<h2>{Title}</h2>{/block:Title}
+			<ul>
+			{block:Lines}<li class="{Alt}">{block:Label}<strong>{Label}</strong> {/block:Label}{Line}</li>{/block:Lines}
+			</ul>
+		</div>
+	</div>
+{/block:Chat}
+
+
+{block:Audio}
+<!-- Post Audio ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="audio">
+		{block:AudioPlayer}
+		<div class="audioart l-center" {block:AlbumArt} style="background: transparent url('{AlbumArtURL}') no-repeat left top; background-size: cover;"{/block:AlbumArt}>
+			<div class="audioplayer">{AudioPlayerWhite}</div>
+		</div>
+		{/block:AudioPlayer}
+		{block:AudioEmbed}
+		<div class="audio-embed l-center">{AudioEmbed}</div>
+		{/block:AudioEmbed}
+	</div>
+{/block:Audio}
+
+
+{block:Video}
+<!-- Post Video ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="video videoplayer">
+		{Video-700}
+	</div>
+{/block:Video}
+
+
+{block:Photoset}
+<!-- Post Photoset ////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<div class="photoset">
+		{Photoset}
+	</div>
+{/block:Photoset}
+
+
+</article><!-- /END Article -->
+
+
+
+
+<!--  PostInfo ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- START PostInfo -->
+<aside class="postinfo l-info">
+
+	<!-- START pagination -->
+	{block:PermalinkPagination}
+	<div class="pagination l-block customfont">
+
+		<!-- not reversed pagination -->
+			{block:PreviousPost}<a href="{PreviousPost}" class="page-number previous l-left">&#8592; {lang:Previous}</a>{/block:PreviousPost}
+			{block:NextPost}<a href="{NextPost}" class="page-number next l-right">{lang:Next} &#8594;</a>{/block:NextPost}
+
+	</div>
+	{/block:PermalinkPagination}
+	<!-- /END pagination -->
+
+	{block:Date}
+
+	<!-- START caption -->
+	{block:Photo}{block:Caption}<div class="caption bt">{Caption}</div>{/block:Caption}{/block:Photo}
+	{block:Audio}
+	<div class="caption bt">
+		{block:TrackName}<p><strong>{TrackName}</strong></p>{/block:TrackName}
+		{block:Caption}{Caption}{/block:Caption}
+	</div>
+	{/block:Audio}
+	{block:Video}{block:Caption}<div class="caption bt">{Caption}</div>{/block:Caption}{/block:Video}
+	{block:Photoset}{block:Caption}<div class="caption bt">{Caption}</div>{/block:Caption}{/block:Photoset}
+	<!--/END caption -->
+
+
+	<!-- START metainfo -->
+	<ul class="metainfo bt">
+		{block:Answer}
+		<!-- answer -->
+		<li class="meta-asker bb">{lang:Asked by Asker 2}</li>
+		{/block:Answer}
+		<!--postdate--><li class="meta-date bb">{lang:Posted on Month DayOfMonth Year}</li><!--/postdate-->
+		<!-- author --><li class="meta-authorname bb">{lang:Posted by PostAuthorName 2}</li><!-- /author -->
+		{block:ContentSource}<!--source--><li class="source bb"><strong>{lang:Source}:</strong> <a href="{SourceURL}">{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}">{/block:SourceLogo}{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a></li><!--/source-->{/block:ContentSource}
+		{block:Audio}<!--playcount--><li class="mata-playcount bb">{lang:Played PlayCount times}</li><!--/playcount-->{/block:Audio}
+		{block:PostNotes}<!--notecount--><li class="meta-notes bb">{lang:This post has NoteCount notes}</li><!--/notecount-->{/block:PostNotes}
+		<!--permalink--><li class="meta-permalink bb"><strong>{lang:Permalink}:</strong> <a href="{ShortURL}">{ShortURL}</a></li><!--/permalink-->
+		{block:HasTags}<!--tags--><li class="meta-tags bb"><strong>{lang:Tags}:</strong><ul class="tags">{block:Tags}<li class="tag-{Tag}"><a href="{TagURL}" alt="{Tag}">{Tag}</a></li>{/block:Tags}</ul></li><!--/tags-->{/block:HasTags}
+	</ul>
+	<!--/END metainfo-->
+
+	{/block:Date}
+
+</aside><!-- /END PostInfo -->
+
+
+
+
+
+{block:Date}
+
+<!-- Comments /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<section id="comments" class="comments l-content"> <!-- no l-block -->
+
+	<!-- Comments will appear on posts only (not pages) -->
+	{block:IfDisqusShortname}
+	<!-- Discus -->
+		<div class="comments-disqus">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = '{text:Disqus Shortname}'; // required: replace example with your Disqus site shortname
+			var disqus_url = '{Permalink}';
+			var disqus_title = '{block:PostTitle}{PostTitle}{/block:PostTitle}';
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>
+	<!-- /Discus -->
+	{/block:IfDisqusShortname}
+
+	{block:PostNotes}
+	<!-- Notes -->
+	<div class="comments">
+		<h4>{lang:Notes}</h4>
+		{PostNotes}
+	</div>
+	<!-- /Notes -->
+	{/block:PostNotes}
+
+
+</section>
+<!-- /END Comments -->
+{/block:Date}
+
+
+{/block:Posts}
+
+<!-- /END PermalinkPage ///////////////////////////////////////////////////////////////////////////////////////////////////// -->
+{/block:PermalinkPage}
+
+
+
+
+</div><!-- END #site-content -->
+
+
+
+
+
+<!-- footer ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!-- BEGIN site nav -->
+<nav id="site-nav-footer" class="l-main l-block visible-phone">
+	<ul class="nav nav-pages customfont">
+	<li class="nav-page nav-home bb"><a href="/" title="{lang:Home}">{lang:Home}</a></li>
+{block:HasPages}
+	<!-- pages -->
+	{block:Pages}<li class="nav-page bb"><a href="{URL}" title="{Label}">{Label}</a></li>{/block:Pages}
+{/block:HasPages}
+
+{block:AskEnabled}
+	<!-- ask -->
+	<li class="nav-page nav-ask bb"><a href="/ask">{AskLabel}</a></li>
+{/block:AskEnabled}
+
+{block:SubmissionsEnabled}
+	<!-- submissions -->
+	<li class="nav-page nav-submit"><a href="/submit">{SubmitLabel}</a></li>
+	<!-- /submissions -->
+{/block:SubmissionsEnabled}
+
+	<li class="search-area">
+	<!-- search -->
+		<form action="/search" method="get" class="search-form">
+		<input type="text" name="q" value="{SearchQuery}">
+		<input type="submit" value="{lang:Search}" class="button search-button">
+		</form>
+	<!-- /search -->
+	</li>
+
+</ul>
+</nav>
+
+</div><!-- /END #site-main -->
+
+<footer id="site-footer" class="l-block">
+<div class="l-wrap l-block">
+	<div class="copyright t-center bt">
+	{block:IfCopyrightText}{text:Copyright Text} {/block:IfCopyrightText}{lang:Powered by Tumblr 2}. <a href="/archive" title="{lang:Archive}">{lang:Archive}</a> | <a href="{RSS}" title="{lang:RSS feed}">{lang:RSS feed}</a>
+	<br><p class="give-credit"><strong><a href="http://themelantic.com">Pop Gallery Lite Theme by Themelantic</a></strong></p>
+	</div>
+
+</div>
+</footer>
+<!-- /footer -->
+
+
+
+<!-- javascript ///////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- JQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+{block:IfInfiniteScrolling}
+<script src="//static.tumblr.com/q0etgkr/lPHlj76n8/infinitescrollingbycodysherman.js"></script>
+{/block:IfInfiniteScrolling}
+
+
+{block:PermalinkPage}{block:Posts}{block:Video}
+<!-- FitVids -->
+<script src="//static.tumblr.com/6az34or/j3Wn29uox/fitvids.min.js"></script>
+{/block:Video}{/block:Posts}{block:PermalinkPage}
+
+<script>
+
+	$(document).ready(function(){
+
+
+	{block:PermalinkPage}{block:Posts}{block:Video}
+	// fitvids
+	$(".videoplayer").fitVids();
+	{/block:Video}{/block:Posts}{block:PermalinkPage}
+
+
+	// hide #back-top first
+	$("#back-top").hide();
+
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+}); //end document ready
+</script>
+
+<!-- Footer Custom Code //////////////////////////////////////////////////////////////////////////// -->
+
+{text:Footer HTML Code}
+
+
+{block:IfGoogleAnalyticsID}
+<!-- Google Analytics /////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+	_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+
+<!-- /Google Analytics -->
+{/block:IfGoogleAnalyticsID}
+
+
+
+
+</body>
+</html>
