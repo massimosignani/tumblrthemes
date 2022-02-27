@@ -1,0 +1,1324 @@
+<!-- top -->
+<!DOCTYPE html>
+<html>
+<!-- head-open --> 
+<head>
+<!-- /head-open -->
+<!-- Zebra theme copyright Tobey Thorn 2014 -->
+    <meta charset='utf-8' />
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name='description' content='{MetaDescription}'/>
+    <title>
+        {Title}
+    </title>
+    <link rel='icon' href='{Favicon}'/>
+    <link rel='alternate' type='application/rss+xml' href='{RSS}'/>
+ 
+    <!-- variable-hooks -->
+    <meta name='text:Disqus Shortname' content='' />
+    
+    <meta name='color:Odd Background Color' content='#FFFFFF'/>
+    <meta name='color:Odd Text Color' content='#202020'/>
+    <meta name='color:Even Background Color' content='#202020'/>
+    <meta name='color:Even Text Color' content='#F3F3F3'/>
+
+    <meta name='if:Bold Quotes' content='0'/>
+    <meta name='if:Italic Quotes' content='1' />
+    <meta name='if:Bold Titles' content='0' />
+
+    <meta name='text:Base Font Scale' content='1.2' />
+    <meta name='text:Base Line Height' content='1.5' />
+    <meta name='text:Title Font Scale' content='1.5' />
+    <meta name='text:SubTitle Font Scale' content='1.0' />
+    <meta name='text:Quote Font Scale' content='1.5' />
+    <meta name='text:Header Title Font Scale' content='3.0' />
+    <meta name='text:Header Description Font Scale' content='1.3' />
+    <meta name='text:Logo Scale' content='6.0' />
+    <meta name='text:Quote Line Height' content='2.0' />
+    
+    <meta name='font:Base Font' content='Georgia' />
+    <meta name='font:Title Font' content='Georgia' />
+
+    <meta name='if:Show Logo' content='1'/>
+    <meta name='if:Show Theme Credit' content='1'/>
+    
+    <meta name='select:Header Text Align' title='Right' content='right'/>
+    <meta name='select:Header Text Align' title='Center' content='center'/>
+    <meta name='select:Header Text Align' title='Left' content='left'/>
+
+    <meta name='select:Footer Text Align' title='Center' content='center'/>
+    <meta name='select:Footer Text Align' title='Right' content='right'/>
+    <meta name='select:Footer Text Align' title='Left' content='left'/>
+    
+    <meta name='select:Odd Foot Color' title='Black' content='black'/>
+    <meta name='select:Odd Foot Color' title='White' content='white'/>
+    
+    <meta name='select:Even Foot Color' title='White' content='white'/>
+    <meta name='select:Even Foot Color' title='Black' content='black'/>
+    
+    <meta name='select:Visual Media Width' title='Wide' content='none'/>
+    <meta name='select:Visual Media Width' title='Normal' content='35rem'/>
+    <meta name='if:Show Social Icons' content='0'/>
+    <meta name='if:Show Notes' content='1'/>
+
+    
+    <meta name='text:Facebook URL' content=''/>
+    <meta name='text:Twitter URL' content=''/>
+    <meta name='text:QZone URL' content=''/>
+    <meta name='text:Sina Weibo URL' content=''/>
+    <meta name='text:Tencent URL' content=''/>
+    <meta name='text:VKontakte URL' content=''/>
+    <meta name='text:Youtube URL' content=''/>
+    <meta name='text:Pinterest URL' content=''/>
+    <meta name='text:LinkedIn URL' content=''/>
+    <meta name='text:Flickr URL' content=''/>
+    <meta name='text:Instagram URL' content=''/>
+
+    <!-- /variable-hooks -->
+    <style type='text/css' media='screen'>
+
+/* omit? */
+html,
+body,
+.main,
+header,
+section,
+article,
+nav,
+footer,
+div,
+p,
+a,
+h1,
+h2,
+h3,
+ul,
+ol,
+li,
+img,
+svg,
+blockquote,
+figure,
+figcaption,
+iframe
+{
+    padding: 0;
+	margin: 0;
+	border-width: 0;
+    /* why does this fix 100% children's size? */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+figure,
+blockquote,
+figcaption,
+iframe,
+ul,
+ol,
+table,
+header,
+footer,
+section,
+a.block,
+nav,
+article,
+svg,
+div,
+form,
+textarea
+{
+    margin-top:1em; /* IE6/7/8 doesn't support rem */
+    margin-top:1rem;
+    
+    display:block;
+    border: 1px solid transparent;
+}
+
+/* display none case? */
+p:first-child,
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child,
+img:first-child,
+figure:first-child,
+blockquote:first-child,
+figcaption:first-child,
+iframe:first-child,
+ul:first-child,
+ol:first-child,
+table:first-child,
+header:first-child,
+footer:first-child,
+section:first-child,
+a.block:first-child,
+nav:first-child,
+article:first-child,
+svg:first-child,
+div:first-child,
+form:first-child,
+textarea:first-child
+{
+    margin-top:0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+form,
+textarea,
+blockquote,
+a.block
+{
+    /*
+        35em is about 64 alphabetical characters per line,
+        or 30 Chinese characters per line.
+        This matches most printed books.
+        This value is optimal for human vision.
+        It should not be changed.
+    */
+    max-width:35em; /* IE6/7/8 doesn't support rem */
+    max-width:35rem; /* omit */
+}
+
+ul,
+ol
+{
+    list-style-position:inside;
+}
+
+
+ul li,
+ol li
+{
+    display: table;
+}
+
+ul li:before,
+ol li:before
+{
+    display: table-cell;
+    text-align: left;
+    padding-right:1.0em;
+}
+
+ol
+{
+    counter-reset: foo;
+}
+
+ol > li
+{
+    counter-increment: foo;
+}
+
+ol > li:before
+{
+    content: counter(foo) ".";
+}
+
+ul > li:before
+{
+    content: '\2022';
+}
+
+html
+{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+/*
+ABOVE IS GENERAL
+
+BELOW IS SPECIFIC
+*/
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+iframe,
+blockquote,
+a.block,
+img,
+.figcontent,
+figcaption
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img
+{
+    width:100%;
+}
+
+#master-header a.block
+{
+    text-align:{select:Header Text Align};
+}
+
+img,
+figure.video iframe
+{
+    -webkit-border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    border-radius: 4px; 
+}
+
+article.link,
+article.link p
+{
+    text-align:center;
+}
+
+div.figcontent
+{
+    position:relative;
+}
+
+figure.audio div.figcontent
+{
+    max-width:35em; /* IE6/7/8 doesn't support rem */
+    max-width:35rem;
+}
+
+#ask_form,
+.notes,
+#disqus_thread
+{
+    max-width:35em; /* IE6/7/8 doesn't support rem */
+    max-width:35rem;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+figure.photo .figcontent,
+figure.photo figcaption,
+figure.video .figcontent,
+figure.video figcaption,
+figure.photo .figcontent *,
+figure.photo figcaption *,
+figure.video .figcontent *,
+figure.video figcaption *
+{
+    max-width: {select:Visual Media Width};
+}
+
+figure.video div.figcontent:before
+{
+    content:'';
+    padding-top:56.25%;
+    padding-top:50%;
+    display:block;
+}
+
+figure.video div.figcontent iframe
+{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+figure.audio div.figcontent iframe
+{
+    max-width:100%;
+}
+
+nav.pages li:before,
+nav.pagination li:before,
+ul.social li:before,
+ul.tumblr-buttons li:before
+{
+    display:none;
+}
+
+ul.tumblr-buttons li
+{
+    display:inline-block;
+    vertical-align:top;
+    margin-right:0;
+    margin-left:0;
+}
+
+ul.tumblr-buttons
+{
+    line-height:1em;
+    line-height:1rem;
+    text-align:center !important;
+    display:block;
+}
+
+a.reblog_button,
+div.like_button
+{
+    width:1.2em !important;
+    height:1.2em !important;
+    width:1.2rem !important;
+    height:1.2rem !important;
+}
+
+div.like_button iframe,
+a.reblog_button svg
+{
+
+    width:100% !important;
+    height:100% !important;
+}
+
+body > *:nth-child(odd) .permalink a
+{
+    text-decoration:none;
+    color:{select:Odd Foot Color} !important;
+}
+
+body > *:nth-child(odd) .reblog_button svg
+{
+    fill:{select:Odd Foot Color} !important;
+}
+
+body > *:nth-child(even) .permalink a
+{
+    text-decoration:none;
+    color:{select:Even Foot Color} !important;
+}
+
+body > *:nth-child(even) .reblog_button svg
+{
+    fill:{select:Even Foot Color} !important;
+}
+
+.reblog_button,
+.like_toggle,
+.permalink,
+.note_count
+{
+    opacity:0.2 !important;
+}
+
+nav.pagination li
+{
+    display:inline-block;
+    vertical-align:top;
+    width:33.33%;
+}
+
+nav.pagination li.newer-page
+{
+    text-align:left;
+}
+
+nav.pagination li.current-page
+{
+    text-align:center;
+}
+
+nav.pagination li.older-page
+{
+    text-align:right;
+}
+
+#master-header,
+#master-header p
+{
+        text-align:{select:Header Text Align};
+}
+
+#master-footer p,
+#master-footer
+{
+        text-align:{select:Footer Text Align};
+}
+
+figure.quote,
+figure.question,
+figure.quote p,
+figure.question p,
+article.answer p,
+blockquote
+{
+    text-align:center;
+}
+
+nav.pages li
+{
+    display:block;
+
+}
+
+article header p
+{
+    text-align:right;
+}
+
+article footer p
+{
+    text-align: left;
+}
+
+p
+{
+    text-align:left;
+}
+
+p.attribute:before
+{
+    content: '- ';
+}
+
+.theme_credit
+{
+    font-size: 0.7em;
+}
+
+.social li
+{
+    display:inline-block;
+    vertical-align:top;
+}
+
+.social a svg
+{
+    border-radius: 2px;
+}
+
+.social a:link,
+.social a:visited
+{
+    width:2.0em;
+    height:2.0em;
+    margin:0.4em;
+}
+
+.social a:focus,
+.social a:hover
+{
+    width:2.8em;
+    height:2.8em;
+    margin:0.0em;
+}
+
+.social a:active
+{
+    width:1.8em;
+    height:1.8em;
+    margin:0.5em;
+}
+
+article,
+#master-header,
+#master-footer
+{
+    padding-top:7%;
+    padding-bottom:7%;
+    padding-left: 7%;
+    padding-right:7%;
+    margin-left:auto;
+    margin-right:auto; 
+}
+/* first child needed? omit?  */
+article,
+article:first-child,
+#master-header,
+#master-footer
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    border-width: 0;
+}
+
+#ga_target
+{
+    display:none;
+}
+
+/* in case content system serves blank elements */
+p:empty
+{
+    display:none;
+}
+
+/* variables */
+/* variables */
+/* variables */
+
+body > *:nth-child(even)
+{
+    background-color: {color:Even Background Color};
+    color:{color:Even Text Color};
+}
+
+body > *:nth-child(odd)
+{
+    background-color: {color:Odd Background Color};
+    color:{color:Odd Text Color};
+}
+
+
+
+#master-header #title
+{
+    font-size: {text:Header Title Font Scale}em;
+}
+
+#master-header #description
+{
+    font-size: {text:Header Description Font Scale}em;
+}
+
+#master-header .logo
+{
+    width:{text:Logo Scale}em;
+    width:{text:Logo Scale}rem;
+    display:inline-block;
+}
+
+
+
+body > *:nth-child(even) .social a:link svg,
+body > *:nth-child(even) .social a:visited svg,
+body > *:first-child + * .social
+{
+    fill:{color:Even Text Color};
+}
+
+body > *:nth-child(odd) .social a:link svg,
+body > *:nth-child(odd) .social a:visited svg
+{
+    fill:{color:Odd Text Color};
+}
+
+blockquote
+{
+    font-size: {text:Quote Font Scale}em;
+    line-height:{text:Quote Line Height}em;
+    {block:IfNotBoldQuotes}
+        font-weight: normal;
+    {/block:IfNotBoldQuotes}
+    {block:IfBoldQuotes}
+        font-weight: bold;
+    {/block:IfBoldQuotes}
+}
+
+figure.quote,
+figure.question,
+figure.quote p,
+figure.question p
+{
+    {block:IfItalicQuotes}
+        font-style: italic;
+    {/block:IfItalicQuotes}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: {font:Title Font}, {font:Base Font};
+    {block:IfNotBoldTitles}
+        font-weight: normal;
+    {/block:IfNotBoldTitles}
+    {block:IfBoldTitles}
+        font-weight: bold;
+    {/block:IfBoldTitles}
+}
+
+h1
+{
+    font-size:{text:Title Font Scale}em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size:{text:SubTitle Font Scale}em;
+}
+
+
+
+html
+{
+    font-size: {text:Base Font Scale}em;
+    font-family: {font:Base Font};
+    line-height:{text:Base Line Height};
+}
+
+body > *:nth-child(odd) a:link,
+body > *:nth-child(odd) a:visited
+{
+    color:{color:Odd Text Color};
+}
+
+body > *:nth-child(even) a:link,
+body > *:nth-child(even) a:visited
+{
+    color:{color:Even Text Color};
+}
+
+article footer
+{
+    margin-top:2em;
+    margin-top:2rem;
+}
+
+.tightgroup > *
+{
+        margin-top:0;
+}
+
+#master-header .pages
+{
+    margin-top:2em;
+    margin-top:2rem;
+}
+
+#master-footer > *
+{
+    margin-top: 4em;
+    margin-top: 4rem;
+}
+
+#master-footer > *:first-child
+{
+    margin-top: 0em;
+    margin-top: 0rem;
+}
+
+.permalink,
+.note_count
+{
+    text-align:center;
+    margin-top:0.5em;
+    margin-top:0.5rem;
+}
+
+/*  tumblr comments*/
+.notes blockquote,
+.notes .answer_content
+{
+    display:block;
+    text-align:left;
+    font-style:italic;
+    font-size:1em;
+}
+
+.notes .avatar
+{
+    width:2em;
+    height:2em;
+}
+
+.notes > .note
+{
+    text-align:left;
+    margin-top:1em;
+    margin-top:1rem;
+}
+
+.notes > .note:first-child
+{
+    margin-top:0;   
+}
+
+.notes .avatar_frame
+{
+    display:table-cell;
+    padding-right:1em;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box; 
+    vertical-align:top;
+}
+
+.notes .action
+{
+    display:block;
+    margin-top:0.25em;
+}
+
+.notes .clear
+{
+    display:none;
+}
+
+.notes .note:before
+{
+    display:none;
+}
+
+.notes,
+#disqus_thread
+{
+    margin-top:6em;
+    margin-top:6rem;
+}
+
+#ask_form + footer
+{
+    display:none;
+}
+
+.dialog > *
+{
+    margin-top:0;
+}
+
+.dialog p
+{
+    font-style:italic;
+}
+
+.dialog p b
+{
+    font-weight:normal;
+    font-style:normal;
+}
+
+.question + *
+{
+    margin-top:4rem;
+}
+
+h2 + ul,
+h2 + ol
+{
+    margin-top:0;
+}
+
+.notes
+{
+    font-size:0.7em;
+}
+
+{CustomCSS}
+</style>
+  
+<!-- head-close -->
+</head>
+<!-- /head-close -->
+<body id='body'>
+    <header role='banner' id='master-header'>
+    {block:IfShowLogo}
+        <a class='block' href='/'>
+            <img class='logo' src='{favicon}' alt='logo'/>
+        </a>
+    {/block:IfShowLogo}
+            <div class='tightgroup'>
+                <h1 id='title'><a href='/'>{Title}</a></h1>
+                <p id='description'>{description}</p>               
+            </div>
+            {block:HasPages}
+             <nav class='pages'>
+                <ul>
+                    {block:Pages}
+                        <li><a href='{URL}'>{Label}</a></li>
+                    {/block:Pages}
+              </ul>  
+            </nav>
+            {/block:HasPages}
+
+    </header>
+    {block:Posts}
+        <article id='{PostID}' class='{PostType}'>
+            <!-- section -->
+      {block:Text}
+            {block:Title}
+                <h1>{title}</h1>
+            {/block:Title}
+            {Body}
+      {/block:Text}
+      
+      {block:Answer}
+        <figure class='question'>
+            <blockquote>
+                <p>{Question}</p>
+            </blockquote>
+            <figcaption>
+                <p class='attribute'>{lang:Asked by Asker 2}</p>
+            </figcaption>
+        </figure>
+        {Answer}
+      {/block:Answer}
+      
+      {block:Quote}
+        <figure class='quote'>
+            <blockquote>
+                <p>{Quote}</p>
+            </blockquote>
+            {block:Source}
+                <figcaption>
+                    <p class='attribute'>{Source}</p>
+                </figcaption>
+            {/block:Source}
+        </figure>
+      {/block:Quote}
+      
+      {block:Link}
+            <h1><a href='{URL}' target='_blank'>{Name}</a></h1>
+          {block:Description}
+                {Description}
+          {/block:Description}
+      {/block:Link}
+      
+      {block:Chat}
+            {block:Title}
+                <h1>{title}</h1>
+            {/block:Title}
+            <div class='dialog'>
+            {block:Lines}
+            <p>
+                {block:Label}
+                    <b>{Label}</b>
+                {/block:Label}
+                {line}
+            </p> 
+            {/block:Lines}
+            </div>
+      {/block:Chat}
+      
+        {block:Audio}
+      <figure class='audio'>
+            <div class='figcontent'>
+                {AudioEmbed}
+            </div>
+            {block:Caption}
+                    <figcaption>
+                        {caption}
+                    </figcaption>
+            {/block:Caption}
+        </figure>
+      {/block:Audio}
+      
+    {block:Video}
+        <figure class='video'>
+            <div class='figcontent'>
+            {Video-500}
+            </div>
+            {block:Caption}
+                    <figcaption>
+                        {caption}
+                    </figcaption>
+            {/block:Caption}
+        </figure>
+    {/block:Video}
+
+      {block:Photo}
+        <figure class='photo'>
+            <div class='figcontent'>
+            <a
+                class='block'
+                href='{PhotoURL-HighRes}'
+                title='{PhotoAlt}'
+            >
+                <img
+                    src='{PhotoURL-HighRes}'
+                    alt='{PhotoAlt}'
+                />
+            </a>
+            </div>
+            {block:Caption}
+                    <figcaption>
+                        {caption}
+                    </figcaption>
+            {/block:Caption}
+        </figure>
+      {/block:Photo}
+
+        {block:Photoset}
+            <figure class='photo-set'>
+                <div class='figcontent'>
+                {block:Photos}
+                <a
+                    class='block'
+                    href='{PhotoURL-HighRes}'
+                    title='{PhotoAlt}'
+                >
+                    <img
+                        src='{PhotoURL-HighRes}'
+                        alt='{PhotoAlt}'
+                    />
+                </a>
+                {block:Photos}
+                </div>
+                {block:Caption}
+                    <figcaption>
+                        {caption}
+                    </figcaption>
+                {/block:Caption}
+            </figure>
+            
+        {/block:Photoset}
+        
+        <!-- section -->
+        
+        <footer>
+
+                <ul class='tumblr-buttons'>
+                    <li>
+                            {LikeButton color="grey"}
+                    </li>
+                    <li>
+                            {ReblogButton color="gray"}
+                    </li>
+                </ul>
+                {block:IfShowNotes}
+                    {block:NoteCount}
+                        <p class='note_count'>
+                            {NoteCountWithLabel}
+                        </p>
+                    {/block:NoteCount}
+                {/block:IfShowNotes}
+                <p class='permalink'>
+                    <a href='{permalink}'>
+                            {Year} / {MonthNumberWithZero} / {DayOfMonthWithZero}
+                    </a>
+                </p>
+                
+                
+                
+                {block:Permalink}
+{block:IfShowNotes}
+{block:PostNotes} 
+        {PostNotes-64}
+
+{/block:PostNotes}
+{/block:IfShowNotes}
+
+       {block:IfDisqusShortname}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '{text:Disqus Shortname}';
+    var disqus_identifier = '{PostID}';
+    var disqus_url = '{BlogURL}post/{PostID}/';
+    
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+         dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+
+
+        {/block:IfDisqusShortname}
+                {/block:Permalink}
+                
+                
+                
+                
+                
+      </footer>
+
+      </article>
+
+      {/block:Posts}
+
+<footer id='master-footer'>
+
+
+
+
+
+{block:Pagination}
+    <nav class='pagination'>
+        <ul>
+            <li class='newer-page'>
+            {block:PreviousPage}
+                    <a href='{PreviousPage}'>
+                        {lang:Newer}
+                    </a>
+            {/block:PreviousPage} 
+            </li><li class='current-page'>
+                        {CurrentPage} / {TotalPages}
+            </li><li class='older-page'>
+            {block:NextPage}
+                    <a href='{NextPage}'>
+                         {lang:Older}
+                    </a>
+            {/block:NextPage}
+            </li>
+        </ul>
+    </nav>
+{/block:Pagination}
+ {block:IfShowSocialIcons}
+    <div class='tightgroup'>
+        <ul class='social'>
+            {block:IfFacebookURL}
+            <li>
+                <a class='block' href='{text:Facebook URL}'>
+                    <svg viewBox='0 0 100 100'>
+                        <path d="M54.102,100H0V0h100v100H70.376V59.573h13.563l2.033-15.754H70.376V33.755c0-4.562,1.261-7.667,7.804-7.667 l8.342-0.01V11.986c-1.445-0.191-6.392-0.616-12.155-0.616l0,0c-12.032,0-20.265,7.345-20.265,20.83v11.618H40.5v15.754h13.602V100z"/>
+                    </svg>
+                </a>
+            </li>
+            {/block:IfFacebookURL}
+            {block:IfTwitterURL}
+             <li>
+                <a class='block' href='{text:Twitter URL}'>
+                    <svg viewBox='0 0 100 100'>
+                        <path d="M74.898,25.997c-2.611-2.974-6.34-4.867-10.459-4.936c-7.918-0.134-14.334,6.557-14.334,14.94
+	c0,1.188,0.126,2.348,0.37,3.461c-11.912-0.772-22.474-6.976-29.543-16.325c-1.233,2.238-1.941,4.857-1.941,7.662
+	c0,5.312,2.531,10.024,6.376,12.809c-2.348-0.103-4.56-0.815-6.492-1.982c-0.001,0.063-0.001,0.128-0.001,0.193
+	c0,7.417,4.942,13.637,11.499,15.088c-1.203,0.339-2.47,0.517-3.777,0.51c-0.924-0.008-1.822-0.108-2.696-0.292
+	c1.823,6.082,7.116,10.518,13.389,10.666c-4.906,4.07-11.085,6.5-17.802,6.484c-1.156-0.006-2.298-0.076-3.419-0.221
+	c6.345,4.353,13.878,6.887,21.971,6.889C64.402,80.951,78.82,58.005,78.82,38.107c0-0.653-0.016-1.3-0.041-1.949
+	c2.801-2.085,5.23-4.703,7.152-7.69c-2.572,1.16-5.332,1.928-8.23,2.252c2.957-1.823,5.23-4.737,6.301-8.23
+	C81.23,24.166,78.164,25.372,74.898,25.997z M100,100H0V0h100V100z"/>
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfTwitterURL}
+            
+            {block:IfQZoneURL}
+             <li>
+                <a class='block' href='{text:QZone URL}'>
+                    <svg viewBox='0 0 100 100'>
+<path d="M50,9.963L61.124,34.59l26.769,2.903L68.001,55.749l5.418,26.288L50,68.823L26.582,82.037l5.42-26.288L12.108,37.494
+	l26.769-2.904L50,9.963 M47.116,42.229c4.903,0.541,9.614,1.51,9.614,1.51L33.243,60.636c0,0,9.203,0.829,18.405,0.823
+	c15.945-0.01,15.795-2.609,15.795-2.609s-3.031,0.029-8.789-0.274c-9.855-0.521-13.462-0.961-13.462-0.961l24.037-16.621
+	c0,0-8.24-1.236-19.229-1.236c-8.927,0-22.25,1.786-22.25,1.786S44.659,41.957,47.116,42.229z M100,0H0v100h100V0z"/>
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfQZoneURL}
+            {block:IfSinaWeiboURL}
+             <li>
+                <a class='block' href='{text:Sina Weibo URL}'>
+                    <svg viewBox='0 0 100 100'>
+                       <path d="M45.23,58.844c-0.403,0.69-1.292,1.021-1.988,0.732c-0.686-0.28-0.9-1.051-0.51-1.729
+	c0.4-0.671,1.255-1,1.938-0.729C45.365,57.374,45.614,58.15,45.23,58.844"/>
+<path d="M41.565,63.547c-1.112,1.775-3.494,2.553-5.289,1.734c-1.768-0.807-2.289-2.867-1.176-4.598
+	c1.099-1.723,3.4-2.49,5.182-1.744C42.083,59.708,42.658,61.755,41.565,63.547"/>
+<path d="M44.595,72.518c-11.499,1.135-21.425-4.062-22.172-11.613c-0.747-7.549,7.973-14.587,19.471-15.724
+	c11.5-1.137,21.426,4.06,22.172,11.608C64.812,64.339,56.096,71.381,44.595,72.518 M45.745,50.988
+	c-5.472-1.424-11.657,1.304-14.034,6.125c-2.421,4.916-0.081,10.376,5.448,12.162c5.728,1.845,12.477-0.983,14.823-6.293
+	C54.298,57.795,51.406,52.453,45.745,50.988"/>
+<path d="M67.596,47.456c-0.979-0.293-1.647-0.493-1.137-1.777c1.107-2.791,1.225-5.198,0.021-6.916
+	c-2.256-3.221-8.426-3.047-15.498-0.086c0-0.004-2.22,0.971-1.652-0.79c1.087-3.498,0.923-6.427-0.769-8.118
+	c-3.836-3.838-14.039,0.146-22.789,8.892c-6.553,6.554-10.357,13.499-10.357,19.503c0,11.488,14.73,18.472,29.142,18.472
+	c18.891,0,31.457-10.977,31.457-19.69C76.016,51.68,71.579,48.691,67.596,47.456 M80.141,26.435
+	c-4.562-5.058-11.291-6.987-17.504-5.666h-0.002c-1.436,0.307-2.352,1.722-2.044,3.156c0.308,1.435,1.72,2.353,3.157,2.046
+	c4.419-0.938,9.197,0.436,12.441,4.028c3.24,3.592,4.121,8.493,2.732,12.788l0.003,0.001c-0.454,1.4,0.31,2.897,1.714,3.349
+	c1.396,0.452,2.896-0.313,3.348-1.709c0-0.001,0-0.006,0-0.01C85.934,38.375,84.704,31.487,80.141,26.435 M73.135,32.756
+	c-2.222-2.462-5.498-3.398-8.525-2.755c-1.237,0.264-2.026,1.481-1.76,2.72c0.266,1.231,1.48,2.024,2.715,1.756v0.002
+	c1.479-0.313,3.082,0.143,4.17,1.345c1.086,1.205,1.377,2.847,0.912,4.286l0,0c-0.388,1.202,0.271,2.494,1.476,2.884
+	c1.203,0.384,2.493-0.271,2.882-1.477C75.954,38.573,75.359,35.219,73.135,32.756 M100,100H0V0h100V100z"/>
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfSinaWeiboURL}
+            {block:IfTencentURL}
+             <li>
+                <a class='block' href='{text:Tencent URL}'>
+                    <svg viewBox='0 0 100 100'>
+                       <path fill-rule="evenodd" clip-rule="evenodd" d="M17.072,65.174l4.507-2.935c-1.28-2.337-2.06-4.994-2.188-7.835
+	c-0.444-9.919,7.238-18.321,17.157-18.765c9.92-0.444,18.321,7.237,18.767,17.157c0.443,9.92-7.235,18.322-17.154,18.767
+	c-2.15,0.097-4.227-0.197-6.168-0.808l-1.214,5.234c2.412,0.712,4.973,1.053,7.623,0.934c12.881-0.575,22.855-11.487,22.276-24.368
+	C60.1,39.675,49.189,29.701,36.308,30.278C23.427,30.854,13.453,41.765,14.03,54.646C14.201,58.48,15.289,62.057,17.072,65.174z
+	 M28.858,58.947c-0.977-1.549-1.541-3.381-1.542-5.346c0-5.543,4.493-10.037,10.035-10.037s10.035,4.493,10.035,10.037
+	c0,5.541-4.493,10.033-10.035,10.033c-1.752,0-3.4-0.449-4.833-1.238h0.002c-2.708,3.625-5.521,7.801-6.778,10.705
+	c-2.035,4.705-4.199,12.207-4.199,26.897l-4.88-0.001c0-4.938,0.492-19.325,4.985-29.521c1.665-3.778,4.522-8.012,7.218-11.535
+	L28.858,58.947z M100,100H0V0h100V100z M77.609,48.068l-0.66-3.404c-1.707,0.199-3.482,0.021-5.213-0.591
+	c-6.033-2.138-9.193-8.763-7.055-14.797c2.137-6.034,8.762-9.194,14.797-7.057c6.032,2.139,9.193,8.762,7.059,14.796
+	c-0.465,1.309-1.145,2.478-1.979,3.49l2.832,1.993c1.012-1.27,1.834-2.716,2.405-4.329c2.777-7.835-1.327-16.438-9.164-19.212
+	c-7.834-2.776-16.438,1.327-19.213,9.163s1.328,16.438,9.164,19.214C72.916,48.162,75.316,48.377,77.609,48.068z M76.744,39.516
+	c-1.16,0.209-2.393,0.103-3.566-0.373c-3.312-1.343-4.906-5.116-3.564-8.427c1.343-3.312,5.115-4.908,8.428-3.564
+	c3.311,1.341,4.907,5.114,3.562,8.426c-0.424,1.047-1.092,1.922-1.91,2.588v-0.002c1.511,2.496,3.324,5.189,4.755,6.644
+	C86.766,47.163,91.223,50.441,100,54v3.5c-2.95-1.197-13.107-5.729-18.111-10.882c-1.854-1.91-3.69-4.643-5.145-7.107V39.516z"/>
+
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfTencentURL}
+            {block:IfVKontakteURL}
+             <li>
+                <a class='block' href='{text:VKontakte URL}'>
+                    <svg viewBox='0 0 100 100'>
+                        <path d="M27.844,30.306l-14.698,0.008c1.363,3.529,7.455,16.821,9.905,20.593c2.172,3.345,5.125,8.944,11.647,14.407
+	c7.602,6.365,21.989,5.064,21.989,5.064c0-2.279-0.109-5.463,0.026-7.152c0.146-1.789,1.737-2.682,3.524-1.83
+	c2.123,1.013,6.438,8.477,11.125,8.854c1.244,0.101,11.88,0.047,13.486-0.036c1.688-0.088,2.021-1.834,2.004-2.854
+	C86.788,63.782,75.9,55.105,75.197,53.783c-0.702-1.322-0.906-1.573,0.295-3.398c2.015-3.062,3.371-5.04,5.246-8.109
+	c2.221-3.633,4.66-8.546,5.793-11.89l-16.159,0.038c-1.06,3.508-3.767,8.593-4.591,9.771c-0.823,1.177-4.854,7.508-6.355,8.357
+	c-0.67,0.378-2.552,0.845-2.591-0.471c-0.05-1.692-0.155-4.111-0.155-16.919c0-4.717-16.756-3.383-18.776-0.72
+	c-0.293,0.387-0.463,1.55,0.459,1.653c1.695,0.192,3.725,1.326,3.725,3.076c0,6.019-0.05,10.314-0.05,12.434
+	c0,1.233-2.112,1.797-3.331,0.578C36.691,46.168,30.325,34.815,27.844,30.306z M100,100H0V0h100V100z"/>
+
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfVKontakteURL}
+            {block:IfYoutubeURL}
+             <li>
+                <a class='block' href='{text:Youtube URL}'>
+                    <svg viewBox='0 0 100 100'>
+                       <path d="M29.249,21.767l49.015,28.3L29.249,78.365V21.767z M100,0H0v100h100V0z"/>
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfYoutubeURL}
+            {block:IfPinterestURL}
+            <li>
+                <a class='block' href='{text:Pinterest URL}'>
+                <svg viewBox='0 0 100 100'>
+<path d="M52.816,13.483c-19.851,0-29.858,14.231-29.858,26.1c0,7.186,2.721,13.58,8.555,15.963c0.958,0.392,1.815,0.015,2.091-1.048
+	c0.194-0.732,0.651-2.583,0.855-3.352c0.28-1.048,0.171-1.416-0.602-2.331c-1.681-1.984-2.758-4.554-2.758-8.192
+	c0-10.56,7.899-20.013,20.57-20.013c11.224,0,17.386,6.858,17.386,16.015c0,12.046-5.33,22.214-13.244,22.214
+	c-4.371,0-7.643-3.613-6.596-8.048c1.257-5.294,3.688-11.006,3.688-14.829c0-3.417-1.836-6.271-5.634-6.271
+	c-4.468,0-8.058,4.624-8.058,10.815c0,3.942,1.332,6.609,1.332,6.609s-4.574,19.375-5.374,22.77
+	c-1.597,6.755-0.24,15.04-0.126,15.875c0.068,0.497,0.705,0.614,0.994,0.24c0.413-0.538,5.735-7.106,7.544-13.672
+	c0.511-1.858,2.938-11.486,2.938-11.486c1.453,2.771,5.694,5.212,10.208,5.212c13.431,0,22.543-12.248,22.543-28.635
+	C79.271,25.026,68.771,13.483,52.816,13.483z M100,100H0V0h100V100z"/>
+
+                </svg>
+                
+                </a>
+            </li>
+            {/block:IfPinterestURL}
+            {block:IfInstagramURL}
+            <li>
+                <a class='block' href='{text:Instagram URL}'>
+                    <svg viewBox='0 0 100 100'>
+	                  <path fill-rule="evenodd" clip-rule="evenodd" d="M92.809,24.708c0,1.104-0.896,2-2,2H75.292c-1.104,0-2-0.896-2-2V9.191
+	c0-1.104,0.896-2,2-2h15.517c1.104,0,2,0.896,2,2V24.708z M75.747,50c0-14.22-11.526-25.749-25.747-25.749
+	C35.78,24.251,24.252,35.78,24.252,50c0,14.221,11.528,25.748,25.749,25.748C64.221,75.748,75.747,64.221,75.747,50z M100,0H0v100
+	h100V0z"/>
+<circle cx="50" cy="50" r="18.521"/>
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfInstagramURL}
+            {block:IfFlickrURL}
+            <li>
+                <a class='block' href='{text:Flickr URL}'>
+                    <svg viewBox='0 0 100 100'>
+                        <path d="M70.29,32.953c8.862,0,16.047,7.185,16.047,16.047S79.152,65.047,70.29,65.047S54.243,57.862,54.243,49
+	S61.428,32.953,70.29,32.953z M30.203,32.953c8.862,0,16.047,7.185,16.047,16.047s-7.185,16.047-16.047,16.047
+	c-8.863,0-16.047-7.185-16.047-16.047S21.34,32.953,30.203,32.953z M100,0H0v100h100V0z"/>
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfFlickrURL}
+            {block:IfLinkedInURL}
+            <li>
+                <a class='block' href='{text:LinkedIn URL}'>
+                    <svg viewBox='0 0 100 100'>
+                    <path d="M31.637,80.969V37.806h-13.34v43.163H31.637z M31.637,24.296c-0.08-3.864-2.653-6.803-6.835-6.803
+	c-4.182,0-6.916,2.939-6.916,6.803c0,3.78,2.654,6.804,6.756,6.804h0.08C28.984,31.099,31.637,28.076,31.637,24.296z M53.4,80.969
+	V56.377c0-1.316,0.098-2.634,0.482-3.57c1.059-2.631,3.463-5.354,7.51-5.354c5.297,0,8.619,3.005,8.619,8.925v24.593h13.428v-25.25
+	c0-13.529-7.217-19.823-16.85-19.823c-7.898,0-11.363,4.418-13.288,7.422l0.097-5.773H39.993c0.193,4.132,0,43.422,0,43.422H53.4
+	L53.4,80.969L53.4,80.969z M100,100H0V0h100V100z"/>
+
+
+
+                    </svg>
+                </a>
+            </li>
+            {/block:IfLinkedInURL}
+         </ul>
+         </div>
+        {/block:IfShowSocialIcons}
+        <div class='credits'>
+        <p class='copyright'>
+            © {title}
+        </p>
+        {block:IfShowThemeCredit}
+        <p class='theme_credit'>
+            Zebra theme by <a href='http://tobeythorn.com/'>Tobey Thorn.</a>
+        </p>
+        {/block:IfShowThemeCredit}
+        </div>
+</footer>
+
+<script>
+
+            var oddFootColor = '{select:Odd Foot Color}';
+            var evenFootColor = '{select:Even Foot Color}';
+        
+            var body = document.getElementById('body');
+            var children = body.children;
+        
+            for(var i = children.length - 1; i >= 0; --i)
+            {
+                var child = children[i];
+                var likes = child.getElementsByClassName('like_toggle');
+                for(var j = likes.length - 1; j >= 0; --j)
+                {
+                    var color;
+                    if(i%2 == 0)
+                    {
+                        color = oddFootColor;
+                    }
+                    else
+                    {
+                        color = evenFootColor;
+                    }
+                    
+                    //reload like button iframe
+                    likes[j].src = likes[j].src.replace('grey', color);
+                }
+            }
+
+            var likes = document.getElementsByClassName('like_button');
+            for(var i = likes.length - 1; i >= 0; --i)
+            {
+                
+                var frame = likes[i].innerHTML;
+                likes[i].innerHTML = frame;
+            }
+
+</script>
+<!-- body-close -->
+</body>
+<!-- /body-close -->
+
+
+</html>
